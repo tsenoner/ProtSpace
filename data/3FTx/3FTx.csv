@@ -1,0 +1,1428 @@
+identifier,group,major_group,sub_group,membran_prediction,seq_start,number_cysteines
+None|Xetr_1|Xenopus_tropicalis,frog Ly6,Ly-6,frog Ly6,Membrane,MAA,10
+None|Xetr_2|Xenopus_tropicalis,frog Ly6,Ly-6,frog Ly6,Secreted,MQC,11
+None|Xetr_3|Xenopus_tropicalis,frog Ly6,Ly-6,frog Ly6,Membrane,,8
+None|Xetr_5|Xenopus_tropicalis,frog Ly6,Ly-6,frog Ly6,Membrane,MAD,10
+None|Xetr_6|Xenopus_tropicalis,frog Ly6,Ly-6,frog Ly6,Membrane,MSP,10
+None|Xetr_7|Xenopus_tropicalis,frog Ly6,Ly-6,frog Ly6,Membrane,MAT,10
+None|Xetr_8|Xenopus_tropicalis,frog Ly6,Ly-6,frog Ly6,Membrane,,10
+None|Xetr_9|Xenopus_tropicalis,GPIHBP1,Ly-6,GPIHBP1,Membrane,,10
+None|Xetr4|Xenopus_tropicalis,frog Ly6,Ly-6,frog Ly6,Secreted,MQC,12
+None|Hosa_13|Homo_sapiens,Ly6L,Ly-6,Ly6L,Membrane,MER,10
+SP|O43653|Homo_sapiens,PSCA,Ly-6,PSCA,Membrane,MAG,10
+SP|O94772|Homo_sapiens,Ly6H,Ly-6,Ly6H,Membrane,MLP,10
+SP|P0DP57|Homo_sapiens,SLURP2,Ly-6,SLURP2,Secreted,MQL,10
+SP|P0DP58|Homo_sapiens,LYNX1,Ly-6,LYNX1,Membrane,MTP,10
+SP|P55000|Homo_sapiens,SLURP1,Ly-6,SLURP1,Secreted,MAS,10
+SP|Q14210|Homo_sapiens,Ly6D,Ly-6,Ly6D,Membrane,MRT,10
+SP|Q16553|Homo_sapiens,Ly6E,Ly-6,Ly6E,Membrane,MKI,10
+SP|Q17RY6-2|Homo_sapiens,Ly6K,Ly-6,Ly6K,Secreted,,6
+SP|Q6UXB3|Homo_sapiens,LYPD2,Ly-6,LYPD2,Membrane,MRG,11
+SP|Q8IV16|Homo_sapiens,GPIHBP1,Ly-6,GPIHBP1,Membrane,MKA,10
+None|Phci_11|Phascolarctos_cinereus,Ly6K,Ly-6,Ly6K,Membrane,,11
+None|Phci_13|Phascolarctos_cinereus,Ly6K,Ly-6,Ly6K,Membrane,MKV,11
+None|Phci_14|Phascolarctos_cinereus,Ly6E,Ly-6,Ly6E,Membrane,MKV,10
+None|Phci_15|Phascolarctos_cinereus,Ly6H,Ly-6,Ly6H,Membrane,MPR,10
+None|Phci_16|Phascolarctos_cinereus,Ly6H,Ly-6,Ly6H,Membrane,MKI,10
+None|Phci_17|Phascolarctos_cinereus,GPIHBP1,Ly-6,GPIHBP1,Membrane,,12
+None|Phci_2|Phascolarctos_cinereus,SLURP1,Ly-6,SLURP1,Membrane,MGT,10
+None|Phci_3|Phascolarctos_cinereus,LYPD2,Ly-6,LYPD2,Membrane,MLG,10
+None|Phci_4|Phascolarctos_cinereus,LYNX1,Ly-6,LYNX1,Membrane,MKF,10
+None|Phci_5|Phascolarctos_cinereus,Non-human mammalian Ly6,Ly-6,Non-human mammalian Ly6,Membrane,MKL,11
+None|Phci_6|Phascolarctos_cinereus,LYNX1,Ly-6,LYNX1,Membrane,MKS,10
+None|Phci_7|Phascolarctos_cinereus,Ly6D,Ly-6,Ly6D,Membrane,MKS,10
+None|Phci_8|Phascolarctos_cinereus,Ly6 unique,Ly-6,Ly6 unique,Membrane,MAS,11
+None|Oran_1|Ornithorhynchus_anatinus,Ly6K,Ly-6,Ly6K,Membrane,MCH,10
+None|Oran_2|Ornithorhynchus_anatinus,Non-human mammalian Ly6,Ly-6,Non-human mammalian Ly6,Membrane,,11
+None|Oran_dn_10|Ornithorhynchus_anatinus,GPIHBP1,Ly-6,GPIHBP1,Membrane,MKA,10
+None|Oran_dn4|Ornithorhynchus_anatinus,SLURP2,Ly-6,SLURP2,Membrane,MKL,11
+None|Oran_dn5|Ornithorhynchus_anatinus,LYNX1,Ly-6,LYNX1,Membrane,MMR,11
+None|Oran1|Ornithorhynchus_anatinus,LYPD2,Ly-6,LYPD2,Membrane,MRP,11
+None|Oran2|Ornithorhynchus_anatinus,SLURP1,Ly-6,SLURP1,Membrane,MKM,10
+None|Oran3|Ornithorhynchus_anatinus,PSCA,Ly-6,PSCA,Membrane,MRA,10
+None|Oran6|Ornithorhynchus_anatinus,Ly6D,Ly-6,Ly6D,Membrane,MKS,11
+None|Oran7|Ornithorhynchus_anatinus,Non-human mammalian Ly6,Ly-6,Non-human mammalian Ly6,Membrane,MKV,12
+None|Oran8|Ornithorhynchus_anatinus,Ly6K,Ly-6,Ly6K,Membrane,MKL,10
+None|Oran9|Ornithorhynchus_anatinus,Ly6H,Ly-6,Ly6H,Membrane,MGN,12
+None|Gaga_1|Gallus_gallus,PSCA,Ly-6,PSCA,Membrane,MKV,10
+None|Gaga_2|Gallus_gallus,SLURP1,Ly-6,SLURP1,Membrane,MKM,10
+None|Gaga_3|Gallus_gallus,LYPD2,Ly-6,LYPD2,Membrane,MKL,11
+None|Gaga_4|Gallus_gallus,Reptilian Ly6 group 1,Ly-6,Reptilian Ly6 group 1,Membrane,MKA,10
+None|Gaga_5|Gallus_gallus,Reptilian Ly6 group 3,Ly-6,Reptilian Ly6 group 3,Membrane,MKT,11
+None|Gaga_6|Gallus_gallus,Reptilian Ly6 group 2,Ly-6,Reptilian Ly6 group 2,Membrane,MKA,11
+None|Gaga_7|Gallus_gallus,Reptilian Ly6 group 2,Ly-6,Reptilian Ly6 group 2,Membrane,MKA,11
+None|Gaga_8|Gallus_gallus,Ly6E,Ly-6,Ly6E,Secreted,MKA,11
+None|Alsi_1|Alligator_sinensis,PSCA,Ly-6,PSCA,Membrane,MKV,11
+None|Alsi_10|Alligator_sinensis,Reptilian Ly6 group 6,Ly-6,Reptilian Ly6 group 6,Membrane,MKP,10
+None|Alsi_2|Alligator_sinensis,SLURP1,Ly-6,SLURP1,Membrane,MKA,11
+None|Alsi_3|Alligator_sinensis,LYPD2,Ly-6,LYPD2,Membrane,MRD,11
+None|Alsi_4|Alligator_sinensis,Ly6H,Ly-6,Ly6H,Membrane,MKA,12
+None|Alsi_5|Alligator_sinensis,Reptilian Ly6 group 1,Ly-6,Reptilian Ly6 group 1,Membrane,MKA,10
+None|Alsi_6|Alligator_sinensis,Reptilian Ly6 group 3,Ly-6,Reptilian Ly6 group 3,Membrane,MKT,10
+None|Alsi_7|Alligator_sinensis,Reptilian Ly6 group 2,Ly-6,Reptilian Ly6 group 2,Membrane,MKL,10
+None|Alsi_8|Alligator_sinensis,Reptilian Ly6 group 2,Ly-6,Reptilian Ly6 group 2,Membrane,MMK,11
+None|Alsi_9|Alligator_sinensis,Ly6E,Ly-6,Ly6E,Secreted,MRT,10
+None|Chmy_1|Chelonia_mydas,PSCA,Ly-6,PSCA,Membrane,,11
+None|Chmy_10|Chelonia_mydas,Reptilian Ly6 group 2,Ly-6,Reptilian Ly6 group 2,Membrane,MKA,10
+None|Chmy_11|Chelonia_mydas,Reptilian Ly6 group 2,Ly-6,Reptilian Ly6 group 2,Membrane,MKA,10
+None|Chmy_12|Chelonia_mydas,Ly6E,Ly-6,Ly6E,Secreted,MKI,10
+None|Chmy_13|Chelonia_mydas,Reptilian Ly6 group 6,Ly-6,Reptilian Ly6 group 6,Membrane,,11
+None|Chmy_2|Chelonia_mydas,SLURP1,Ly-6,SLURP1,Membrane,MKV,10
+None|Chmy_3|Chelonia_mydas,LYPD2,Ly-6,LYPD2,Membrane,MKG,11
+None|Chmy_4|Chelonia_mydas,Reptilian Ly6 group 1,Ly-6,Reptilian Ly6 group 1,Membrane,,10
+None|Chmy_5|Chelonia_mydas,Reptilian Ly6 group 1,Ly-6,Reptilian Ly6 group 1,Membrane,MKA,10
+None|Chmy_6|Chelonia_mydas,Reptilian Ly6 group 1,Ly-6,Reptilian Ly6 group 1,Membrane,MLQ,9
+None|Chmy_7|Chelonia_mydas,Reptilian Ly6 group 1,Ly-6,Reptilian Ly6 group 1,Membrane,MLS,10
+None|Chmy_9|Chelonia_mydas,Reptilian Ly6 group 3,Ly-6,Reptilian Ly6 group 3,Membrane,MKA,10
+None|Povi_1|Pogona_vitticeps,PSCA,Ly-6,PSCA,Membrane,MTP,11
+None|Povi_10|Pogona_vitticeps,Reptilian Ly6 group 4,Ly-6,Reptilian Ly6 group 4,Secreted,MKT,9
+None|Povi_11|Pogona_vitticeps,Reptilian Ly6 group 4,Ly-6,Reptilian Ly6 group 4,Membrane,MKT,10
+None|Povi_12|Pogona_vitticeps,Reptilian Ly6 group 6,Ly-6,Reptilian Ly6 group 6,Membrane,MKV,10
+None|Povi_3|Pogona_vitticeps,LYPD2,Ly-6,LYPD2,Membrane,MVE,12
+None|Povi_5|Pogona_vitticeps,Reptilian Ly6 group 1,Ly-6,Reptilian Ly6 group 1,Membrane,,10
+None|Povi_6|Pogona_vitticeps,Reptilian Ly6 group 1-2,Ly-6,Reptilian Ly6 group 1-2,Membrane,MKA,10
+None|Povi_7|Pogona_vitticeps,Ly6 unique,Ly-6,Ly6 unique,Membrane,MKA,10
+None|Povi_8|Pogona_vitticeps,Reptilian Ly6 group 7,Ly-6,Reptilian Ly6 group 7,Membrane,,10
+None|Povi_9|Pogona_vitticeps,Reptilian Ly6 group 3,Ly-6,Reptilian Ly6 group 3,Secreted,MKT,11
+None|Povi_4|Pogona_vitticeps,Reptilian Ly6 group 5,Ly-6,Reptilian Ly6 group 5,Membrane,MMA,10
+None|Anca_1|Anolis_carolinensis,PSCA,Ly-6,PSCA,Membrane,MKV,10
+None|Anca_10|Anolis_carolinensis,Reptilian Ly6 group 4,Ly-6,Reptilian Ly6 group 4,Membrane,MKT,10
+None|Anca_2|Anolis_carolinensis,SLURP1,Ly-6,SLURP1,Membrane,MNV,10
+None|Anca_3|Anolis_carolinensis,LYPD2,Ly-6,LYPD2,Membrane,MEK,10
+None|Anca_5|Anolis_carolinensis,Reptilian Ly6 group 1,Ly-6,Reptilian Ly6 group 1,Membrane,MKA,10
+None|Anca_6|Anolis_carolinensis,Reptilian Ly6 group 1-2,Ly-6,Reptilian Ly6 group 1-2,Membrane,MKA,10
+None|Anca_7|Anolis_carolinensis,Reptilian Ly6 group 7,Ly-6,Reptilian Ly6 group 7,Membrane,MKS,11
+None|Anca_8|Anolis_carolinensis,Reptilian Ly6 group 3,Ly-6,Reptilian Ly6 group 3,Secreted,MKA,10
+None|Anca_9|Anolis_carolinensis,Reptilian Ly6 group 4,Ly-6,Reptilian Ly6 group 4,Secreted,MMK,10
+None|Anca_4|Anolis_carolinensis,Reptilian Ly6 group 5,Ly-6,Reptilian Ly6 group 5,Membrane,MAT,10
+None|Vako_dn2|Varanus_komodoensis,SLURP1,Ly-6,SLURP1,Secreted,,6
+None|Vako_dn3|Varanus_komodoensis,LYPD2,Ly-6,LYPD2,Membrane,,10
+None|Vako_dn8|Varanus_komodoensis,Reptilian Ly6 group 3,Ly-6,Reptilian Ly6 group 3,Secreted,,10
+None|Vako1|Varanus_komodoensis,PSCA,Ly-6,PSCA,Membrane,MKV,11
+None|Vako10|Varanus_komodoensis,Ly6E,Ly-6,Ly6E,Secreted,MRP,10
+None|Vako5|Varanus_komodoensis,Reptilian Ly6 group 1,Ly-6,Reptilian Ly6 group 1,Membrane,MKA,10
+None|Vako6|Varanus_komodoensis,Reptilian Ly6 group 1-2,Ly-6,Reptilian Ly6 group 1-2,Membrane,MKS,11
+None|Vako7|Varanus_komodoensis,Reptilian Ly6 group 7,Ly-6,Reptilian Ly6 group 7,Membrane,MKA,10
+None|Vako9|Varanus_komodoensis,Reptilian Ly6 group 4,Ly-6,Reptilian Ly6 group 4,Membrane,MKT,10
+None|Vako_dn4|Varanus_komodoensis,Reptilian Ly6 group 5,Ly-6,Reptilian Ly6 group 5,Membrane,MAA,11
+TR|M9T1L2|Aspidites_melanocephalus,Non-standard,Non-standard,,Secreted,MKA,11
+TR|M9T271|Aspidites_melanocephalus,Non-standard,Non-standard,,Secreted,MKA,11
+NCBI|Pbiv_NW_006541926_1_gene_1_mRNA_1|Python_bivittatus,Non-standard,Non-standard,,Secreted,,12
+NCBI|Pbiv_NW_006543148_1_gene_1_mRNA_1|Python_bivittatus,Non-standard,Non-standard,,Secreted,,11
+None|Pybi_1|Python_bivittatus,Reptilian Ly6 group 4,Ly-6,Reptilian Ly6 group 4,Membrane,MGI,10
+None|Pybi_2|Python_bivittatus,SLURP1,Ly-6,SLURP1,Membrane,,10
+None|Pybi_3|Python_bivittatus,PSCA,Ly-6,PSCA,Membrane,MKA,12
+TR|A0A098LY61|Python_regius,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+TR|A0A098LWQ5|Python_regius,Non-standard,Non-standard,,Secreted,MKA,11
+TR|A0A098LY55|Python_regius,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A098LY67|Python_regius,Plesiotypic,Plesiotypic,,Secreted,MRK,10
+TR|M9SZR1|Cylindrophis_ruffus,Non-standard,Non-standard,,Secreted,MKA,11
+TR|M9T2J4|Azemiops_feae,Non-standard,Non-standard,Viperid non-standard C #8 -> Y,Secreted,MKT,10
+NCBI|BOTJA_GEXA01000001.1_15_275|Bothrops_jararaca,Non-standard,Non-standard,,Secreted,,10
+SP|P84716|Causus_rhombeatus,Short-chain,Short-chain,,Secreted,,8
+TR|A0A1W7RBC9|Crotalus_adamanteus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A1W7RBD9|Crotalus_adamanteus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|CROCE_GGMJ01000004.1_1_267|Crotalus_cerastes,Non-standard,Non-standard,,Secreted,,10
+NCBI|CROCE_GGMJ01000005.1_1_252|Crotalus_cerastes,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|CROSC_GGIP01000025.1_1_252|Crotalus_scutulatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|CROTI_XM_039332036.1_300_557|Crotalus_tigris,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|CROTI_XM_039332037.1_103_360|Crotalus_tigris,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|CROTI_XM_039332038.1_21_260|Crotalus_tigris,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+NCBI|CROTI_XR_005555302.1_67_312|Crotalus_tigris,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|CROTI_XR_005555304.1_268_468|Crotalus_tigris,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|CROTI_XR_005555300.1_149_355|Crotalus_tigris,Non-standard,Non-standard,Basal viper genomic 8-cysteine,Secreted,,8
+NCBI|CROTI_XR_005557461.1_417_620|Crotalus_tigris,Non-standard,Non-standard,Basal viper genomic 8-cysteine,Secreted,,8
+NCBI|CROTI_XR_005557464.1_96_332|Crotalus_tigris,Non-standard,Non-standard,Basal viper genomic 8-cysteine,Secreted,,8
+None|Cvir_PDHV02000066_1_88429_90401|Crotalus_viridis,Non-standard,Non-standard,,Secreted,MKT,11
+None|Cvir_PDHV02000188_1_35190_37247_mka|Crotalus_viridis,Non-standard,Non-standard,Basal genomic 8-cysteines,Secreted,MKA,8
+None|Dacu_scaffold1201_gene_1_mRNA_1_mka|Deinagkistrodon_acutus,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+None|Dacu_scaffold1201_gene_1_mRNA_2_mka|Deinagkistrodon_acutus,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+None|Dacu_scaffold1201_gene_1_mRNA_3_mka|Deinagkistrodon_acutus,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+None|Dacu_scaffold1201_gene_1_mRNA_4_mka|Deinagkistrodon_acutus,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+None|Dacu_scaffold1201_gene_1_mRNA_5_mka|Deinagkistrodon_acutus,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+None|Dacu_scaffold1201_gene_1_mRNA_6|Deinagkistrodon_acutus,Ly6H,Ly-6,Ly6H,Secreted,MKA,10
+None|Dacu_scaffold2000_gene_1_mRNA_1|Deinagkistrodon_acutus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|GLOIN_GHUB01014925.1_176_436|Gloydius_intermedius,Non-standard,Non-standard,,Secreted,,11
+NCBI|GLOIN_GHUB01014927.1_176_415|Gloydius_intermedius,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|GLOIN_GHUB01072089.1_C300_49|Gloydius_intermedius,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|GLOIN_GHUB01143089.1_C464_201|Gloydius_intermedius,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|U3T794|Protobothrops_flavoviridis,Non-standard,Non-standard,,Secreted,MKT,10
+None|Prmu_3|Protobothrops_mucrosquamatus,Non-standard,Non-standard,,Secreted,,8
+None|Prmu_6|Protobothrops_mucrosquamatus,Ly6E,Ly-6,Ly6E,Secreted,MKA,9
+NCBI|PROMU_XM_015823117.1_32_274|Protobothrops_mucrosquamatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Protobothrops_mucrosquamatus_XP_015678608|Protobothrops_mucrosquamatus,Non-standard,Non-standard,,Secreted,MKT,11
+None|Prmu_2|Protobothrops_mucrosquamatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+None|Prmu_4|Protobothrops_mucrosquamatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+None|Prmu_5|Protobothrops_mucrosquamatus,Reptilian Ly6 group 4,Ly-6,Reptilian Ly6 group 4,Membrane,,10
+None|Prmu_7|Protobothrops_mucrosquamatus,SLURP1,Ly-6,SLURP1,Membrane,,10
+None|Pseudocerastes_urarachnoides_3FTx_05|Pseudocerastes_urarachnoides,Non-standard,Non-standard,Viperid non-standard C #8 -> Y,Secreted,MKT,9
+None|Pseudocerastes_urarachnoides_3FTx_06|Pseudocerastes_urarachnoides,Non-standard,Non-standard,Viperid non-standard C #8 -> Y,Secreted,,9
+TR|A5X2W6|Sistrurus_catenatus_edwardsii,Non-standard,Non-standard,,Secreted,MKT,10
+SP|A5X2W8|Sistrurus_catenatus_edwardsii,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A5X2W7|Sistrurus_catenatus_edwardsii,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A5X2W9|Sistrurus_catenatus_edwardsii,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A5X2X0|Sistrurus_catenatus_edwardsii,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|B4Y143|Sistrurus_catenatus_edwardsii,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|VIPTR_OL439441.1_1_264|Vipera_transcaucasiana,Non-standard,Non-standard,Viperid non-standard C #8 -> Y,Secreted,MKT,9
+None|Vipera_transcaucasiana_3FTx_08|Vipera_transcaucasiana,Non-standard,Non-standard,Viperid non-standard C #8 -> Y,Secreted,,9
+None|Vipera_transcaucasiana_3FTx_09|Vipera_transcaucasiana,Non-standard,Non-standard,Viperid non-standard C #8 -> Y,Secreted,,9
+None|Vipera_transcaucasiana_3FTx_10|Vipera_transcaucasiana,Non-standard,Non-standard,Viperid non-standard C #8 -> Y,Secreted,,9
+NCBI|Atractaspis_aterrima_GAME01026808|Atractaspis_aterrima,Non-standard,Non-standard,,Secreted,,10
+NCBI|ATRAT_GAME01039965.1_33_296|Atractaspis_aterrima,Non-standard,Non-standard,,Secreted,,12
+NCBI|Atractaspis_aterrima_GAMF01005539|Atractaspis_aterrima,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Atractaspis_aterrima_GAMF01040875|Atractaspis_aterrima,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Atractaspis_aterrima_GAMF01050194|Atractaspis_aterrima,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Atractaspis_aterrima_GAMF01055489|Atractaspis_aterrima,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|ATRAT_GAMF01005539.1_32_289|Atractaspis_aterrima,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|ATRAT_GAMF01035612.1_104_391|Atractaspis_aterrima,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|ATRAT_GAMF01040875.1_33_287|Atractaspis_aterrima,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|ATRAT_GAMF01047773.1_120_359|Atractaspis_aterrima,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|ATRAT_GAMF01050194.1_30_284|Atractaspis_aterrima,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|A7X3R6|Leioheterodon_madagascariensis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|MALIN_GFTV01000051.1_C343_146|Malpolon_insignitus,Long-chain,Long-chain,,Secreted,,10
+NCBI|MALMO_OL366269.1_1_252|Malpolon_monspessulanus,Non-standard,Non-standard,,Secreted,MKT,11
+None|Malpolon_monspessulanus_unigene50403|Malpolon_monspessulanus,Non-standard,Non-standard,,Secreted,,11
+SP|A7X3M3|Psammophis_mossambicus,Non-standard,Non-standard,,Secreted,MKT,9
+NCBI|PSASC_OL366271.1_1_249|Psammophis_schokari,Non-standard,Non-standard,,Secreted,MLL,9
+None|Psammophis_schokari_unigene276500|Psammophis_schokari,Non-standard,Non-standard,,Secreted,,9
+NCBI|PSASC_OL366270.1_1_258|Psammophis_schokari,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|PSASC_OL366274.1_1_264|Psammophis_schokari,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+None|Psammophis_schokari_unigene221596|Psammophis_schokari,Plesiotypic,Plesiotypic,,Secreted,,10
+None|Psammophis_schokari_unigene36962|Psammophis_schokari,Plesiotypic,Plesiotypic,,Secreted,,10
+None|Psammophis_schokari_unigene503446|Psammophis_schokari,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|PSASU_OL439254.1_1_252|Psammophis_subtaeniatus,Non-standard,Non-standard,,Secreted,MKT,11
+None|Psammophis_subtaeniatus_unigene107172|Psammophis_subtaeniatus,Non-standard,Non-standard,,Secreted,,11
+None|Psammophis_subtaeniatus_unigene33896|Psammophis_subtaeniatus,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A0A193CHL3|Ahaetulla_prasina,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y,Secreted,MKT,8
+TR|A0A346CLY6|Ahaetulla_prasina,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y,Secreted,,9
+TR|A0A346CLY7|Ahaetulla_prasina,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y,Secreted,,9
+TR|A0A193CHL5|Ahaetulla_prasina,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A346CLY8|Ahaetulla_prasina,Non-standard,Non-standard,,Secreted,,11
+TR|A0A346CLZ0|Ahaetulla_prasina,Non-standard,Non-standard,,Secreted,,11
+TR|A0A346CLZ1|Ahaetulla_prasina,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A0A346CM15|Ahaetulla_prasina,Non-standard,Non-standard,,Secreted,,11
+TR|A0A346CM25|Ahaetulla_prasina,Non-standard,Non-standard,,Secreted,,11
+TR|A0A481MQM5|Boiga_cynodon,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+TR|A0A193CHL1|Boiga_cynodon,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Boiga_dendrophila_dendrophila_GGUB01000001|Boiga_dendrophila_dendrophila,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+TR|A0A481MQP4|Boiga_dendrophila,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+SP|Q06ZW0|Boiga_dendrophila,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A481MQJ6|Boiga_dendrophila,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A481MQK7|Boiga_dendrophila,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A481MQL7|Boiga_dendrophila,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Boiga_dendrophila_dendrophila_GGUB01000002|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Boiga_dendrophila_dendrophila_GGUB01000005|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Boiga_dendrophila_dendrophila_GGUB01000024|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Boiga_dendrophila_dendrophila_GGUB01000025|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Boiga_dendrophila_dendrophila_GGUB01000027|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,MKI,10
+None|1217Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1221Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1231Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1233Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1237Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1283Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1305Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1307Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1311Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1313Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1315Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1319Boiga_|Boiga_dendrophila_dendrophila,Non-standard,Non-standard,,Secreted,,12
+None|1321Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1323Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1325Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1327Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1329Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1383Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1387Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1389Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1391Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1393Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1399Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1401Boiga_|Boiga_dendrophila_dendrophila,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1223Boiga_|Boiga_dendrophila_gemmicincta,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1225Boiga_|Boiga_dendrophila_gemmicincta,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1227Boiga_|Boiga_dendrophila_gemmicincta,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1309Boiga_|Boiga_dendrophila_gemmicincta,Non-standard,Non-standard,,Secreted,,12
+None|1317Boiga_|Boiga_dendrophila_gemmicincta,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1385Boiga_|Boiga_dendrophila_gemmicincta,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1397Boiga_|Boiga_dendrophila_gemmicincta,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+NCBI|Boiga_irregularis_Brisbane_GGUD01000006|Boiga_irregularis,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+NCBI|Boiga_irregularis_Sulawesi_GGUE01000001|Boiga_irregularis,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+TR|A0A0B8RZX5|Boiga_irregularis,Non-standard,Non-standard,,Secreted,MKT,9
+NCBI|Boiga_irregularis_Brisbane_GGUD01000001|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Boiga_irregularis_Brisbane_GGUD01000007|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+None|1253Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1255Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1263Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1279Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1281Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1289Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1295Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1355Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1359Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1363Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1367Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1371Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1373Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,,10
+None|1381Boiga_|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|A0S864|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+SP|A0S865|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RS19|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RS22|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RS37|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RS42|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RS43|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RS45|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RS48|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RSY0|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RSY6|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RSZ0|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RSZ1|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RSZ3|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RVA5|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RVB2|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RVB7|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RVB9|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RVC5|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RYW2|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RYX1|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RYX5|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RYY0|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RYY3|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RYY5|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RYY9|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RZW9|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RZX0|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A0B8RZX6|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RZX8|Boiga_irregularis,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A0B8RZY0|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A193CHL4|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A193CHL6|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A193CHL9|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A193CHM0|Boiga_irregularis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A6G1S2N1|Boiga_nigriceps,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+None|1285Boiga_|Boiga_nigriceps,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1345Boiga_|Boiga_nigriceps,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+None|1347Boiga_|Boiga_nigriceps,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+TR|A0A193CHL8|Boiga_nigriceps,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A6G1S2M3|Boiga_nigriceps,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A6G1S2M9|Boiga_nigriceps,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Boiga_trigonata_GGUG01000004|Boiga_trigonata,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+NCBI|Boiga_trigonata_GGUG01000001|Boiga_trigonata,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Boiga_trigonata_GGUG01000002|Boiga_trigonata,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Boiga_trigonata_GGUG01000005|Boiga_trigonata,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Boiga_trigonata_GGUG01000007|Boiga_trigonata,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|BOITR_GGUG01000006.1_1_318|Boiga_trigonata,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|BOITR_GGUG01000007.1_1_330|Boiga_trigonata,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+None|1331Boiga_|Boiga_trigonata,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P83490|Coelognathus_radiatus,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|CONLI_GJFD01001950.1_49_315|Conophis_lineatus,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|A7X6J0|Dispholidus_typus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y,Secreted,MKT,9
+TR|A7X3Q4|Dispholidus_typus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+TR|A7X3T2|Dispholidus_typus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A7X3U0|Dispholidus_typus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A7X3P2|Erythrolamprus_poecilogyrus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+TR|A7X3P8|Erythrolamprus_poecilogyrus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+SP|A7X3M9|Erythrolamprus_poecilogyrus,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+NCBI|HELLE_OL366256.1_49_246|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+NCBI|HELLE_OL366259.1_1_249|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+NCBI|HELLE_OL366260.1_1_243|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,7
+NCBI|HELLE_OL366262.1_1_258|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+NCBI|HELLE_OL366263.1_1_237|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+None|Helicops_leopardinus_unigene312779|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,7
+None|Helicops_leopardinus_unigene312780|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+None|Helicops_leopardinus_unigene312792|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+None|Helicops_leopardinus_unigene312798|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+None|Helicops_leopardinus_unigene488093|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,7
+None|Helicops_leopardinus_unigene488904|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,7
+None|Helicops_leopardinus_unigene490899|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+None|Helicops_leopardinus_unigene57119|Helicops_leopardinus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+NCBI|HETNA_OL366266.1_1_249|Heterodon_nasicus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+None|Heterodon_nasicus_unigene14895|Heterodon_nasicus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,8
+None|Heterodon_nasicus_unigene2480|Heterodon_nasicus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+None|Heterodon_nasicus_unigene384518|Heterodon_nasicus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+None|Heterodon_nasicus_unigene617783|Heterodon_nasicus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,8
+TR|A0A098M253|Hypsiglena_sp._JMG-2014,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+TR|A0A098LWV3|Opheodrys_aestivus,Non-standard,Non-standard,Viperid non-standard C #8 -> Y,Secreted,MKT,9
+TR|A0A098LWU4|Opheodrys_aestivus,Plesiotypic,Plesiotypic,,Membrane,MKT,10
+TR|A0A098LYB1|Opheodrys_aestivus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|C0HJD3|Oxybelis_fulgidus,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A0A193CHK9|Oxybelis_fulgidus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A098LYG6|Pantherophis_guttatus,Non-standard,Non-standard,,Secreted,MKT,10
+NCBI|Pgut_NW_023031289_1_mka|Pantherophis_guttatus,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A0A098LYH6|Pantherophis_guttatus,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+TR|A0A098LYI5|Pantherophis_guttatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A6P9C8Z9|Pantherophis_guttatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Pgut_NW_023011746_1_mka|Pantherophis_guttatus,Non-standard,Non-standard,Basal genomic 8-cysteines,Secreted,,8
+TR|A0A182C5S7|Phalotris_mertensi,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+TR|A0A182C5Y1|Phalotris_mertensi,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,7
+NCBI|RHASU_OL439256.1_49_252|Rhabdophis_subminiatus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+NCBI|RHASU_OL439258.1_1_255|Rhabdophis_subminiatus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y,Secreted,MKT,9
+None|Rhabdophis_subminiatus_unigene144234|Rhabdophis_subminiatus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+None|Rhabdophis_subminiatus_unigene61055|Rhabdophis_subminiatus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+NCBI|RHASU_OL439257.1_1_264|Rhabdophis_subminiatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|RHASU_OL439259.1_1_258|Rhabdophis_subminiatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|RHASU_OL439262.1_1_264|Rhabdophis_subminiatus,Non-standard,Non-standard,,Secreted,MKT,11
+NCBI|RHASU_OL439263.1_1_264|Rhabdophis_subminiatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+None|Rhabdophis_subminiatus_unigene52075|Rhabdophis_subminiatus,Plesiotypic,Plesiotypic,,Secreted,,10
+None|Rhabdophis_subminiatus_unigene76486|Rhabdophis_subminiatus,Non-standard,Non-standard,,Secreted,,11
+None|Rhabdophis_subminiatus_unigene76489|Rhabdophis_subminiatus,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A0A346CI88|Spilotes_sulphureus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y,Secreted,,9
+TR|A0A346CI89|Spilotes_sulphureus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+TR|A0A346CI93|Spilotes_sulphureus,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+TR|A0A346CI94|Spilotes_sulphureus,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A0A346CI95|Spilotes_sulphureus,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A0A346CIA0|Spilotes_sulphureus,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+TR|A0A346CIA9|Spilotes_sulphureus,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A0A346CIB0|Spilotes_sulphureus,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A0A346CIB1|Spilotes_sulphureus,Plesiotypic,Plesiotypic,Dimeric,Secreted,,11
+TR|A0A346CIB2|Spilotes_sulphureus,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A0A346CIB4|Spilotes_sulphureus,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A0A346CIB5|Spilotes_sulphureus,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A0A346CIB7|Spilotes_sulphureus,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|TANNI_GJFV01002418.1_1_255|Tantilla_nigriceps,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+NCBI|TANNI_GJFV01002407.1_1_318|Tantilla_nigriceps,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|TANNI_GJFV01002408.1_1_327|Tantilla_nigriceps,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|TANNI_GJFV01002409.1_1_333|Tantilla_nigriceps,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|TANNI_GJFV01002410.1_1_321|Tantilla_nigriceps,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|TANNI_GJFV01002419.1_1_255|Tantilla_nigriceps,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|TANNI_GJFV01002420.1_1_258|Tantilla_nigriceps,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|TANNI_GJFV01002421.1_70_255|Tantilla_nigriceps,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|TANNI_GJFV01002438.1_1_327|Tantilla_nigriceps,Plesiotypic,Plesiotypic,,Secreted,,10
+TR|A7X3N6|Telescopus_dhara,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,MKT,9
+TR|A7X3S5|Telescopus_dhara,Non-standard,Non-standard,,Secreted,MKT,9
+SP|A7X3V0|Telescopus_dhara,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A7X3S8|Telescopus_dhara,Non-standard,Non-standard,,Secreted,MKT,11
+NCBI|THAST_JK264299.1_33_284|Thamnodynastes_strigatus,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_14|Thamnophis_elegans,Non-standard,Non-standard,,Secreted,,9
+NCBI|THAEL_XM_032222341.1_64_258|Thamnophis_elegans,Non-standard,Non-standard,,Secreted,MKT,9
+NCBI|Tele_NC_045548_1_gene_1_mRNA_1_mka|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_10_mka|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_11_mka|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_13_mka|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_16|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_17|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_18|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_2_mka|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_4_mka|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_5_mka|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_6_mka|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_7_mka|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_8_mka|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_9_mka|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Tele_rna_XM_032222338_1|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|Tele_rna_XM_032222748_1_mka|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+NCBI|THAEL_XM_032222342.1_49_258|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|THAEL_XM_032222748.1_26_265|Thamnophis_elegans,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+NCBI|Tele_NC_045548_1_gene_1_mRNA_15_mka|Thamnophis_elegans,Non-standard,Non-standard,Basal genomic 8-cysteines,Secreted,,8
+NCBI|Tele_rna_XM_032222667_1_mka|Thamnophis_elegans,Non-standard,Non-standard,Basal genomic 8-cysteines,Secreted,MKA,8
+NCBI|THAEL_XR_004255865.1_31_267|Thamnophis_elegans,Non-standard,Non-standard,Basal genomic 8-cysteines,Secreted,,8
+NCBI|THASI_GDKU01029485.1_88_309|Thamnophis_sirtalis,Non-standard,Non-standard,,Secreted,,11
+None|Thelotornis_mossambicanus_3FTx_01|Thelotornis_mossambicanus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+None|Thelotornis_mossambicanus_3FTx_04|Thelotornis_mossambicanus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y,Secreted,,9
+TR|A0A646QBR0|Thelotornis_mossambicanus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y,Secreted,,9
+TR|A0A646QDR7|Thelotornis_mossambicanus,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y,Secreted,,9
+None|Thelotornis_mossambicanus_3FTx_05|Thelotornis_mossambicanus,Plesiotypic,Plesiotypic,,Secreted,,10
+None|Thelotornis_mossambicanus_3FTx_06|Thelotornis_mossambicanus,Plesiotypic,Plesiotypic,,Secreted,,10
+None|Thelotornis_mossambicanus_3FTx_08|Thelotornis_mossambicanus,Plesiotypic,Plesiotypic,,Secreted,,10
+None|Thelotornis_mossambicanus_3FTx_09|Thelotornis_mossambicanus,Plesiotypic,Plesiotypic,,Secreted,,10
+None|Thelotornis_mossambicanus_3FTx_11|Thelotornis_mossambicanus,Plesiotypic,Plesiotypic,,Secreted,,10
+None|Thelotornis_mossambicanus_3FTx_15|Thelotornis_mossambicanus,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|A7X6I4|Thrasops_jacksonii,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y,Secreted,MKT,9
+TR|A7X3T6|Thrasops_jacksonii,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A7X3U4|Thrasops_jacksonii,Plesiotypic,Plesiotypic,,Secreted,MKL,10
+TR|A7X3U7|Thrasops_jacksonii,Non-standard,Non-standard,,Secreted,MKT,11
+NCBI|TREVA_GGQZ01007816.1_20_253|Tretanorhinus_variabilis,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+SP|A7X3S2|Trimorphodon_biscutatus,Non-standard,Non-standard,,Secreted,MKT,9
+SP|A7X3S0|Trimorphodon_biscutatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A7X3Q9|Trimorphodon_biscutatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A193CHM1|Trimorphodon_lambda,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+TR|A0A193CHM4|Trimorphodon_lambda,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|A0A193CHM5|Trimorphodon_lambda,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|XENME_JZ904769.1_12_257|Xenodon_merremii,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+NCBI|XENME_JZ904948.1_7_246|Xenodon_merremii,Non-standard,Non-standard,Colubrid non-standard C #8 -> Y/L,Secreted,,9
+NCBI|XENME_JZ904898.1_10_261|Xenodon_merremii,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P01385|Acanthophis_antarcticus,Long-chain,Long-chain,,Secreted,,10
+SP|P0DKW9|Acanthophis_antarcticus,Long-chain,Long-chain,,Secreted,,10
+SP|P34073|Acanthophis_antarcticus,Long-chain,Long-chain,,Secreted,,10
+SP|P01434|Acanthophis_antarcticus,Short-chain,Short-chain,,Secreted,,9
+TR|R4FI70|Acanthophis_wellsi,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4FI75|Acanthophis_wellsi,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2D8|Acanthophis_wellsi,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2D9|Acanthophis_wellsi,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2P6|Acanthophis_wellsi,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G7E7|Acanthophis_wellsi,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G7E8|Acanthophis_wellsi,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2D7|Acanthophis_wellsi,Short-chain,Short-chain,,Secreted,MKT,9
+TR|R4G2P2|Acanthophis_wellsi,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P19958|Aipysurus_laevis,Short-chain,Short-chain,,Secreted,,9
+SP|P19959|Aipysurus_laevis,Short-chain,Short-chain,,Secreted,MKT,9
+SP|P19960|Aipysurus_laevis,Short-chain,Short-chain,,Secreted,MKT,9
+SP|P32879|Aipysurus_laevis,Short-chain,Short-chain,,Secreted,,9
+NCBI|ASPSC_GHOC01000120.1_C395_189|Aspidelaps_scutatus,Long-chain,Long-chain,,Secreted,,10
+NCBI|ASPSC_GHOC01000728.1_C419_201|Aspidelaps_scutatus,Non-standard,Non-standard,,Secreted,,11
+NCBI|ASPSC_GHOC01001452.1_C395_195|Aspidelaps_scutatus,Long-chain,Long-chain,,Secreted,,10
+NCBI|ASPSC_GHOC01002482.1_C199_2|Aspidelaps_scutatus,Long-chain,Long-chain,,Secreted,,10
+SP|P25670|Aspidelaps_scutatus,Long-chain,Long-chain,,Secreted,,10
+NCBI|ASPSC_GHOC01002299.1_C248_45|Aspidelaps_scutatus,Non-standard,Non-standard,,Secreted,,10
+NCBI|ASPSC_GHOC01000043.1_C425_180|Aspidelaps_scutatus,Short-chain,Short-chain,,Secreted,,9
+NCBI|ASPSC_GHOC01000196.1_C418_209|Aspidelaps_scutatus,Short-chain,Short-chain,P-type cytotoxin,Secreted,,9
+NCBI|ASPSC_GHOC01000373.1_C401_153|Aspidelaps_scutatus,Short-chain,Short-chain,Cobra+ 8-cysteine clade in plesiotypics,Secreted,,8
+NCBI|ASPSC_GHOC01000507.1_C460_218|Aspidelaps_scutatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|ASPSC_GHOC01000706.1_C513_331|Aspidelaps_scutatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|ASPSC_GHOC01000786.1_C477_220|Aspidelaps_scutatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|ASPSC_GHOC01000868.1_C426_214|Aspidelaps_scutatus,Short-chain,Short-chain,,Secreted,,9
+NCBI|ASPSC_GHOC01001195.1_C374_120|Aspidelaps_scutatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|ASPSC_GHOC01001197.1_C406_203|Aspidelaps_scutatus,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+NCBI|ASPSC_GHOC01001435.1_C398_174|Aspidelaps_scutatus,Short-chain,Short-chain,P-type cytotoxin,Secreted,,9
+NCBI|ASPSC_GHOC01001478.1_C367_110|Aspidelaps_scutatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|ASPSC_GHOC01002308.1_C243_1|Aspidelaps_scutatus,Short-chain,Short-chain,,Secreted,,8
+SP|P19003|Aspidelaps_scutatus,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P19004|Aspidelaps_scutatus,Short-chain,Short-chain,P-type cytotoxin,Secreted,,9
+SP|B2BRQ5|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+SP|B2BRQ6|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+TR|B2BRQ7|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+TR|B2BRQ8|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+TR|B2BRQ9|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+TR|B2BRR0|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+TR|B2BRR1|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+TR|B2BRR3|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+TR|B2BRR4|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+TR|B2BRR5|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+TR|B2BRR6|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+TR|B2BRR7|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MRT,10
+TR|B2BRR8|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+TR|B2BRS1|Austrelaps_labialis,Long-chain,Long-chain,,Secreted,MKT,10
+SP|A8S6B0|Austrelaps_superbus,Long-chain,Long-chain,,Secreted,MKT,10
+SP|A8S6A4|Austrelaps_superbus,Short-chain,Short-chain,,Secreted,MKT,9
+TR|R4FJH6|Brachyurophis_roperi,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2Q9|Brachyurophis_roperi,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2E5|Brachyurophis_roperi,Non-standard,Non-standard,Australian long-chain reversion,Secreted,MKT,10
+TR|R4G7F4|Brachyurophis_roperi,Non-standard,Non-standard,Australian long-chain reversion,Secreted,MKT,10
+TR|R4FJG1|Brachyurophis_roperi,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G2E3|Brachyurophis_roperi,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G2Q5|Brachyurophis_roperi,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G7F3|Brachyurophis_roperi,Short-chain,Short-chain,,Secreted,MKT,8
+SP|A1IVR8|Bungarus_candidus,Long-chain,Long-chain,,Secreted,,10
+SP|A1IVR9|Bungarus_candidus,Long-chain,Long-chain,,Secreted,,10
+SP|P85140|Bungarus_candidus,Long-chain,Long-chain,,Secreted,,10
+SP|Q8AY55|Bungarus_candidus,Long-chain,Long-chain,κ-neurotoxin,Secreted,MKT,10
+SP|Q8AY56|Bungarus_candidus,Long-chain,Long-chain,κ-neurotoxin,Secreted,MKT,10
+SP|P81782|Bungarus_candidus,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P81783|Bungarus_candidus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|Q8AY49|Bungarus_candidus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|Q8AY50|Bungarus_candidus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|Q8AY51|Bungarus_candidus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|P83346|Bungarus_candidus,Short-chain,Short-chain,,Secreted,,8
+SP|Q8AY52|Bungarus_candidus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q8AY53|Bungarus_candidus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P14534|Bungarus_fasciatus,Non-standard,Non-standard,,Secreted,,8
+SP|A2CKF6|Bungarus_fasciatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|A2CKF7|Bungarus_fasciatus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|P0C552|Bungarus_fasciatus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P0C553|Bungarus_fasciatus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P0C554|Bungarus_fasciatus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P0C555|Bungarus_fasciatus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P10808|Bungarus_fasciatus,Short-chain,Short-chain,,Secreted,,8
+TR|D5J9Q3|Bungarus_flaviceps,Non-standard,Non-standard,Bungarus non-standard,Secreted,MKT,10
+TR|D5J9P6|Bungarus_flaviceps,Plesiotypic,Plesiotypic,,Secreted,MKS,10
+TR|D5J9P8|Bungarus_flaviceps,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|D5J9Q0|Bungarus_flaviceps,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|D5J9P0|Bungarus_flaviceps,Short-chain,Short-chain,,Secreted,MKS,8
+TR|D5J9P2|Bungarus_flaviceps,Short-chain,Short-chain,,Secreted,MKT,8
+TR|D5J9P3|Bungarus_flaviceps,Short-chain,Short-chain,,Secreted,MKS,8
+TR|D5J9P4|Bungarus_flaviceps,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P15815|Bungarus_flaviceps_flaviceps,Long-chain,Long-chain,κ-neurotoxin,Secreted,,10
+None|Bmul_scaffold27_G00003_t1|Bungarus_multicinctus,Long-chain,Long-chain,,Secreted,MKT,10
+None|Bmul_scaffold35_G00001_t1|Bungarus_multicinctus,Long-chain,Long-chain,,Secreted,MKT,10
+None|Bmul_scaffold7_G00815_t1|Bungarus_multicinctus,Long-chain,Long-chain,κ-neurotoxin,Secreted,MKT,10
+SP|O12961|Bungarus_multicinctus,Long-chain,Long-chain,κ-neurotoxin,Secreted,MKT,10
+SP|O12962|Bungarus_multicinctus,Long-chain,Long-chain,κ-neurotoxin,Secreted,MKT,10
+SP|P01398|Bungarus_multicinctus,Long-chain,Long-chain,κ-neurotoxin,Secreted,MKT,10
+SP|P15816|Bungarus_multicinctus,Long-chain,Long-chain,κ-neurotoxin,Secreted,MKT,10
+SP|P15817|Bungarus_multicinctus,Long-chain,Long-chain,κ-neurotoxin,Secreted,MKT,10
+SP|P60615|Bungarus_multicinctus,Long-chain,Long-chain,,Secreted,MKT,10
+SP|P60616|Bungarus_multicinctus,Long-chain,Long-chain,,Secreted,MKT,10
+None|Bmul_scaffold7_G00802_t1_mka|Bungarus_multicinctus,Non-standard,Non-standard,,Secreted,MKA,9
+None|Bmul_scaffold9_G00036_t1|Bungarus_multicinctus,Non-standard,Non-standard,Bungarus non-standard,Secreted,MKT,10
+SP|Q8JFX7|Bungarus_multicinctus,Non-standard,Non-standard,Muscarinic toxin,Secreted,MKT,10
+SP|Q9PW19|Bungarus_multicinctus,Non-standard,Non-standard,Bungarus non-standard,Secreted,MKT,10
+SP|Q9YGH0|Bungarus_multicinctus,Non-standard,Non-standard,Bungarus non-standard,Secreted,MKT,10
+None|Bmul_scaffold6_G00174_t1|Bungarus_multicinctus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+None|Bmul_scaffold7_G00790_t1|Bungarus_multicinctus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+None|Bmul_scaffold7_G00803_t1_mka|Bungarus_multicinctus,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+None|Bmul_scaffold7_G00819_t1|Bungarus_multicinctus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|O12963|Bungarus_multicinctus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|P15818|Bungarus_multicinctus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|Q70WS8|Bungarus_multicinctus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|Q9YGH9|Bungarus_multicinctus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|Q9YGJ0|Bungarus_multicinctus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+None|Bmul_scaffold7_G00718_t1|Bungarus_multicinctus,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKS,8
+None|Bmul_scaffold7_G00807_t1_mka|Bungarus_multicinctus,Non-standard,Non-standard,Basal genomic 8-cysteines,Secreted,MKA,8
+None|Bmul_scaffold7_G00808_t1_mka|Bungarus_multicinctus,Non-standard,Non-standard,Basal genomic 8-cysteines,Secreted,MKA,8
+None|Bmul_scaffold7_G00810_t1|Bungarus_multicinctus,Short-chain,Short-chain,,Secreted,MKT,8
+None|Bmul_scaffold7_G00817_t1|Bungarus_multicinctus,Short-chain,Short-chain,,Secreted,MKI,8
+SP|P43445|Bungarus_multicinctus,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|P79688|Bungarus_multicinctus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q800Y3|Bungarus_multicinctus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9W727|Bungarus_multicinctus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9YGI8|Bungarus_multicinctus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G2F2|Cacophis_squamulosus,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4FIB4|Cacophis_squamulosus,Non-standard,Non-standard,,Secreted,MKT,9
+TR|R4FIB8|Cacophis_squamulosus,Non-standard,Non-standard,,Secreted,MKT,10
+TR|R4G2S0|Cacophis_squamulosus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G2S3|Cacophis_squamulosus,Short-chain,Short-chain,,Secreted,MKT,9
+TR|A0A898IJN7|Calliophis_bivirgatus,Plesiotypic,Plesiotypic,,Secreted,MKS,10
+SP|P0DL82|Calliophis_bivirgatus,Short-chain,Short-chain,δ-elapitoxin,Secreted,,8
+TR|A0A898IJU7|Calliophis_bivirgatus,Non-standard,Non-standard,,Secreted,MKT,10
+TR|A0A898IJX5|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IJZ2|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IK11|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IK81|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IKB4|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IKH0|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IKK6|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IKP8|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IKR2|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IKT9|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IKW1|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IKZ4|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IKZ5|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IL04|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IL27|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IL31|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IL54|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IL68|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IL83|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898ILD4|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898ILG1|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898ILL6|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898ILP2|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898ILQ5|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898ILU1|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IMW8|Calliophis_bivirgatus,Non-standard,Non-standard,,Secreted,MKT,10
+TR|A0A898IMX4|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IMZ3|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IN02|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IN07|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IN20|Calliophis_bivirgatus,Non-standard,Non-standard,,Secreted,MKT,10
+TR|A0A898IN21|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IN37|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IN41|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKP,8
+TR|A0A898IN56|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IN63|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IN64|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IN70|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IN78|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IN79|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IN91|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IN96|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898INB4|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898INK0|Calliophis_bivirgatus,Non-standard,Non-standard,,Secreted,MKT,10
+TR|A0A898INL0|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898INL5|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898INM0|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898INM6|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPF7|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPI9|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPK1|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPK7|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPL1|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPM2|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPM8|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPN0|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPN2|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPN4|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPN6|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPP1|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A898IPP4|Calliophis_bivirgatus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|A8HDJ7|Cryptophis_nigrescens,Short-chain,Short-chain,,Secreted,MKT,9
+SP|A8HDJ8|Cryptophis_nigrescens,Short-chain,Short-chain,,Secreted,MKT,9
+SP|A6MFK4|Demansia_vestigiata,Long-chain,Long-chain,,Secreted,MKT,10
+SP|A6MFK5|Demansia_vestigiata,Non-standard,Non-standard,,Secreted,MKT,9
+SP|A6MFK6|Demansia_vestigiata,Short-chain,Short-chain,,Secreted,MKT,9
+SP|C0HJT4|Dendroaspis_angusticeps,Non-standard,Non-standard,Potassium channel activator,Secreted,,8
+SP|P01408|Dendroaspis_angusticeps,Non-standard,Non-standard,Synergistic toxin,Secreted,,8
+SP|P01409|Dendroaspis_angusticeps,Non-standard,Non-standard,Synergistic toxin,Secreted,,8
+SP|P01410|Dendroaspis_angusticeps,Non-standard,Non-standard,Synergistic toxin,Secreted,,8
+SP|P01411|Dendroaspis_angusticeps,Non-standard,Non-standard,Synergistic toxin,Secreted,,8
+SP|P81946|Dendroaspis_angusticeps,Non-standard,Non-standard,Platelet inhibitor,Secreted,,8
+NCBI|Dendroaspis_angusticeps_GILR01002080|Dendroaspis_angusticeps,Non-standard,Non-standard,,Secreted,,11
+NCBI|Dendroaspis_angusticeps_GILR01002482|Dendroaspis_angusticeps,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|C0HJB0|Dendroaspis_angusticeps,Short-chain,Short-chain,,Secreted,,9
+SP|P01404|Dendroaspis_angusticeps,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P0C1Y9|Dendroaspis_angusticeps,Short-chain,Short-chain,Acetylcholinesterase inhibitor,Secreted,,8
+SP|P0C1Z0|Dendroaspis_angusticeps,Short-chain,Short-chain,,Secreted,,8
+SP|P17696|Dendroaspis_angusticeps,Short-chain,Short-chain,,Secreted,MKT,9
+SP|P18328|Dendroaspis_angusticeps,Short-chain,Short-chain,Muscarinic toxin,Secreted,MKT,8
+SP|P18329|Dendroaspis_angusticeps,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P25684|Dendroaspis_angusticeps,Short-chain,Short-chain,,Secreted,,8
+SP|P60234|Dendroaspis_angusticeps,Short-chain,Short-chain,Muscarinic toxin,Secreted,,8
+SP|P60237|Dendroaspis_angusticeps,Short-chain,Short-chain,Muscarinic toxin,Secreted,,8
+SP|P81030|Dendroaspis_angusticeps,Short-chain,Short-chain,Muscarinic toxin,Secreted,,8
+SP|P81031|Dendroaspis_angusticeps,Short-chain,Short-chain,Muscarinic toxin,Secreted,,8
+SP|P85092|Dendroaspis_angusticeps,Short-chain,Short-chain,Adrenergic toxin,Secreted,,8
+SP|P86419|Dendroaspis_angusticeps,Short-chain,Short-chain,Adrenergic toxin,Secreted,,8
+SP|Q8QGR0|Dendroaspis_angusticeps,Short-chain,Short-chain,Muscarinic toxin,Secreted,MKT,8
+SP|Q9PSN1|Dendroaspis_angusticeps,Short-chain,Short-chain,Muscarinic toxin,Secreted,,8
+NCBI|DENJA_GHPA01001931.1_C348_130|Dendroaspis_jamesoni_jamesoni,Non-standard,Non-standard,,Secreted,,11
+NCBI|Dendroaspis_jamesoni_jamesoni_GHPA01000962|Dendroaspis_jamesoni_jamesoni,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|DENJA_GHPA01003912.1_C199_11|Dendroaspis_jamesoni_jamesoni,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|DENJA_GHPA01000569.1_C862_620|Dendroaspis_jamesoni_jamesoni,Short-chain,Short-chain,,Secreted,,8
+NCBI|DENJA_GHPA01001858.1_C359_156|Dendroaspis_jamesoni_jamesoni,Short-chain,Short-chain,,Secreted,,9
+NCBI|DENJA_GHPA01002461.1_C321_136|Dendroaspis_jamesoni_jamesoni,Non-standard,Non-standard,Dendroaspis basal 8-cysteine,Secreted,,8
+NCBI|DENJA_GHPA01003914.1_C250_53|Dendroaspis_jamesoni_jamesoni,Short-chain,Short-chain,,Secreted,,8
+SP|P0DQP2|Dendroaspis_jamesoni_jamesoni,Short-chain,Short-chain,,Secreted,,9
+NCBI|DENJA_GHPB01001397.1_C449_192|Dendroaspis_jamesoni_kaimosae,Long-chain,Long-chain,,Secreted,,10
+SP|P01393|Dendroaspis_jamesoni_kaimosae,Long-chain,Long-chain,,Secreted,,10
+SP|P01407|Dendroaspis_jamesoni_kaimosae,Non-standard,Non-standard,Synergistic toxin,Secreted,,8
+SP|P01413|Dendroaspis_jamesoni_kaimosae,Non-standard,Non-standard,Dendroaspis non-standard,Secreted,,8
+SP|P28375|Dendroaspis_jamesoni_kaimosae,Non-standard,Non-standard,Dendroaspis non-standard,Secreted,,8
+SP|P25682|Dendroaspis_jamesoni_kaimosae,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|DENJA_GHPB01001432.1_C457_203|Dendroaspis_jamesoni_kaimosae,Short-chain,Short-chain,,Secreted,,8
+NCBI|DENJA_GHPB01001482.1_C448_212|Dendroaspis_jamesoni_kaimosae,Short-chain,Short-chain,,Secreted,,8
+NCBI|DENJA_GHPB01001485.1_C349_161|Dendroaspis_jamesoni_kaimosae,Non-standard,Non-standard,Dendroaspis basal 8-cysteine,Secreted,,8
+NCBI|DENJA_GHPB01001718.1_C417_160|Dendroaspis_jamesoni_kaimosae,Short-chain,Short-chain,,Secreted,,8
+SP|P01406|Dendroaspis_jamesoni_kaimosae,Short-chain,Short-chain,,Secreted,,8
+SP|P01417|Dendroaspis_jamesoni_kaimosae,Short-chain,Short-chain,,Secreted,,8
+SP|P01419|Dendroaspis_jamesoni_kaimosae,Short-chain,Short-chain,,Secreted,,8
+SP|P25683|Dendroaspis_jamesoni_kaimosae,Short-chain,Short-chain,,Secreted,,8
+None|Dendroaspis_polylepis_T2720|Dendroaspis_polylepis,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|C0HJD7|Dendroaspis_polylepis_polylepis,Long-chain,Long-chain,,Secreted,,10
+SP|P01396|Dendroaspis_polylepis_polylepis,Long-chain,Long-chain,,Secreted,,10
+SP|P01397|Dendroaspis_polylepis_polylepis,Long-chain,Long-chain,,Secreted,,10
+SP|P25667|Dendroaspis_polylepis_polylepis,Long-chain,Long-chain,,Secreted,,10
+SP|A0A4P1LYC9|Dendroaspis_polylepis_polylepis,Short-chain,Short-chain,,Secreted,,8
+SP|P01414|Dendroaspis_polylepis_polylepis,Short-chain,Short-chain,,Secreted,,8
+SP|P01416|Dendroaspis_polylepis_polylepis,Short-chain,Short-chain,,Secreted,,8
+SP|P0DKR6|Dendroaspis_polylepis_polylepis,Short-chain,Short-chain,Block ASICs,Secreted,MKT,8
+SP|P0DKS3|Dendroaspis_polylepis_polylepis,Short-chain,Short-chain,Block ASICs,Secreted,,8
+SP|P22947|Dendroaspis_polylepis_polylepis,Short-chain,Short-chain,Blockage of L-type CaV,Secreted,,8
+SP|P25518|Dendroaspis_polylepis_polylepis,Short-chain,Short-chain,Adrenergic toxin,Secreted,,8
+SP|P25681|Dendroaspis_polylepis_polylepis,Short-chain,Short-chain,,Secreted,,8
+SP|P80494|Dendroaspis_polylepis_polylepis,Short-chain,Short-chain,Muscarinic toxin,Secreted,,8
+SP|P80495|Dendroaspis_polylepis_polylepis,Short-chain,Short-chain,Adrenergic toxin,Secreted,,8
+NCBI|DENVI_GHPC01001205.1_C457_203|Dendroaspis_viridis,Long-chain,Long-chain,,Secreted,,10
+NCBI|DENVI_GHPC01001404.1_C400_188|Dendroaspis_viridis,Long-chain,Long-chain,,Secreted,,10
+SP|P01394|Dendroaspis_viridis,Long-chain,Long-chain,,Secreted,,10
+SP|P01395|Dendroaspis_viridis,Long-chain,Long-chain,,Secreted,,10
+NCBI|DENVI_GHPC01000299.1_C401_210|Dendroaspis_viridis,Non-standard,Non-standard,,Secreted,,10
+NCBI|DENVI_GHPC01000454.1_C741_505|Dendroaspis_viridis,Non-standard,Non-standard,Dendroaspis non-standard,Secreted,,8
+NCBI|DENVI_GHPC01002163.1_C239_108|Dendroaspis_viridis,Non-standard,Non-standard,,Secreted,,6
+NCBI|DENVI_GHPC01002751.1_C265_29|Dendroaspis_viridis,Non-standard,Non-standard,Dendroaspis non-standard,Secreted,,8
+NCBI|Dendroaspis_viridis_GHPC01002050|Dendroaspis_viridis,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Dendroaspis_viridis_GHPC01002196|Dendroaspis_viridis,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|DENVI_GHPC01002119.1_C301_116|Dendroaspis_viridis,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|DENVI_GHPC01000122.1_C1190_987|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,9
+NCBI|DENVI_GHPC01000454.1_C275_21|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,9
+NCBI|DENVI_GHPC01000776.1_C544_326|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,9
+NCBI|DENVI_GHPC01000912.1_C482_285|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,9
+NCBI|DENVI_GHPC01001280.1_C467_210|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,8
+NCBI|DENVI_GHPC01001446.1_C417_214|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,9
+NCBI|DENVI_GHPC01001450.1_C441_235|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,9
+NCBI|DENVI_GHPC01001497.1_C400_161|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,8
+NCBI|DENVI_GHPC01001754.1_C391_149|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,8
+NCBI|DENVI_GHPC01001797.1_C357_163|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,8
+NCBI|DENVI_GHPC01002655.1_C305_51|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,8
+NCBI|DENVI_GHPC01002805.1_C272_78|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,9
+NCBI|DENVI_GHPC01003084.1_C271_53|Dendroaspis_viridis,Non-standard,Non-standard,,Secreted,,10
+NCBI|DENVI_GHPC01003265.1_C223_17|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,9
+SP|P01405|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,8
+SP|P01418|Dendroaspis_viridis,Short-chain,Short-chain,,Secreted,,8
+TR|R4G2F6|Denisonia_devisi,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2T5|Denisonia_devisi,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G7G5|Denisonia_devisi,Long-chain,Long-chain,,Secreted,MKT,10
+SP|F8J2B3|Drysdalia_coronoides,Long-chain,Long-chain,,Secreted,MKT,10
+SP|F8J2D7|Drysdalia_coronoides,Long-chain,Long-chain,,Secreted,MKT,10
+SP|F8J2E1|Drysdalia_coronoides,Long-chain,Long-chain,,Secreted,MKT,10
+SP|F8J2E2|Drysdalia_coronoides,Long-chain,Long-chain,,Secreted,MKT,10
+SP|F8J2E5|Drysdalia_coronoides,Long-chain,Long-chain,,Secreted,MKT,10
+SP|F8J2E6|Drysdalia_coronoides,Long-chain,Long-chain,,Secreted,MKT,10
+SP|F8J2F2|Drysdalia_coronoides,Long-chain,Long-chain,,Secreted,MKT,10
+TR|F8J2D8|Drysdalia_coronoides,Non-standard,Non-standard,,Secreted,MKT,11
+TR|F8J2D9|Drysdalia_coronoides,Long-chain,Long-chain,,Secreted,MKT,10
+TR|F8J2E7|Drysdalia_coronoides,Long-chain,Long-chain,,Secreted,MKT,10
+TR|F8J2E9|Drysdalia_coronoides,Long-chain,Long-chain,,Secreted,MKT,10
+TR|F8J2F0|Drysdalia_coronoides,Long-chain,Long-chain,,Secreted,MKT,10
+TR|F8J2F1|Drysdalia_coronoides,Long-chain,Long-chain,,Secreted,MKT,10
+TR|F8J2D6|Drysdalia_coronoides,Non-standard,Non-standard,,Secreted,MKT,9
+TR|F8J2E3|Drysdalia_coronoides,Non-standard,Non-standard,,Secreted,MKT,9
+TR|F8J2E8|Drysdalia_coronoides,Non-standard,Non-standard,,Secreted,MKT,9
+TR|F8J2G7|Drysdalia_coronoides,Non-standard,Non-standard,,Secreted,MKT,7
+SP|F8J2G3|Drysdalia_coronoides,Short-chain,Short-chain,,Secreted,MKT,8
+SP|F8J2G5|Drysdalia_coronoides,Short-chain,Short-chain,,Secreted,MKT,8
+TR|F8QZ63|Drysdalia_coronoides,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4FJQ3|Echiopsis_curta,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2U8|Echiopsis_curta,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G7H1|Echiopsis_curta,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2G8|Furina_ornata,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2G9|Furina_ornata,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2W0|Furina_ornata,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4FJR7|Furina_ornata,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G2G6|Furina_ornata,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G2G7|Furina_ornata,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G7H5|Furina_ornata,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P01402|Hemachatus_haemachatus,Non-standard,Non-standard,,Secreted,,8
+SP|B3EWH9|Hemachatus_haemachatus,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|C0HJT5|Hemachatus_haemachatus,Short-chain,Short-chain,FX inhibitor,Secreted,,8
+SP|P01425|Hemachatus_haemachatus,Short-chain,Short-chain,,Secreted,,8
+SP|P01433|Hemachatus_haemachatus,Short-chain,Short-chain,,Secreted,,8
+SP|P01471|Hemachatus_haemachatus,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P0DQH2|Hemachatus_haemachatus,Short-chain,Short-chain,FX inhibitor,Secreted,,8
+SP|P24776|Hemachatus_haemachatus,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P24777|Hemachatus_haemachatus,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P24778|Hemachatus_haemachatus,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P25676|Hemachatus_haemachatus,Short-chain,Short-chain,Cobra+ 8-cysteine clade in plesiotypics,Secreted,,8
+TR|R4FJX3|Hemiaspis_signata,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2H7|Hemiaspis_signata,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G7I7|Hemiaspis_signata,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2H6|Hemiaspis_signata,Short-chain,Short-chain,,Secreted,MKT,9
+TR|R4G7I5|Hemiaspis_signata,Short-chain,Short-chain,,Secreted,MKT,9
+TR|R4FIQ0|Hoplocephalus_bungaroides,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4FK28|Hoplocephalus_bungaroides,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4FIP4|Hoplocephalus_bungaroides,Short-chain,Short-chain,,Secreted,MKT,9
+SP|A8HDJ9|Hoplocephalus_stephensii,Short-chain,Short-chain,,Secreted,MKT,9
+None|Hcur_superscaf_587_797385_795811|Hydrophis_curtus,Long-chain,Long-chain,,Secreted,MKI,10
+None|Hcur_SS00042983_m1|Hydrophis_curtus,Short-chain,Short-chain,,Secreted,MKT,9
+SP|P25494|Hydrophis_cyanocinctus,Short-chain,Short-chain,,Secreted,,9
+SP|P62376|Hydrophis_cyanocinctus,Short-chain,Short-chain,,Secreted,,9
+SP|Q8UW28|Hydrophis_hardwickii,Long-chain,Long-chain,,Secreted,MKT,10
+SP|Q8UW29|Hydrophis_hardwickii,Long-chain,Long-chain,,Secreted,MKI,10
+SP|Q8UW27|Hydrophis_hardwickii,Short-chain,Short-chain,,Secreted,MKT,9
+SP|P01437|Hydrophis_lapemoides,Short-chain,Short-chain,,Secreted,,9
+SP|P68413|Hydrophis_ornatus,Short-chain,Short-chain,,Secreted,,9
+SP|P68415|Hydrophis_schistosus,Short-chain,Short-chain,,Secreted,,9
+SP|P01380|Hydrophis_stokesii,Long-chain,Long-chain,,Secreted,,10
+SP|P01381|Hydrophis_stokesii,Long-chain,Long-chain,,Secreted,,10
+SP|P0C8R6|Laticauda_colubrina,Non-standard,Non-standard,Laticauda long-chain reversion,Secreted,,8
+SP|P0C8R7|Laticauda_colubrina,Non-standard,Non-standard,Laticauda long-chain reversion,Secreted,,8
+SP|P0C8R8|Laticauda_colubrina,Non-standard,Non-standard,Laticauda long-chain reversion,Secreted,,8
+SP|P10455|Laticauda_colubrina,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P10456|Laticauda_colubrina,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P10457|Laticauda_colubrina,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9YGC7|Laticauda_colubrina,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P10458|Laticauda_crockeri,Short-chain,Short-chain,,Secreted,,8
+SP|P25495|Laticauda_crockeri,Short-chain,Short-chain,,Secreted,,8
+SP|P25496|Laticauda_crockeri,Short-chain,Short-chain,,Secreted,,8
+SP|P10459|Laticauda_laticaudata,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P10460|Laticauda_laticaudata,Short-chain,Short-chain,,Secreted,,8
+SP|Q9YGC2|Laticauda_laticaudata,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9YGC4|Laticauda_laticaudata,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9YGW8|Laticauda_laticaudata,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9YGW9|Laticauda_laticaudata,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P01379|Laticauda_semifasciata,Long-chain,Long-chain,,Secreted,,10
+SP|P60775|Laticauda_semifasciata,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q7T2I5|Laticauda_semifasciata,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q90VW1|Laticauda_semifasciata,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9YGX1|Laticauda_semifasciata,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A024AXD8|Micropechis_ikaheca,Long-chain,Long-chain,,Secreted,MKT,10
+TR|A0A024AXH2|Micropechis_ikaheca,Long-chain,Long-chain,,Secreted,MKT,10
+TR|A0A024AXY1|Micropechis_ikaheca,Long-chain,Long-chain,,Secreted,MKT,10
+TR|A0A024AYC2|Micropechis_ikaheca,Short-chain,Short-chain,,Secreted,MKT,9
+TR|F5CPD4|Micrurus_altirostris,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+NCBI|MICAL_JG743131.1_7_255|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICAL_JG743827.1_16_264|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICAL_JG744005.1_7_258|Micrurus_altirostris,Non-standard,Non-standard,,Secreted,,10
+SP|F5CPD3|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,8
+SP|F5CPD5|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,8
+SP|F5CPD6|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,8
+SP|F5CPD7|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,9
+SP|F5CPD8|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,8
+SP|F5CPD9|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,8
+SP|F5CPE0|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MRT,8
+SP|F5CPE2|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MRT,8
+SP|F5CPE3|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,8
+SP|F5CPE4|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,9
+SP|F5CPE6|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,8
+TR|F5CPD1|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,8
+TR|F5CPD2|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,8
+TR|F5CPE1|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,9
+TR|F5CPE5|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,8
+TR|F5CPE7|Micrurus_altirostris,Short-chain,Short-chain,,Secreted,MKT,9
+TR|A0A0H4BEG5|Micrurus_browni,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4BJD8|Micrurus_browni,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4BLZ7|Micrurus_browni,Short-chain,Short-chain,,Secreted,,8
+TR|A0A0H4IRA8|Micrurus_browni,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4IS74|Micrurus_browni,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4IUN8|Micrurus_browni,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4IVP7|Micrurus_browni,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4J512|Micrurus_browni,Short-chain,Short-chain,,Secreted,MKT,8
+SP|C0HK04|Micrurus_clarki,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_FL590938.1_47_247|Micrurus_corallinus,Non-standard,Non-standard,,Secreted,,9
+SP|P58370|Micrurus_corallinus,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|MICCO_FL590763.1_12_263|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_FL590874.1_84_269|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_FL590954.1_1_240|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_FL591005.1_5_238|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_IACJ01051156.1_C353_108|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_IACJ01060045.1_C293_57|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICCO_IACJ01060046.1_C299_57|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_IACJ01062266.1_C421_209|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICCO_IACJ01062270.1_C245_39|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICCO_IACJ01062272.1_C287_39|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_IACJ01062273.1_C457_209|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_IACJ01062274.1_C457_209|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICCO_IACJ01078504.1_47_283|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_IACJ01079596.1_80_283|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICCO_IACJ01115251.1_10_243|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_IACJ01122327.1_C319_116|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICCO_IACJ01122328.1_C319_116|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICCO_IACJ01122330.1_C352_116|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_IACJ01130835.1_35_289|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_IACJ01130841.1_35_289|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_IACJ01133145.1_C312_76|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_IACJ01138867.1_C388_128|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICCO_IACJ01147547.1_C352_128|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICCO_IACJ01155703.1_C232_2|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICCO_IACJ01157475.1_C340_104|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,,9
+SP|C6JUP1|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|C6JUP2|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|C6JUP3|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9PRI1|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9PUB7|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|C6JUP0|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,MNT,8
+TR|C6JUP4|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|C6JUP5|Micrurus_corallinus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0G3YJD1|Micrurus_diastema,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4BEF7|Micrurus_diastema,Short-chain,Short-chain,,Secreted,,8
+TR|A0A0H4BEG1|Micrurus_diastema,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4BFQ4|Micrurus_diastema,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4BKJ5|Micrurus_diastema,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4BLZ2|Micrurus_diastema,Short-chain,Short-chain,,Secreted,MKT,8
+SP|C0HLK5|Micrurus_dumerilii,Short-chain,Short-chain,,Secreted,,8
+SP|P86423|Micrurus_frontalis,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P86424|Micrurus_frontalis,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P86420|Micrurus_frontalis,Short-chain,Short-chain,,Secreted,,8
+SP|P86421|Micrurus_frontalis,Short-chain,Short-chain,,Secreted,,8
+SP|P86422|Micrurus_frontalis,Short-chain,Short-chain,,Secreted,,8
+TR|U3FVH6|Micrurus_fulvius,Plesiotypic,Plesiotypic,,Secreted,MKA,10
+SP|U3EPL2|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+SP|U3FAE1|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0F7YZP6|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0F7Z039|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0F7Z3S7|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3EPI1|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3EPL9|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3EPM4|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3EPM9|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3F5B5|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKA,8
+TR|U3F5D3|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3F5E9|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,,8
+TR|U3FAC0|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3FAE7|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3FAF0|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3FVG5|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKA,8
+TR|U3FVG7|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3FVH8|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MNT,8
+TR|U3FVI0|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3FVI5|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3FYQ0|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MLL,8
+TR|U3FYQ5|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKA,8
+TR|U3FYQ7|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKT,8
+TR|U3FYQ9|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,,8
+TR|U3FYR0|Micrurus_fulvius,Short-chain,Short-chain,,Secreted,MKA,8
+SP|K9MCH1|Micrurus_laticollaris,Short-chain,Short-chain,,Secreted,MKT,8
+SP|K9MCX0|Micrurus_laticollaris,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0G3YLL2|Micrurus_laticollaris,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4BFP9|Micrurus_laticollaris,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4BJD1|Micrurus_laticollaris,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4BKI7|Micrurus_laticollaris,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4BLY9|Micrurus_laticollaris,Short-chain,Short-chain,,Secreted,MKT,8
+NCBI|MICLE_IACI01040496.1_87_287|Micrurus_lemniscatus_carvalhoi,Non-standard,Non-standard,Basal non-standard,Secreted,,8
+NCBI|MICLE_IACI01115070.1_C396_142|Micrurus_lemniscatus_carvalhoi,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|MICLE_IACI01006908.1_C324_85|Micrurus_lemniscatus_carvalhoi,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACI01031826.1_C308_96|Micrurus_lemniscatus_carvalhoi,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACI01044503.1_1_195|Micrurus_lemniscatus_carvalhoi,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACI01044558.1_65_268|Micrurus_lemniscatus_carvalhoi,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACI01044597.1_3_212|Micrurus_lemniscatus_carvalhoi,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACI01044606.1_1_216|Micrurus_lemniscatus_carvalhoi,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACI01080067.1_C243_43|Micrurus_lemniscatus_carvalhoi,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACI01104478.1_C425_174|Micrurus_lemniscatus_carvalhoi,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01123615.1_32_220|Micrurus_lemniscatus_lemniscatus,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|MICLE_IACK01184724.1_C364_110|Micrurus_lemniscatus_lemniscatus,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|MICLE_IACK01013110.1_53_289|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01022837.1_22_255|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01022838.1_1_171|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01034485.1_24_263|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01096229.1_C271_65|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACK01096260.1_C330_127|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACK01096271.1_C304_71|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01096289.1_C230_3|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01096291.1_C277_65|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACK01096292.1_C304_92|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACK01096298.1_C319_71|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACK01096299.1_C319_71|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACK01116619.1_5_187|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01122846.1_2_205|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01125772.1_95_352|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01171799.1_C289_41|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACK01179260.1_41_280|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01193830.1_C315_121|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICLE_IACK01196011.1_C295_38|Micrurus_lemniscatus_lemniscatus,Non-standard,Non-standard,Micrurus 8-cysteine in plesiotypic,Secreted,,8
+NCBI|MICLE_IACK01227912.1_2_244|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01227913.1_2_235|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01242084.1_46_240|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICLE_IACK01242085.1_46_240|Micrurus_lemniscatus_lemniscatus,Short-chain,Short-chain,,Secreted,,9
+SP|C0HJR1|Micrurus_mipartitus,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|C0HJR2|Micrurus_mipartitus,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|A0A2P1BSS8|Micrurus_mipartitus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|A0A2P1BSS9|Micrurus_mipartitus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|A0A2P1BST7|Micrurus_mipartitus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|A0A2P1BSU3|Micrurus_mipartitus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|B3EWF8|Micrurus_mipartitus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P80548|Micrurus_nigrocinctus,Short-chain,Short-chain,,Secreted,,8
+SP|P0CAR1|Micrurus_pyrrhocryptus,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSP_IACM01149051.1_C220_32|Micrurus_spixii,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|MICSP_IACM01149052.1_C220_32|Micrurus_spixii,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|MICSP_IACM01022253.1_2_205|Micrurus_spixii,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICSP_IACM01029668.1_3_191|Micrurus_spixii,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSP_IACM01029686.1_3_191|Micrurus_spixii,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICSP_IACM01029730.1_3_206|Micrurus_spixii,Non-standard,Non-standard,,Secreted,,10
+NCBI|MICSP_IACM01086450.1_C267_70|Micrurus_spixii,Non-standard,Non-standard,,Secreted,,10
+NCBI|MICSP_IACM01088188.1_C375_139|Micrurus_spixii,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSP_IACM01092118.1_13_264|Micrurus_spixii,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSP_IACM01115014.1_C372_136|Micrurus_spixii,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSP_IACM01128650.1_C296_48|Micrurus_spixii,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICSP_IACM01130693.1_C333_100|Micrurus_spixii,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSP_IACM01148308.1_C341_108|Micrurus_spixii,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICSP_IACM01156860.1_C373_146|Micrurus_spixii,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICSP_IACM01172481.1_C357_124|Micrurus_spixii,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSP_IACM01174987.1_42_281|Micrurus_spixii,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSU_IACN01003279.1_C250_56|Micrurus_surinamensis,Non-standard,Non-standard,,Secreted,,8
+NCBI|MICSU_IACN01070774.1_C229_26|Micrurus_surinamensis,Non-standard,Non-standard,,Secreted,,9
+NCBI|MICSU_IACN01070786.1_C214_26|Micrurus_surinamensis,Non-standard,Non-standard,,Secreted,,8
+NCBI|MICSU_IACN01093897.1_C387_133|Micrurus_surinamensis,Non-standard,Non-standard,,Secreted,,10
+NCBI|MICSU_IACN01100674.1_3_242|Micrurus_surinamensis,Non-standard,Non-standard,,Secreted,,11
+SP|P86096|Micrurus_surinamensis,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P86098|Micrurus_surinamensis,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P86099|Micrurus_surinamensis,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|MICSU_IACN01019456.1_2_211|Micrurus_surinamensis,Non-standard,Non-standard,,Secreted,,10
+NCBI|MICSU_IACN01019457.1_2_187|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSU_IACN01037374.1_29_277|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSU_IACN01048942.1_C402_145|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSU_IACN01070775.1_C305_84|Micrurus_surinamensis,Non-standard,Non-standard,,Secreted,,10
+NCBI|MICSU_IACN01070777.1_C297_49|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSU_IACN01077346.1_C348_109|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSU_IACN01080103.1_C346_110|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSU_IACN01083611.1_C321_118|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICSU_IACN01083613.1_C321_118|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICSU_IACN01083857.1_C448_215|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSU_IACN01083858.1_C259_26|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSU_IACN01083864.1_C451_215|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,8
+NCBI|MICSU_IACN01095837.1_C328_134|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICSU_IACN01099285.1_C780_583|Micrurus_surinamensis,Non-standard,Non-standard,,Secreted,,10
+NCBI|MICSU_IACN01100666.1_C226_26|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,9
+NCBI|MICSU_IACN01111607.1_C418_212|Micrurus_surinamensis,Non-standard,Non-standard,,Secreted,,10
+SP|P86094|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,8
+SP|P86095|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,8
+SP|P86097|Micrurus_surinamensis,Short-chain,Short-chain,,Secreted,,8
+TR|A0A194ATD7|Micrurus_tener,Non-standard,Non-standard,,Secreted,MNT,7
+TR|A0A0H4IRB3|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4IS80|Micrurus_tener,Short-chain,Short-chain,,Secreted,,8
+TR|A0A0H4IUP1|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4IVQ6|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A0H4J521|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194APB1|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKA,8
+TR|A0A194APE1|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194APF0|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194APG0|Micrurus_tener,Non-standard,Non-standard,Micrurus 8-cysteine in plesiotypic,Secreted,MKT,8
+TR|A0A194APG5|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194APH0|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194APH5|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194API9|Micrurus_tener,Short-chain,Short-chain,,Secreted,MNT,8
+TR|A0A194ARB2|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ARB6|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ARC1|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ARC5|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKA,8
+TR|A0A194ARH7|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ARJ0|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,9
+TR|A0A194ARJ5|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ARK4|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ARK8|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ASD1|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ASE0|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ASE2|Micrurus_tener,Short-chain,Short-chain,,Secreted,,8
+TR|A0A194ASE3|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKA,8
+TR|A0A194ASE5|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ASF5|Micrurus_tener,Short-chain,Short-chain,,Secreted,,8
+TR|A0A194AT81|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKA,8
+TR|A0A194ATA3|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ATA6|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ATB0|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ATB5|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ATC0|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ATC3|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+TR|A0A194ATD1|Micrurus_tener,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P01389|Naja_anchietae,Long-chain,Long-chain,,Secreted,,10
+SP|P34074|Naja_annulata_annulata,Long-chain,Long-chain,,Secreted,,10
+SP|P34075|Naja_annulata_annulata,Short-chain,Short-chain,,Secreted,,8
+SP|P01399|Naja_annulifera,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P01420|Naja_annulifera,Short-chain,Short-chain,,Secreted,,8
+SP|P01421|Naja_annulifera,Short-chain,Short-chain,,Secreted,,8
+SP|P01422|Naja_annulifera,Short-chain,Short-chain,,Secreted,,8
+SP|P01453|Naja_annulifera,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01454|Naja_annulifera,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01455|Naja_annulifera,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01459|Naja_annulifera,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01460|Naja_annulifera,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01461|Naja_annulifera,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01462|Naja_annulifera,Short-chain,Short-chain,S-type cytotoxin,Secreted,,9
+SP|P01464|Naja_annulifera,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01465|Naja_annulifera,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01466|Naja_annulifera,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P25677|Naja_annulifera,Short-chain,Short-chain,,Secreted,,8
+SP|P25678|Naja_annulifera,Short-chain,Short-chain,,Secreted,,8
+SP|P62390|Naja_annulifera,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P68417|Naja_annulifera,Short-chain,Short-chain,,Secreted,,8
+SP|O93422|Naja_atra,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|P60814|Naja_atra,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|Q9YGI1|Naja_atra,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|Q9YGI4|Naja_atra,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+TR|E2ITZ6|Naja_atra,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|P01442|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+SP|P01443|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+SP|P07525|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P0DUK7|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P49122|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|P49123|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|P60304|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+SP|P60306|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P60307|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P60308|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P60309|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P60770|Naja_atra,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P79810|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+SP|P80245|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|P80958|Naja_atra,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q8UUK0|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|Q91124|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|Q91126|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|Q91135|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+SP|Q91136|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+SP|Q91137|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|Q98956|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+SP|Q98957|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+SP|Q98958|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+SP|Q98959|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|Q98960|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|Q98961|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+SP|Q98962|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|Q98965|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|Q9W6W6|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|Q9W6W9|Naja_atra,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+SP|Q9W716|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+TR|E2ITZ7|Naja_atra,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|P34076|Naja_christyi,Short-chain,Short-chain,,Secreted,,8
+NCBI|NAJHA_GHRV01002244.1_C372_184|Naja_haje,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|NAJHA_GHRV01000814.1_C597_352|Naja_haje,Short-chain,Short-chain,Cobra+ 8-cysteine clade in plesiotypics,Secreted,,8
+SP|P25674|Naja_haje_haje,Long-chain,Long-chain,,Secreted,,10
+SP|P01401|Naja_haje_haje,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P01415|Naja_haje_haje,Short-chain,Short-chain,Cobra+ 8-cysteine clade in plesiotypics,Secreted,,8
+SP|P01457|Naja_haje_haje,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P25675|Naja_haje_haje,Short-chain,Short-chain,,Secreted,,8
+SP|P01391|Naja_kaouthia,Long-chain,Long-chain,,Secreted,,10
+SP|P0DSM9|Naja_kaouthia,Non-standard,Non-standard,,Secreted,,8
+SP|P25679|Naja_kaouthia,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P82935|Naja_kaouthia,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|P01445|Naja_kaouthia,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01446|Naja_kaouthia,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P0CH80|Naja_kaouthia,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P0DSN0|Naja_kaouthia,Short-chain,Short-chain,,Secreted,,8
+SP|P14541|Naja_kaouthia,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P14613|Naja_kaouthia,Short-chain,Short-chain,,Secreted,,8
+SP|P24779|Naja_kaouthia,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P59275|Naja_kaouthia,Short-chain,Short-chain,,Secreted,,8
+SP|P59276|Naja_kaouthia,Short-chain,Short-chain,,Secreted,,8
+SP|P82462|Naja_kaouthia,Short-chain,Short-chain,,Secreted,,8
+SP|P82463|Naja_kaouthia,Short-chain,Short-chain,,Secreted,,8
+SP|P82464|Naja_kaouthia,Short-chain,Short-chain,,Secreted,,8
+SP|P82849|Naja_kaouthia,Short-chain,Short-chain,,Secreted,,8
+SP|Q9DGH9|Naja_kaouthia,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|P01383|Naja_melanoleuca,Long-chain,Long-chain,,Secreted,,10
+SP|P01388|Naja_melanoleuca,Long-chain,Long-chain,,Secreted,,10
+SP|P0DQQ1|Naja_melanoleuca,Long-chain,Long-chain,,Secreted,,10
+SP|P0DQQ2|Naja_melanoleuca,Long-chain,Long-chain,,Secreted,,10
+SP|P01400|Naja_melanoleuca,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P01424|Naja_melanoleuca,Short-chain,Short-chain,,Secreted,,8
+SP|P01448|Naja_melanoleuca,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01473|Naja_melanoleuca,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P01474|Naja_melanoleuca,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P01431|Naja_mossambica,Short-chain,Short-chain,,Secreted,,8
+SP|P01432|Naja_mossambica,Short-chain,Short-chain,,Secreted,,9
+SP|P01452|Naja_mossambica,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01467|Naja_mossambica,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P01469|Naja_mossambica,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P01470|Naja_mossambica,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P25517|Naja_mossambica,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+NCBI|Nnaj_CM019150_1_np121212_gene_1_mRNA_11|Naja_naja,Long-chain,Long-chain,,Secreted,,10
+SP|C0HM09|Naja_naja,Long-chain,Long-chain,,Secreted,,10
+SP|P25668|Naja_naja,Long-chain,Long-chain,,Secreted,,10
+SP|P25669|Naja_naja,Long-chain,Long-chain,,Secreted,,10
+SP|P25671|Naja_naja,Long-chain,Long-chain,,Secreted,,10
+SP|P25672|Naja_naja,Long-chain,Long-chain,,Secreted,,10
+SP|P25673|Naja_naja,Long-chain,Long-chain,,Secreted,,10
+NCBI|Nana_c3_dn_17|Naja_naja,Non-standard,Non-standard,Basal non-standard,Secreted,,9
+NCBI|Nnaj_CM019150_1_np121212_gene_1_mRNA_10|Naja_naja,Non-standard,Non-standard,S-type cytotoxin,Secreted,,9
+NCBI|Nnaj_CM019150_1_np121212_gene_1_mRNA_15|Naja_naja,Non-standard,Non-standard,S-type cytotoxin,Secreted,,9
+None|Nana_c1_1|Naja_naja,Non-standard,Non-standard,,Secreted,MRK,10
+None|Nana_c3_16|Naja_naja,Non-standard,Non-standard,Basal non-standard,Secreted,,9
+None|Nana_c3_dn_12|Naja_naja,Non-standard,Non-standard,P-type cytotoxin,Secreted,MKT,7
+None|Nana_c3_dn_19|Naja_naja,Non-standard,Non-standard,Basal non-standard,Secreted,,8
+NCBI|Nnaj_CM019150_1_np121212_gene_1_mRNA_3|Naja_naja,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Nnaj_CM019150_1_np121212_gene_1_mRNA_6_mka|Naja_naja,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Nnaj_CM019150_1_np121212_gene_1_mRNA_7_mka|Naja_naja,Non-standard,Non-standard,,Secreted,,12
+NCBI|Nnaj_CM019151_1_np121212_gene_1_mRNA_1|Naja_naja,Plesiotypic,Plesiotypic,,Secreted,,10
+None|Nana_c3_11|Naja_naja,Reptilian Ly6 group 1-2,Ly-6,Reptilian Ly6 group 1-2,Membrane,MKP,10
+None|Nana_c3_8|Naja_naja,LYPD2,Ly-6,LYPD2,Membrane,,10
+None|Nana_c3_dn_10|Naja_naja,Reptilian Ly6 group 1,Ly-6,Reptilian Ly6 group 1,Membrane,,10
+None|Nana_c3_dn_2|Naja_naja,Plesiotypic,Plesiotypic,,Secreted,,10
+None|Nana_c3_dn_25|Naja_naja,Ly6E,Ly-6,Ly6E,Secreted,MKT,11
+None|Nana_c3_dn_3|Naja_naja,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+None|Nana_c3_dn_5|Naja_naja,Non-standard,Non-standard,,Secreted,,11
+None|Nana_c3_dn_7|Naja_naja,PSCA,Ly-6,PSCA,Membrane,MKA,11
+None|Nana_c3_dn_9|Naja_naja,Reptilian Ly6 group 5,Ly-6,Reptilian Ly6 group 5,Membrane,,11
+None|Nana_c4_dn_1|Naja_naja,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|P29179|Naja_naja,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P29180|Naja_naja,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P29181|Naja_naja,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P29182|Naja_naja,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|Nnaj_CM019150_1_np121212_gene_1_mRNA_12|Naja_naja,Short-chain,Short-chain,,Secreted,,8
+NCBI|Nnaj_CM019150_1_np121212_gene_1_mRNA_14|Naja_naja,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+None|Nana_c3_28|Naja_naja,Short-chain,Short-chain,,Secreted,,8
+None|Nana_c3_dn_1|Naja_naja,Short-chain,Short-chain,,Secreted,MKT,8
+None|Nana_c3_dn_14|Naja_naja,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+None|Nana_c3_dn_15|Naja_naja,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+None|Nana_c3_dn_18|Naja_naja,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,9
+None|Nana_c3_dn_20|Naja_naja,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+None|Nana_c3_dn_23|Naja_naja,Short-chain,Short-chain,,Secreted,MKI,8
+None|Nana_c3_dn_24|Naja_naja,Short-chain,Short-chain,,Secreted,,8
+None|Nana_c3_dn_26|Naja_naja,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+None|Nana_c3_dn_27|Naja_naja,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+None|Nana_c3_dn_4|Naja_naja,Short-chain,Short-chain,,Secreted,,9
+None|Nana_c3_dn_6|Naja_naja,Short-chain,Short-chain,,Secreted,,8
+None|Nnaj_SOZL01001066_1_np121212_gene_1_mRNA_1|Naja_naja,Short-chain,Short-chain,,Secreted,MKT,8
+None|Nnaj_SOZL01001066_1_np121212_gene_1_mRNA_2|Naja_naja,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+None|Nnaj_SOZL01001066_1_np121212_gene_1_mRNA_3|Naja_naja,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+None|Nnaj_SOZL01001066_1_np121212_gene_1_mRNA_4|Naja_naja,Short-chain,Short-chain,S-type cytotoxin,Secreted,MKT,8
+SP|C0HM08|Naja_naja,Short-chain,Short-chain,,Secreted,,8
+SP|P01440|Naja_naja,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P01447|Naja_naja,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P24780|Naja_naja,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P86382|Naja_naja,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P86538|Naja_naja,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P86540|Naja_naja,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P86541|Naja_naja,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+NCBI|NAJMO_GIJF01000694.1_C620_375|Naja_nigricollis,Short-chain,Short-chain,,Secreted,,8
+NCBI|NAJMO_GIJF01000822.1_C570_316|Naja_nigricollis,Short-chain,Short-chain,,Secreted,,8
+NCBI|NAJMO_GIJF01002765.1_C269_63|Naja_nigricollis,Short-chain,Short-chain,P-type cytotoxin,Secreted,,9
+NCBI|NAJNI_GIJG01001078.1_C500_294|Naja_nigricollis,Short-chain,Short-chain,P-type cytotoxin,Secreted,,9
+NCBI|NAJNI_GIJG01001188.1_C432_220|Naja_nigricollis,Short-chain,Short-chain,P-type cytotoxin,Secreted,,9
+NCBI|NAJNI_GIJG01001191.1_C479_237|Naja_nigricollis,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+NCBI|NAJNI_GIJG01001632.1_C398_189|Naja_nigricollis,Short-chain,Short-chain,P-type cytotoxin,Secreted,,9
+SP|P0DSN1|Naja_nigricollis,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P01390|Naja_nivea,Long-chain,Long-chain,,Secreted,,10
+SP|P25680|Naja_nivea,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|NAJNI_GIJH01000740.1_C512_282|Naja_nivea,Short-chain,Short-chain,,Secreted,,9
+NCBI|NAJNI_GIJH01000756.1_C445_239|Naja_nivea,Short-chain,Short-chain,S-type cytotoxin,Secreted,,9
+SP|P01423|Naja_nivea,Short-chain,Short-chain,,Secreted,,8
+SP|P01456|Naja_nivea,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01458|Naja_nivea,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P01463|Naja_nivea,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+NCBI|NAJNU_GIJI01001285.1_C460_209|Naja_nubiae,Long-chain,Long-chain,,Secreted,,10
+NCBI|NAJNU_GIJI01001525.1_C450_190|Naja_nubiae,Non-standard,Non-standard,Bungarus non-standard,Secreted,,11
+NCBI|NAJNU_GIJI01001829.1_C373_116|Naja_nubiae,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|NAJNU_GIJI01000015.1_C2405_2196|Naja_nubiae,Short-chain,Short-chain,P-type cytotoxin,Secreted,,9
+NCBI|NAJNU_GIJI01000526.1_C465_223|Naja_nubiae,Short-chain,Short-chain,,Secreted,,8
+NCBI|NAJNU_GIJI01001024.1_C456_214|Naja_nubiae,Short-chain,Short-chain,,Secreted,,9
+NCBI|NAJNU_GIJI01001548.1_C448_212|Naja_nubiae,Short-chain,Short-chain,,Secreted,,9
+SP|P01382|Naja_oxiana,Long-chain,Long-chain,,Secreted,,10
+SP|P85520|Naja_oxiana,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P01441|Naja_oxiana,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+SP|P01451|Naja_oxiana,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|Q9PS34|Naja_oxiana,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+NCBI|NAJPA_GIJJ01000770.1_C467_213|Naja_pallida,Short-chain,Short-chain,,Secreted,,8
+NCBI|NAJPA_GIJJ01001129.1_C372_115|Naja_pallida,Short-chain,Short-chain,,Secreted,,8
+NCBI|NAJPA_GIJJ01001759.1_C249_13|Naja_pallida,Short-chain,Short-chain,,Secreted,,9
+SP|P01426|Naja_pallida,Short-chain,Short-chain,,Secreted,,8
+SP|P01468|Naja_pallida,Short-chain,Short-chain,P-type cytotoxin,Secreted,,8
+NCBI|NAJPH_GIJK01000105.1_C1082_864|Naja_philippinensis,Non-standard,Non-standard,,Secreted,,10
+NCBI|NAJPH_GIJK01000671.1_C406_203|Naja_philippinensis,Non-standard,Non-standard,,Secreted,,10
+NCBI|NAJPH_GIJK01000704.1_C431_213|Naja_philippinensis,Short-chain,Short-chain,Cobra+ 8-cysteine clade in plesiotypics,Secreted,,9
+NCBI|NAJPH_GIJK01001248.1_C249_16|Naja_philippinensis,Non-standard,Non-standard,,Secreted,,11
+SP|P60773|Naja_philippinensis,Short-chain,Short-chain,,Secreted,,8
+SP|P83345|Naja_sagittifera,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+NCBI|NAJSI_GIJL01002105.1_C250_44|Naja_siamensis,Long-chain,Long-chain,,Secreted,,10
+NCBI|NAJSI_GIJL01000963.1_C467_213|Naja_siamensis,Short-chain,Short-chain,,Secreted,,8
+SP|O42257|Naja_sputatrix,Long-chain,Long-chain,,Secreted,MKT,10
+SP|O93472|Naja_sputatrix,Non-standard,Non-standard,P-type cytotoxin,Secreted,MKT,7
+SP|O42255|Naja_sputatrix,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|O42256|Naja_sputatrix,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|Q802B2|Naja_sputatrix,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|Q802B3|Naja_sputatrix,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|Q9W7I3|Naja_sputatrix,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+SP|O57326|Naja_sputatrix,Short-chain,Short-chain,,Secreted,MKT,8
+SP|O57327|Naja_sputatrix,Short-chain,Short-chain,,Secreted,MKT,8
+SP|O73856|Naja_sputatrix,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|O93471|Naja_sputatrix,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|O93473|Naja_sputatrix,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|P60302|Naja_sputatrix,Short-chain,Short-chain,P-type cytotoxin,Secreted,MKT,8
+SP|P60311|Naja_sputatrix,Short-chain,Short-chain,S-type cytotoxin,Secreted,,8
+SP|P60772|Naja_sputatrix,Short-chain,Short-chain,,Secreted,,8
+SP|Q9PSN6|Naja_sputatrix,Short-chain,Short-chain,,Secreted,,8
+SP|Q9YGJ5|Naja_sputatrix,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9YGJ6|Naja_sputatrix,Short-chain,Short-chain,,Secreted,MKT,8
+NCBI|NAJSU_GIJM01003258.1_C442_182|Naja_subfulva,Long-chain,Long-chain,,Secreted,,10
+NCBI|NAJSU_GIJM01003390.1_C487_248|Naja_subfulva,Long-chain,Long-chain,,Secreted,,10
+NCBI|NAJSU_GIJM01003176.1_C489_247|Naja_subfulva,Non-standard,Non-standard,,Secreted,,7
+NCBI|NAJSU_GIJM01004954.1_C362_117|Naja_subfulva,Non-standard,Non-standard,Cobra+ 8-cysteine clade in plesiotypics,Secreted,,7
+NCBI|NAJSU_GIJM01000709.1_C501_238|Naja_subfulva,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|NAJSU_GIJM01004310.1_C401_147|Naja_subfulva,Plesiotypic,Plesiotypic,,Secreted,,10
+NCBI|NAJSU_GIJM01002726.1_C453_214|Naja_subfulva,Short-chain,Short-chain,,Secreted,,8
+NCBI|NAJSU_GIJM01003137.1_C418_212|Naja_subfulva,Short-chain,Short-chain,,Secreted,,9
+NCBI|NAJSU_GIJM01003193.1_C499_266|Naja_subfulva,Short-chain,Short-chain,P-type cytotoxin,Secreted,,9
+NCBI|NAJSU_GIJM01003678.1_C291_61|Naja_subfulva,Short-chain,Short-chain,,Secreted,,8
+NCBI|NAJSU_GIJM01004065.1_C446_207|Naja_subfulva,Short-chain,Short-chain,,Secreted,,8
+NCBI|NAJSU_GIJN01002005.1_C525_271|Naja_sumatrana,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|P01384|Notechis_scutatus_scutatus,Long-chain,Long-chain,,Secreted,MKT,10
+SP|A8HDK0|Notechis_scutatus_scutatus,Short-chain,Short-chain,,Secreted,MKT,9
+SP|A8N285|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,MKT,10
+SP|C5ILC5|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,MKT,10
+SP|P01386|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,,10
+SP|P01387|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,,10
+SP|P07526|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,,10
+SP|P80156|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,,10
+SP|P80965|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,,10
+SP|P82662|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,MKT,10
+SP|Q2VBP3|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,MKT,10
+SP|Q2VBP4|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,MKT,10
+SP|Q2VBP6|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,MKT,10
+SP|Q2VBP8|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,MKI,10
+SP|Q53B53|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,,10
+SP|Q53B54|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,,10
+SP|Q53B56|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,MKT,10
+SP|Q53B57|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,MKT,10
+SP|Q53B58|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,MKT,10
+SP|Q53B59|Ophiophagus_hannah,Long-chain,Long-chain,,Secreted,MKT,10
+SP|Q2VBP5|Ophiophagus_hannah,Non-standard,Non-standard,,Secreted,MKT,9
+SP|Q53B55|Ophiophagus_hannah,Non-standard,Non-standard,,Secreted,MKT,8
+SP|Q2VBN2|Ophiophagus_hannah,Plesiotypic,Plesiotypic,Dimeric,Secreted,MKT,11
+SP|Q53B61|Ophiophagus_hannah,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|A8N286|Ophiophagus_hannah,Short-chain,Short-chain,Blockage of α3 nAChRs,Secreted,MKT,8
+SP|P01412|Ophiophagus_hannah,Short-chain,Short-chain,,Secreted,MKT,8
+SP|P83302|Ophiophagus_hannah,Short-chain,Short-chain,,Secreted,,8
+SP|Q2VBN0|Ophiophagus_hannah,Short-chain,Short-chain,Muscarinic toxin,Secreted,MKT,8
+SP|Q2VBN1|Ophiophagus_hannah,Short-chain,Short-chain,Muscarinic toxin,Secreted,MKT,8
+SP|Q2VBN3|Ophiophagus_hannah,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q2VBN4|Ophiophagus_hannah,Short-chain,Short-chain,β-cardiotoxin,Secreted,MKT,8
+SP|Q2VBN5|Ophiophagus_hannah,Short-chain,Short-chain,β-cardiotoxin,Secreted,MKT,8
+SP|Q2VBN7|Ophiophagus_hannah,Short-chain,Short-chain,β-cardiotoxin,Secreted,MKT,8
+SP|Q2VBN8|Ophiophagus_hannah,Short-chain,Short-chain,β-cardiotoxin,Secreted,MKT,8
+SP|Q2VBN9|Ophiophagus_hannah,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q2VBP0|Ophiophagus_hannah,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q2VBP2|Ophiophagus_hannah,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q53B46|Ophiophagus_hannah,Short-chain,Short-chain,β-cardiotoxin,Secreted,MKT,8
+SP|Q53B47|Ophiophagus_hannah,Short-chain,Short-chain,,Secreted,MKN,8
+SP|Q53B48|Ophiophagus_hannah,Short-chain,Short-chain,,Secreted,MKN,8
+SP|Q53B49|Ophiophagus_hannah,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q53B50|Ophiophagus_hannah,Short-chain,Short-chain,,Secreted,MKN,8
+SP|Q53B52|Ophiophagus_hannah,Short-chain,Short-chain,,Secreted,MKN,8
+SP|Q69CJ8|Ophiophagus_hannah,Short-chain,Short-chain,,Secreted,MKP,8
+SP|Q69CK0|Ophiophagus_hannah,Short-chain,Short-chain,β-cardiotoxin,Secreted,MKT,8
+SP|A7X4Q3|Oxyuranus_microlepidotus,Long-chain,Long-chain,,Secreted,MKT,10
+SP|A8HDK7|Oxyuranus_microlepidotus,Long-chain,Long-chain,,Secreted,MKT,10
+SP|A8HDK8|Oxyuranus_microlepidotus,Long-chain,Long-chain,,Secreted,MKT,10
+SP|A7X4R0|Oxyuranus_microlepidotus,Non-standard,Non-standard,Australian long-chain reversion,Secreted,MKT,8
+SP|A7X4R5|Oxyuranus_microlepidotus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|A7X4S0|Oxyuranus_microlepidotus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|A7X4S7|Oxyuranus_microlepidotus,Short-chain,Short-chain,,Secreted,MKT,9
+SP|A7X4T2|Oxyuranus_microlepidotus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|A8HDK2|Oxyuranus_scutellatus_scutellatus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|A8HDK9|Oxyuranus_scutellatus_scutellatus,Non-standard,Non-standard,Australian long-chain reversion,Secreted,MKT,8
+SP|P0CB06|Oxyuranus_scutellatus_scutellatus,Short-chain,Short-chain,,Secreted,,8
+SP|Q45Z11|Oxyuranus_scutellatus_scutellatus,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q4VRI0|Oxyuranus_scutellatus_scutellatus,Short-chain,Short-chain,,Secreted,MKT,8
+TR|H8PG68|Parasuta_nigriceps,Long-chain,Long-chain,,Secreted,MKT,10
+TR|H8PG67|Parasuta_nigriceps,Non-standard,Non-standard,,Secreted,MKT,9
+TR|H8PG61|Parasuta_nigriceps,Short-chain,Short-chain,,Secreted,MKT,9
+TR|H8PG65|Parasuta_nigriceps,Short-chain,Short-chain,,Secreted,MKT,9
+SP|P14612|Pseudechis_australis,Non-standard,Non-standard,,Secreted,MKT,11
+SP|P25497|Pseudechis_australis,Short-chain,Short-chain,,Secreted,MKT,9
+SP|A8HDJ4|Pseudechis_porphyriacus,Short-chain,Short-chain,,Secreted,MKT,9
+TR|S6CB76|Pseudechis_rossignolii,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4FIT5|Pseudonaja_modesta,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4FK68|Pseudonaja_modesta,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4FK75|Pseudonaja_modesta,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G319|Pseudonaja_modesta,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G2J7|Pseudonaja_modesta,Non-standard,Non-standard,,Secreted,MKT,9
+TR|R4G326|Pseudonaja_modesta,Non-standard,Non-standard,,Secreted,MKT,9
+TR|R4G7K6|Pseudonaja_modesta,Non-standard,Non-standard,,Secreted,MKT,9
+TR|R4FIT0|Pseudonaja_modesta,Non-standard,Non-standard,Australian long-chain reversion,Secreted,MKT,8
+TR|R4FIV9|Pseudonaja_modesta,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4FIW8|Pseudonaja_modesta,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4FK93|Pseudonaja_modesta,Non-standard,Non-standard,Australian long-chain reversion,Secreted,MKT,8
+TR|R4FKC0|Pseudonaja_modesta,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G2J9|Pseudonaja_modesta,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G2K1|Pseudonaja_modesta,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G2K2|Pseudonaja_modesta,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G2K6|Pseudonaja_modesta,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G321|Pseudonaja_modesta,Non-standard,Non-standard,Australian long-chain reversion,Secreted,MKT,8
+TR|R4G330|Pseudonaja_modesta,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G7K5|Pseudonaja_modesta,Short-chain,Short-chain,,Secreted,MKT,8
+NCBI|PSETE_GDAD01001328.1_69_296|Pseudonaja_textilis,Non-standard,Non-standard,,Secreted,,11
+SP|P13495|Pseudonaja_textilis,Long-chain,Long-chain,,Secreted,,10
+SP|Q9W7J5|Pseudonaja_textilis,Long-chain,Long-chain,,Secreted,MKT,10
+NCBI|PSETE_GDAD01000187.1_103_339|Pseudonaja_textilis,Non-standard,Non-standard,,Secreted,,9
+SP|Q9W7J9|Pseudonaja_textilis,Non-standard,Non-standard,,Secreted,MKT,7
+NCBI|Pste_2|Pseudonaja_textilis,PSCA,Ly-6,PSCA,Membrane,MHG,11
+NCBI|Pste_3|Pseudonaja_textilis,SLURP1,Ly-6,SLURP1,Membrane,MMK,10
+NCBI|Pste_4|Pseudonaja_textilis,LYPD2,Ly-6,LYPD2,Membrane,MVK,10
+NCBI|Pste_5|Pseudonaja_textilis,Reptilian Ly6 group 1,Ly-6,Reptilian Ly6 group 1,Membrane,MPT,10
+NCBI|Pste_6|Pseudonaja_textilis,Reptilian Ly6 group 1-2,Ly-6,Reptilian Ly6 group 1-2,Membrane,MKP,10
+NCBI|Pste_7|Pseudonaja_textilis,Reptilian Ly6 group 3,Ly-6,Reptilian Ly6 group 3,Secreted,MKR,11
+NCBI|Pste_8|Pseudonaja_textilis,Reptilian Ly6 group 4,Ly-6,Reptilian Ly6 group 4,Membrane,MKT,10
+NCBI|Pste_9|Pseudonaja_textilis,Ly6E,Ly-6,Ly6E,Secreted,MKT,10
+NCBI|Pste_s337_1|Pseudonaja_textilis,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|PSETE_GDAD01000072.1_272_508|Pseudonaja_textilis,Short-chain,Short-chain,,Secreted,,8
+NCBI|PSETE_GDAD01000079.1_272_508|Pseudonaja_textilis,Short-chain,Short-chain,,Secreted,,8
+NCBI|PSETE_GDAD01000185.1_103_345|Pseudonaja_textilis,Short-chain,Short-chain,,Secreted,,8
+NCBI|PSETE_XM_026716000.1_90_335|Pseudonaja_textilis,Short-chain,Short-chain,,Secreted,MKT,8
+NCBI|Pste1|Pseudonaja_textilis,Short-chain,Short-chain,,Secreted,MKT,8
+SP|A8HDK1|Pseudonaja_textilis,Short-chain,Short-chain,,Secreted,MKT,8
+SP|A8HDK6|Pseudonaja_textilis,Non-standard,Non-standard,Australian long-chain reversion,Secreted,MKT,8
+SP|Q9W7J6|Pseudonaja_textilis,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9W7J7|Pseudonaja_textilis,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9W7K0|Pseudonaja_textilis,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9W7K1|Pseudonaja_textilis,Short-chain,Short-chain,,Secreted,MKT,8
+SP|Q9W7K2|Pseudonaja_textilis,Short-chain,Short-chain,,Secreted,MKT,8
+SP|A8HDK4|Tropidechis_carinatus,Long-chain,Long-chain,,Secreted,MKT,10
+SP|A8HDJ5|Tropidechis_carinatus,Short-chain,Short-chain,,Secreted,MKT,9
+SP|A8HDJ6|Tropidechis_carinatus,Short-chain,Short-chain,,Secreted,MKT,9
+TR|R4FIZ6|Vermicella_annulata,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4FKG3|Vermicella_annulata,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4G352|Vermicella_annulata,Long-chain,Long-chain,,Secreted,MKT,10
+TR|R4FKG7|Vermicella_annulata,Non-standard,Non-standard,,Secreted,MKT,9
+TR|R4G2M2|Vermicella_annulata,Non-standard,Non-standard,,Secreted,MKT,9
+TR|R4G354|Vermicella_annulata,Non-standard,Non-standard,,Secreted,MKT,9
+TR|R4FIZ2|Vermicella_annulata,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G2M0|Vermicella_annulata,Short-chain,Short-chain,,Secreted,MKT,8
+TR|R4G7L9|Vermicella_annulata,Short-chain,Short-chain,,Secreted,MKT,8
+NCBI|WALAE_GIJO01002154.1_C376_188|Walterinnesia_aegyptia,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|C0HKZ8|Walterinnesia_aegyptia,Plesiotypic,Plesiotypic,,Secreted,,10
+SP|C1IC49|Walterinnesia_aegyptia,Plesiotypic,Plesiotypic,,Secreted,MKT,10
+NCBI|WALAE_GIJO01000037.1_C2199_1945|Walterinnesia_aegyptia,Short-chain,Short-chain,,Secreted,,8
+NCBI|WALAE_GIJO01002203.1_C450_211|Walterinnesia_aegyptia,Short-chain,Short-chain,,Secreted,,9
+NCBI|WALAE_GIJO01002391.1_C377_165|Walterinnesia_aegyptia,Short-chain,Short-chain,,Secreted,,9
+NCBI|WALAE_GIJO01002432.1_C415_209|Walterinnesia_aegyptia,Short-chain,Short-chain,,Secreted,,9
+SP|C1IC47|Walterinnesia_aegyptia,Short-chain,Short-chain,,Secreted,MKT,8
+SP|C1IC48|Walterinnesia_aegyptia,Short-chain,Short-chain,,Secreted,MKT,9
+TR|H0YB12|Homo_sapiens,SLURP2,Ly-6,SLURP2,Secreted,,5
+NCBI|NP_076435.1|Homo_sapiens,LYNX1-SLURP2 readthrough,Ly-6,LYNX1-SLURP2 readthrough,Secreted,MTP,15
+SP|Q17RY6|Homo_sapiens,Ly6K,Ly-6,Ly6K,Membrane,MAL,11
+TR|E5RGJ8|Homo_sapiens,Ly6K,Ly-6,Ly6K,Secreted,MAL,6
+NCBI|NP_001153826.1|Homo_sapiens,Ly6K,Ly-6,Ly6K,Secreted,MAL,5
+None|B.multicinctus_HiC_scaffold7_G00795.t1|Bungarus_multicinctus,Ly6 other,Ly-6,Ly6 other,Membrane,MKV,
+None|B.multicinctus_HiC_scaffold7_G00800.t1|Bungarus_multicinctus,Ly6 other,Ly-6,Ly6 other,Membrane,MPA,
+None|B.multicinctus_HiC_scaffold7_G00801.t1|Bungarus_multicinctus,Ly6 other,Ly-6,Ly6 other,Membrane,MLS,
+None|denovo_2_scaffold7|Bungarus_multicinctus,Plesiotypic,Plesiotypic,,Secreted,MKT,
+None|ScVE01q_1072_HRSCAF_1231_-_32|Naja_naja,Short-chain,Short-chain,,Secreted,MKT,
+None|ScVE01q_1072_HRSCAF_1231_-_33|Naja_naja,Short-chain,Short-chain,,Secreted,MKT,

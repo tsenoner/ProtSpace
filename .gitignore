@@ -1,9 +1,8 @@
 # ignore for now
-backup
-data
-docs
-script
-tests
+/backup
+/docs
+/script
+/tests
 .DS_Store
 
 # Byte-compiled / optimized / DLL files

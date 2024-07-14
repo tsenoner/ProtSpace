@@ -1,25 +1,30 @@
 import argparse
 import itertools
-from typing import Dict, Any, List
-import os
 import tempfile
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 
 import dash
-from dash import dcc, html
-from dash.dependencies import Input, Output, State
 import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objs as go
+from dash import dcc, html
+from dash.dependencies import Input, Output, State
+from dash.exceptions import PreventUpdate
+from dash_bio import NglMoleculeViewer
+from dash_bio.utils import ngl_parser
 
 from .data.json_loader import JsonReader
 
+
 class ProtSpaceApp:
-    def __init__(self, json_file: str):
+    def __init__(self, json_file: str, pdb_dir: Optional[str] = None):
         self.reader = JsonReader(json_file)
         self.projections = sorted(self.reader.get_projection_names())
         self.features = sorted(self.reader.get_all_features())
         self.protein_ids = sorted(self.reader.get_protein_ids())
+        self.pdb_dir = pdb_dir
         self.app = self._create_app()
         self.temp_dir = tempfile.mkdtemp()
 
@@ -31,83 +36,212 @@ class ProtSpaceApp:
         return app
 
     def _create_layout(self) -> html.Div:
-        return html.Div([
-            html.H1("ProtSpace", style={
-                "textAlign": "center",
-                "margin": "0",
-                "padding": "10px 0"
-            }),
-            html.Div([
-                dcc.Dropdown(
-                    id="feature-dropdown",
-                    options=[{"label": feature, "value": feature} for feature in self.features],
-                    value=self.features[0],
-                    placeholder="Select a feature",
-                    style={"width": "24vw", "display": "inline-block"},
-                ),
-                dcc.Dropdown(
-                    id="projection-dropdown",
-                    options=[{"label": proj, "value": proj} for proj in self.projections],
-                    value=self.projections[0],
-                    placeholder="Select a projection",
-                    style={"width": "24vw", "display": "inline-block"},
-                ),
-                dcc.Dropdown(
-                    id="protein-search-dropdown",
-                    options=[{"label": pid, "value": pid} for pid in self.protein_ids],
-                    value=[],
-                    placeholder="Search for protein identifiers",
-                    multi=True,
-                    style={"width": "48vw", "display": "inline-block"},
-                ),
-            ], style={"display": "flex", "justifyContent": "space-between"}),
-            html.Div([
-            html.Div([  # Wrapper for the graph
-                dcc.Graph(id="scatter-plot", style={"height": "100%"}, responsive=True)
-            ], style={
-                "border": "2px solid #dddddd",
-                "height": "calc(100vh - 200px)",  # Adjust this value as needed
-                "marginBottom": "20px"  # Add some space between graph and button
-            }),
-            html.Div([  # Wrapper for the button and inputs
-                html.Button("Download", id="download-button", n_clicks=0),
-                dcc.Input(id="image-width", type="number", placeholder="Width", value=1000, style={"marginLeft": "10px"}),
-                dcc.Input(id="image-height", type="number", placeholder="Height", value=800, style={"marginLeft": "10px"}),
-                dcc.Download(id="download-plot")
-            ], style={
+        common_layout = [
+            html.H1(
+                "ProtSpace",
+                style={
+                    "textAlign": "center",
+                    "margin": "0",
+                    "padding": "10px 0",
+                },
+            ),
+            html.Div(
+                [
+                    dcc.Dropdown(
+                        id="feature-dropdown",
+                        options=[
+                            {"label": feature, "value": feature}
+                            for feature in self.features
+                        ],
+                        value=self.features[0],
+                        placeholder="Select a feature",
+                        style={"width": "24vw", "display": "inline-block"},
+                    ),
+                    dcc.Dropdown(
+                        id="projection-dropdown",
+                        options=[
+                            {"label": proj, "value": proj}
+                            for proj in self.projections
+                        ],
+                        value=self.projections[0],
+                        placeholder="Select a projection",
+                        style={"width": "24vw", "display": "inline-block"},
+                    ),
+                    dcc.Dropdown(
+                        id="protein-search-dropdown",
+                        options=[
+                            {"label": pid, "value": pid}
+                            for pid in self.protein_ids
+                        ],
+                        value=[],
+                        placeholder="Search for protein identifiers",
+                        multi=True,
+                        style={"width": "48vw", "display": "inline-block"},
+                    ),
+                ],
+                style={"display": "flex", "justifyContent": "space-between"},
+            ),
+        ]
+
+        if self.pdb_dir:
+            plot_layout = html.Div(
+                [
+                    html.Div(
+                        [  # Wrapper for the scatter plot
+                            dcc.Graph(
+                                id="scatter-plot",
+                                style={"height": "100%"},
+                                responsive=True,
+                            )
+                        ],
+                        style={
+                            "border": "2px solid #dddddd",
+                            "height": "calc(100vh - 200px)",
+                            "width": "48vw",
+                            "display": "inline-block",
+                            "marginBottom": "20px",
+                        },
+                    ),
+                    html.Div(
+                        [  # Wrapper for the protein structure viewer and info
+                            NglMoleculeViewer(
+                                id="ngl-molecule-viewer",
+                                width="100%",
+                                height="calc(100vh - 200px)",
+                                molStyles={
+                                    "representations": ["cartoon"],
+                                    "chosenAtomsColor": "white",
+                                    "chosenAtomsRadius": 0.5,
+                                    "molSpacingXaxis": 50,
+                                    "sideByside": True,
+                                },
+                            ),
+                        ],
+                        style={
+                            "border": "2px solid #dddddd",
+                            "height": "calc(100vh - 200px)",
+                            "width": "48vw",
+                            "display": "inline-block",
+                            "marginBottom": "20px",
+                        },
+                    ),
+                ],
+                style={
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                },
+            )
+        else:
+            plot_layout = html.Div(
+                [
+                    dcc.Graph(
+                        id="scatter-plot",
+                        style={"height": "calc(100vh - 200px)"},
+                        responsive=True,
+                    )
+                ],
+                style={
+                    "border": "2px solid #dddddd",
+                    "height": "calc(100vh - 200px)",
+                    "marginBottom": "20px",
+                },
+            )
+
+        common_layout.append(plot_layout)
+
+        common_layout.append(
+            html.Div(
+                [  # Wrapper for the button and inputs
+                    html.Button("Download", id="download-button", n_clicks=0),
+                    dcc.Input(
+                        id="image-width",
+                        type="number",
+                        placeholder="Width",
+                        value=1000,
+                        style={"marginLeft": "10px"},
+                    ),
+                    dcc.Input(
+                        id="image-height",
+                        type="number",
+                        placeholder="Height",
+                        value=800,
+                        style={"marginLeft": "10px"},
+                    ),
+                    dcc.Download(id="download-plot"),
+                ],
+                style={
+                    "display": "flex",
+                    "justifyContent": "center",
+                    "alignItems": "center",
+                    "height": "50px",
+                },
+            )
+        )
+
+        return html.Div(
+            common_layout,
+            style={
                 "display": "flex",
-                "justifyContent": "center",
-                "alignItems": "center",
-                "height": "50px"  # Fixed height for the button area
-            }),
-        ], style={
-            "display": "flex",
-            "flexDirection": "column",
-            "height": "calc(100vh - 100px)",  # Adjust this value as needed
-        }),
-    ], style={
-        "display": "flex",
-        "flexDirection": "column",
-        "height": "100vh",
-        "padding": "20px",
-        "boxSizing": "border-box"
-    })
+                "flexDirection": "column",
+                "height": "100vh",
+                "padding": "20px",
+                "boxSizing": "border-box",
+            },
+        )
 
     def _setup_callbacks(self, app: dash.Dash) -> None:
         @app.callback(
             Output("scatter-plot", "figure"),
-            [Input("projection-dropdown", "value"),
-             Input("feature-dropdown", "value"),
-             Input("protein-search-dropdown", "value")]
+            [
+                Input("projection-dropdown", "value"),
+                Input("feature-dropdown", "value"),
+                Input("protein-search-dropdown", "value"),
+            ],
         )
-        def update_graph(selected_projection: str, selected_feature: str, selected_proteins: List[str]) -> go.Figure:
+        def update_graph(
+            selected_projection: str,
+            selected_feature: str,
+            selected_proteins: List[str],
+        ) -> go.Figure:
             df = self._prepare_dataframe(selected_projection, selected_feature)
-            projection_info = self.reader.get_projection_info(selected_projection)
+            projection_info = self.reader.get_projection_info(
+                selected_projection
+            )
 
             if projection_info["dimensions"] == 2:
-                return self._create_2d_plot(df, selected_feature, selected_proteins)
+                return self._create_2d_plot(
+                    df, selected_feature, selected_proteins
+                )
             else:
-                return self._create_3d_plot(df, selected_feature, selected_proteins)
+                return self._create_3d_plot(
+                    df, selected_feature, selected_proteins
+                )
+
+        if self.pdb_dir:
+
+            @app.callback(
+                Output("ngl-molecule-viewer", "data"),
+                Input("protein-search-dropdown", "value"),
+            )
+            def update_protein_structure_info(
+                selected_proteins: List[str],
+            ) -> tuple:
+                if not selected_proteins:
+                    raise PreventUpdate
+
+                data_list = []
+                for protein_id in selected_proteins:
+                    protein_id_underscore = protein_id.replace(".", "_")
+                    data_structure = ngl_parser.get_data(
+                        data_path=self.pdb_dir + "/",
+                        pdb_id=protein_id_underscore,
+                        color="black",
+                        reset_view=True,
+                        local=True,
+                    )
+                    data_list.append(data_structure)
+
+                return data_list
 
         @app.callback(
             Output("download-plot", "data"),
@@ -122,7 +256,9 @@ class ProtSpaceApp:
             if n_clicks == 0:
                 raise dash.exceptions.PreventUpdate
 
-            projection_info = self.reader.get_projection_info(selected_projection)
+            projection_info = self.reader.get_projection_info(
+                selected_projection
+            )
 
             if projection_info["dimensions"] == 2:
                 return self._save_2d_plot(figure, width, height)
@@ -130,140 +266,228 @@ class ProtSpaceApp:
                 return self._save_3d_plot(figure, width, height)
 
     def _save_2d_plot(self, figure: dict, width: int, height: int) -> dict:
-        filename = os.path.join(self.temp_dir, "protspace_2d_plot.svg")
+        filename = Path(self.temp_dir) / "protspace_2d_plot.svg"
         fig = go.Figure(figure)
         fig.update_layout(width=width, height=height)
         fig.write_image(filename)
         return dcc.send_file(filename)
 
     def _save_3d_plot(self, figure: dict, width: int, height: int) -> dict:
-        filename = os.path.join(self.temp_dir, "protspace_3d_plot.html")
+        filename = Path(self.temp_dir) / "protspace_3d_plot.html"
         fig = go.Figure(figure)
         fig.update_layout(width=width, height=height)
         fig.write_html(filename, include_plotlyjs="cdn")
         return dcc.send_file(filename)
 
-
-    def _prepare_dataframe(self, selected_projection: str, selected_feature: str) -> pd.DataFrame:
+    def _prepare_dataframe(
+        self, selected_projection: str, selected_feature: str
+    ) -> pd.DataFrame:
         projection_data = self.reader.get_projection_data(selected_projection)
         df = pd.DataFrame(projection_data)
         df["x"] = df["coordinates"].apply(lambda x: x["x"])
         df["y"] = df["coordinates"].apply(lambda x: x["y"])
-        if self.reader.get_projection_info(selected_projection)["dimensions"] == 3:
+        if (
+            self.reader.get_projection_info(selected_projection)["dimensions"]
+            == 3
+        ):
             df["z"] = df["coordinates"].apply(lambda x: x["z"])
 
         df[selected_feature] = df["identifier"].apply(
             lambda x: self.reader.get_protein_features(x).get(selected_feature)
         )
-        df[selected_feature] = df[selected_feature].replace({np.nan: "<NaN>", None: "<NaN>"})
+        df[selected_feature] = df[selected_feature].replace(
+            {np.nan: "<NaN>", None: "<NaN>"}
+        )
 
         if df[selected_feature].dtype in ["float64", "int64"]:
             df[selected_feature] = df[selected_feature].astype(str)
 
         return df
 
-    def _create_color_map(self, df: pd.DataFrame, selected_feature: str) -> Dict[str, str]:
+    def _create_color_map(
+        self, df: pd.DataFrame, selected_feature: str
+    ) -> Dict[str, str]:
         unique_values = df[selected_feature].unique()
         sorted_values = sorted([val for val in unique_values if val != "<NaN>"])
         sorted_values.append("<NaN>")
 
         color_discrete_map = {
-            val: px.colors.qualitative.Plotly[i % len(px.colors.qualitative.Plotly)]
-            for i, val in enumerate(sorted_values) if val != "<NaN>"
+            val: px.colors.qualitative.Plotly[
+                i % len(px.colors.qualitative.Plotly)
+            ]
+            for i, val in enumerate(sorted_values)
+            if val != "<NaN>"
         }
         color_discrete_map["<NaN>"] = "lightgrey"
         return color_discrete_map
 
-    def _create_2d_plot(self, df: pd.DataFrame, selected_feature: str, selected_proteins: List[str]) -> go.Figure:
+    def _create_2d_plot(
+        self,
+        df: pd.DataFrame,
+        selected_feature: str,
+        selected_proteins: List[str],
+    ) -> go.Figure:
         color_discrete_map = self._create_color_map(df, selected_feature)
         fig = px.scatter(
             df,
-            x="x", y="y",
+            x="x",
+            y="y",
             color=selected_feature,
             color_discrete_map=color_discrete_map,
-            hover_data={"identifier": True, selected_feature: True, "x": False, "y": False},
-            category_orders={selected_feature: sorted(df[selected_feature].unique())},
+            hover_data={
+                "identifier": True,
+                selected_feature: True,
+                "x": False,
+                "y": False,
+            },
+            category_orders={
+                selected_feature: sorted(df[selected_feature].unique())
+            },
         )
 
         # Increase dot size and set border width to 0.5
-        fig.update_traces(marker=dict(size=10, line=dict(width=0.5, color='black')))
+        fig.update_traces(
+            marker=dict(size=10, line=dict(width=0.5, color="black"))
+        )
 
         # Highlight selected proteins
         if selected_proteins:
-            selected_df = df[df['identifier'].isin(selected_proteins)]
-            fig.add_trace(go.Scatter(
-                x=selected_df['x'],
-                y=selected_df['y'],
-                mode='markers',
-                marker=dict(
-                    size=20,
-                    color='rgba(255, 255, 0, 0.7)',  # Semi-transparent yellow
-                    line=dict(width=3, color='red')
-                ),
-                hoverinfo='text',
-                hovertext=selected_df['identifier'],
-                showlegend=False
-            ))
+            selected_df = df[df["identifier"].isin(selected_proteins)]
+            feature_value = selected_df[selected_feature].values[0]
+            identifier = selected_df["identifier"].values[0]
+            fig.add_trace(
+                go.Scatter(
+                    x=selected_df["x"],
+                    y=selected_df["y"],
+                    mode="markers",
+                    marker=dict(
+                        size=20,
+                        color="rgba(255, 255, 0, 0.7)",  # Semi-transparent yellow
+                        line=dict(width=3, color="red"),
+                    ),
+                    hoverinfo="text",
+                    hovertext=f"{selected_feature}={feature_value}<br>identifier={identifier}",
+                    showlegend=False,
+                )
+            )
 
         fig.update_layout(
-            xaxis=dict(showticklabels=False, showline=False, zeroline=False, showgrid=False, title=None),
-            yaxis=dict(showticklabels=False, showline=False, zeroline=False, showgrid=False, title=None),
-            plot_bgcolor='white',
+            xaxis=dict(
+                showticklabels=False,
+                showline=False,
+                zeroline=False,
+                showgrid=False,
+                title=None,
+            ),
+            yaxis=dict(
+                showticklabels=False,
+                showline=False,
+                zeroline=False,
+                showgrid=False,
+                title=None,
+            ),
+            plot_bgcolor="white",
             margin=dict(l=0, r=0, t=0, b=0),
-            uirevision='constant',  # Prevents scene update when searching protein IDs
+            uirevision="constant",  # Prevents scene update when searching protein IDs
         )
         return fig
 
-    def _create_3d_plot(self, df: pd.DataFrame, selected_feature: str, selected_proteins: List[str]) -> go.Figure:
+    def _create_3d_plot(
+        self,
+        df: pd.DataFrame,
+        selected_feature: str,
+        selected_proteins: List[str],
+    ) -> go.Figure:
         color_discrete_map = self._create_color_map(df, selected_feature)
         fig = px.scatter_3d(
             df,
-            x="x", y="y", z="z",
+            x="x",
+            y="y",
+            z="z",
             color=selected_feature,
             color_discrete_map=color_discrete_map,
-            hover_data={"identifier": True, selected_feature: True, "x": False, "y": False, "z": False},
-            category_orders={selected_feature: sorted(df[selected_feature].unique())},
+            hover_data={
+                "identifier": True,
+                selected_feature: True,
+                "x": False,
+                "y": False,
+                "z": False,
+            },
+            category_orders={
+                selected_feature: sorted(df[selected_feature].unique())
+            },
         )
 
         # Add black border to markers
-        fig.update_traces(marker=dict(line=dict(width=1, color='black')))
+        fig.update_traces(marker=dict(line=dict(width=1, color="black")))
 
         # Highlight selected proteins
         if selected_proteins:
-            selected_df = df[df['identifier'].isin(selected_proteins)]
-            fig.add_trace(go.Scatter3d(
-                x=selected_df['x'],
-                y=selected_df['y'],
-                z=selected_df['z'],
-                mode='markers',
-                marker=dict(
-                    size=15,
-                    color='rgba(255, 255, 0, 0.7)',  # Semi-transparent yellow
-                    line=dict(width=3, color='red')
-                ),
-                hoverinfo='text',
-                hovertext=selected_df['identifier'],
-                showlegend=False
-            ))
+            selected_df = df[df["identifier"].isin(selected_proteins)]
+            feature_value = selected_df[selected_feature].values[0]
+            identifier = selected_df["identifier"].values[0]
+            fig.add_trace(
+                go.Scatter3d(
+                    x=selected_df["x"],
+                    y=selected_df["y"],
+                    z=selected_df["z"],
+                    mode="markers",
+                    marker=dict(
+                        size=15,
+                        color="rgba(255, 255, 0, 0.7)",  # Semi-transparent yellow
+                        line=dict(width=3, color="red"),
+                    ),
+                    hoverinfo="text",
+                    hovertext=f"{selected_feature}={feature_value}<br>identifier={identifier}",
+                    showlegend=False,
+                )
+            )
 
         fig.add_trace(self._create_bounding_box(df))
         fig.update_layout(
             margin=dict(l=0, r=0, t=0, b=0),
             scene=self._get_3d_scene_layout(df),
-            uirevision='constant',  # Prevents scene update when searching protein IDs
+            uirevision="constant",  # Prevents scene update when searching protein IDs
         )
         return fig
 
-
     def _create_bounding_box(self, df: pd.DataFrame) -> go.Scatter3d:
-        bounds = {dim: [df[dim].min() * 1.05, df[dim].max() * 1.05] for dim in ["x", "y", "z"]}
+        bounds = {
+            dim: [df[dim].min() * 1.05, df[dim].max() * 1.05]
+            for dim in ["x", "y", "z"]
+        }
         vertices = np.array(list(itertools.product(*bounds.values())))
-        edges = [(0, 1), (1, 3), (3, 2), (2, 0), (4, 5), (5, 7), (7, 6), (6, 4), (0, 4), (1, 5), (2, 6), (3, 7)]
+        edges = [
+            (0, 1),
+            (1, 3),
+            (3, 2),
+            (2, 0),
+            (4, 5),
+            (5, 7),
+            (7, 6),
+            (6, 4),
+            (0, 4),
+            (1, 5),
+            (2, 6),
+            (3, 7),
+        ]
 
         return go.Scatter3d(
-            x=[v for edge in edges for v in (vertices[edge[0]][0], vertices[edge[1]][0], None)],
-            y=[v for edge in edges for v in (vertices[edge[0]][1], vertices[edge[1]][1], None)],
-            z=[v for edge in edges for v in (vertices[edge[0]][2], vertices[edge[1]][2], None)],
+            x=[
+                v
+                for edge in edges
+                for v in (vertices[edge[0]][0], vertices[edge[1]][0], None)
+            ],
+            y=[
+                v
+                for edge in edges
+                for v in (vertices[edge[0]][1], vertices[edge[1]][1], None)
+            ],
+            z=[
+                v
+                for edge in edges
+                for v in (vertices[edge[0]][2], vertices[edge[1]][2], None)
+            ],
             mode="lines",
             line=dict(color="black", width=2),
             hoverinfo="none",
@@ -281,9 +505,18 @@ class ProtSpaceApp:
             title="",
         )
         return {
-            "xaxis": {**axis_layout, "range": [df["x"].min() * 1.05, df["x"].max() * 1.05]},
-            "yaxis": {**axis_layout, "range": [df["y"].min() * 1.05, df["y"].max() * 1.05]},
-            "zaxis": {**axis_layout, "range": [df["z"].min() * 1.05, df["z"].max() * 1.05]},
+            "xaxis": {
+                **axis_layout,
+                "range": [df["x"].min() * 1.05, df["x"].max() * 1.05],
+            },
+            "yaxis": {
+                **axis_layout,
+                "range": [df["y"].min() * 1.05, df["y"].max() * 1.05],
+            },
+            "zaxis": {
+                **axis_layout,
+                "range": [df["z"].min() * 1.05, df["z"].max() * 1.05],
+            },
             "aspectmode": "cube",
         }
 
@@ -299,16 +532,26 @@ class ProtSpaceApp:
     def run_server(self, debug: bool = True, port: int = 8050) -> None:
         self.app.run_server(debug=debug, port=port)
 
+
 def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="ProtSpace")
     parser.add_argument("json", help="Path to the input JSON file")
-    parser.add_argument("--port", type=int, default=8050, help="Port to run the server on")
+    parser.add_argument(
+        "--pdb_dir",
+        required=False,
+        help="Path to the directory containing PDB files",
+    )
+    parser.add_argument(
+        "--port", type=int, default=8050, help="Port to run the server on"
+    )
     return parser.parse_args()
+
 
 def main() -> None:
     args = parse_arguments()
-    app = ProtSpaceApp(args.json)
+    app = ProtSpaceApp(args.json, args.pdb_dir)
     app.run_server(debug=True, port=args.port)
+
 
 if __name__ == "__main__":
     main()

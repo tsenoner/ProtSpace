@@ -1,6 +1,6 @@
 import argparse
 import itertools
-from typing import Dict, Any
+from typing import Dict, Any, List
 import os
 import tempfile
 
@@ -19,6 +19,7 @@ class ProtSpaceApp:
         self.reader = JsonReader(json_file)
         self.projections = sorted(self.reader.get_projection_names())
         self.features = sorted(self.reader.get_all_features())
+        self.protein_ids = sorted(self.reader.get_protein_ids())
         self.app = self._create_app()
         self.temp_dir = tempfile.mkdtemp()
 
@@ -31,44 +32,82 @@ class ProtSpaceApp:
 
     def _create_layout(self) -> html.Div:
         return html.Div([
-            html.H1("ProtSpace", style={"textAlign": "center"}),
+            html.H1("ProtSpace", style={
+                "textAlign": "center",
+                "margin": "0",
+                "padding": "10px 0"
+            }),
             html.Div([
                 dcc.Dropdown(
                     id="feature-dropdown",
                     options=[{"label": feature, "value": feature} for feature in self.features],
                     value=self.features[0],
-                    style={"width": "48%", "display": "inline-block"},
+                    placeholder="Select a feature",
+                    style={"width": "24vw", "display": "inline-block"},
                 ),
                 dcc.Dropdown(
                     id="projection-dropdown",
                     options=[{"label": proj, "value": proj} for proj in self.projections],
                     value=self.projections[0],
-                    style={"width": "48%", "float": "right", "display": "inline-block"},
+                    placeholder="Select a projection",
+                    style={"width": "24vw", "display": "inline-block"},
                 ),
-            ]),
-            dcc.Graph(id="scatter-plot", style={"height": "80vh"}, responsive=True),
+                dcc.Dropdown(
+                    id="protein-search-dropdown",
+                    options=[{"label": pid, "value": pid} for pid in self.protein_ids],
+                    value=[],
+                    placeholder="Search for protein identifiers",
+                    multi=True,
+                    style={"width": "48vw", "display": "inline-block"},
+                ),
+            ], style={"display": "flex", "justifyContent": "space-between"}),
             html.Div([
+            html.Div([  # Wrapper for the graph
+                dcc.Graph(id="scatter-plot", style={"height": "100%"}, responsive=True)
+            ], style={
+                "border": "2px solid #dddddd",
+                "height": "calc(100vh - 200px)",  # Adjust this value as needed
+                "marginBottom": "20px"  # Add some space between graph and button
+            }),
+            html.Div([  # Wrapper for the button and inputs
                 html.Button("Download", id="download-button", n_clicks=0),
                 dcc.Input(id="image-width", type="number", placeholder="Width", value=1000, style={"marginLeft": "10px"}),
                 dcc.Input(id="image-height", type="number", placeholder="Height", value=800, style={"marginLeft": "10px"}),
                 dcc.Download(id="download-plot")
-            ], style={"textAlign": "center", "marginTop": "20px"}),
-        ], style={"padding": "20px"})
+            ], style={
+                "display": "flex",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "height": "50px"  # Fixed height for the button area
+            }),
+        ], style={
+            "display": "flex",
+            "flexDirection": "column",
+            "height": "calc(100vh - 100px)",  # Adjust this value as needed
+        }),
+    ], style={
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100vh",
+        "padding": "20px",
+        "boxSizing": "border-box"
+    })
 
     def _setup_callbacks(self, app: dash.Dash) -> None:
         @app.callback(
             Output("scatter-plot", "figure"),
             [Input("projection-dropdown", "value"),
-             Input("feature-dropdown", "value")]
+             Input("feature-dropdown", "value"),
+             Input("protein-search-dropdown", "value")]
         )
-        def update_graph(selected_projection: str, selected_feature: str) -> go.Figure:
+        def update_graph(selected_projection: str, selected_feature: str, selected_proteins: List[str]) -> go.Figure:
             df = self._prepare_dataframe(selected_projection, selected_feature)
             projection_info = self.reader.get_projection_info(selected_projection)
 
             if projection_info["dimensions"] == 2:
-                return self._create_2d_plot(df, selected_feature)
+                return self._create_2d_plot(df, selected_feature, selected_proteins)
             else:
-                return self._create_3d_plot(df, selected_feature)
+                return self._create_3d_plot(df, selected_feature, selected_proteins)
 
         @app.callback(
             Output("download-plot", "data"),
@@ -104,6 +143,7 @@ class ProtSpaceApp:
         fig.write_html(filename, include_plotlyjs="cdn")
         return dcc.send_file(filename)
 
+
     def _prepare_dataframe(self, selected_projection: str, selected_feature: str) -> pd.DataFrame:
         projection_data = self.reader.get_projection_data(selected_projection)
         df = pd.DataFrame(projection_data)
@@ -134,7 +174,7 @@ class ProtSpaceApp:
         color_discrete_map["<NaN>"] = "lightgrey"
         return color_discrete_map
 
-    def _create_2d_plot(self, df: pd.DataFrame, selected_feature: str) -> go.Figure:
+    def _create_2d_plot(self, df: pd.DataFrame, selected_feature: str, selected_proteins: List[str]) -> go.Figure:
         color_discrete_map = self._create_color_map(df, selected_feature)
         fig = px.scatter(
             df,
@@ -148,23 +188,33 @@ class ProtSpaceApp:
         # Increase dot size and set border width to 0.5
         fig.update_traces(marker=dict(size=10, line=dict(width=0.5, color='black')))
 
+        # Highlight selected proteins
+        if selected_proteins:
+            selected_df = df[df['identifier'].isin(selected_proteins)]
+            fig.add_trace(go.Scatter(
+                x=selected_df['x'],
+                y=selected_df['y'],
+                mode='markers',
+                marker=dict(
+                    size=20,
+                    color='rgba(255, 255, 0, 0.7)',  # Semi-transparent yellow
+                    line=dict(width=3, color='red')
+                ),
+                hoverinfo='text',
+                hovertext=selected_df['identifier'],
+                showlegend=False
+            ))
+
         fig.update_layout(
             xaxis=dict(showticklabels=False, showline=False, zeroline=False, showgrid=False, title=None),
             yaxis=dict(showticklabels=False, showline=False, zeroline=False, showgrid=False, title=None),
             plot_bgcolor='white',
-            shapes=[
-                dict(
-                    type="rect",
-                    xref="paper", yref="paper",
-                    x0=0, y0=0, x1=1, y1=1,
-                    line=dict(color="black", width=1),
-                    fillcolor="rgba(0,0,0,0)"
-                )
-            ],
+            margin=dict(l=0, r=0, t=0, b=0),
+            uirevision='constant',  # Prevents scene update when searching protein IDs
         )
         return fig
 
-    def _create_3d_plot(self, df: pd.DataFrame, selected_feature: str) -> go.Figure:
+    def _create_3d_plot(self, df: pd.DataFrame, selected_feature: str, selected_proteins: List[str]) -> go.Figure:
         color_discrete_map = self._create_color_map(df, selected_feature)
         fig = px.scatter_3d(
             df,
@@ -178,11 +228,32 @@ class ProtSpaceApp:
         # Add black border to markers
         fig.update_traces(marker=dict(line=dict(width=1, color='black')))
 
+        # Highlight selected proteins
+        if selected_proteins:
+            selected_df = df[df['identifier'].isin(selected_proteins)]
+            fig.add_trace(go.Scatter3d(
+                x=selected_df['x'],
+                y=selected_df['y'],
+                z=selected_df['z'],
+                mode='markers',
+                marker=dict(
+                    size=15,
+                    color='rgba(255, 255, 0, 0.7)',  # Semi-transparent yellow
+                    line=dict(width=3, color='red')
+                ),
+                hoverinfo='text',
+                hovertext=selected_df['identifier'],
+                showlegend=False
+            ))
+
         fig.add_trace(self._create_bounding_box(df))
         fig.update_layout(
+            margin=dict(l=0, r=0, t=0, b=0),
             scene=self._get_3d_scene_layout(df),
+            uirevision='constant',  # Prevents scene update when searching protein IDs
         )
         return fig
+
 
     def _create_bounding_box(self, df: pd.DataFrame) -> go.Scatter3d:
         bounds = {dim: [df[dim].min() * 1.05, df[dim].max() * 1.05] for dim in ["x", "y", "z"]}

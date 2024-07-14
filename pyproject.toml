@@ -18,6 +18,7 @@ datashader = "^0.16.0"
 scikit-learn = "^1.4.0"
 matplotlib = "^3.8.2"
 umap-learn = "^0.5.6"
+dash-bio = "^1.0.2"
 
 
 [tool.poetry.group.dev.dependencies]

@@ -39,7 +39,7 @@ This SVG image is a static representation of the interactive plot you'll see in 
 
 For 3D projections, ProtSpace generates interactive HTML plots. You can view an example of such here:
 
-[View 3D Interactive Plot](https://github.io/tsenoner/ProtSpace/3FTx.html)
+[View 3D Interactive Plot](https://tsenoner.github.io/ProtSpace/3FTx.html)
 
 
 ## Installation

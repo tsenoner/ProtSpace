@@ -1,8 +1,8 @@
 import argparse
 import itertools
-import tempfile
+import io
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Union
 
 import dash
 import numpy as np
@@ -25,8 +25,6 @@ class ProtSpaceApp:
         self.features = sorted(self.reader.get_all_features())
         self.protein_ids = sorted(self.reader.get_protein_ids())
         self.pdb_dir = pdb_dir
-        self.app = self._create_app()
-        self.temp_dir = tempfile.mkdtemp()
 
     def _create_app(self) -> dash.Dash:
         app = dash.Dash(__name__, suppress_callback_exceptions=True)
@@ -157,14 +155,14 @@ class ProtSpaceApp:
                         id="image-width",
                         type="number",
                         placeholder="Width",
-                        value=1000,
+                        value=1600,
                         style={"marginLeft": "10px"},
                     ),
                     dcc.Input(
                         id="image-height",
                         type="number",
                         placeholder="Height",
-                        value=800,
+                        value=1000,
                         style={"marginLeft": "10px"},
                     ),
                     dcc.Download(id="download-plot"),
@@ -218,7 +216,6 @@ class ProtSpaceApp:
                 )
 
         if self.pdb_dir:
-
             @app.callback(
                 Output("ngl-molecule-viewer", "data"),
                 Input("protein-search-dropdown", "value"),
@@ -254,7 +251,7 @@ class ProtSpaceApp:
         )
         def download_plot(n_clicks, figure, selected_projection, width, height):
             if n_clicks == 0:
-                raise dash.exceptions.PreventUpdate
+                raise PreventUpdate
 
             projection_info = self.reader.get_projection_info(
                 selected_projection
@@ -263,21 +260,41 @@ class ProtSpaceApp:
             if projection_info["dimensions"] == 2:
                 return self._save_2d_plot(figure, width, height)
             else:
-                return self._save_3d_plot(figure, width, height)
+                return self._save_3d_plot(figure)
 
-    def _save_2d_plot(self, figure: dict, width: int, height: int) -> dict:
-        filename = Path(self.temp_dir) / "protspace_2d_plot.svg"
-        fig = go.Figure(figure)
-        fig.update_layout(width=width, height=height)
-        fig.write_image(filename)
-        return dcc.send_file(filename)
+    def generate_images(self, projection: str, feature: str, output_dir: str, width: int, height: int) -> None:
+        output_dir = Path(output_dir)
+        output_file = output_dir / f"{projection}_{feature}"
+        output_dir.mkdir(parents=True, exist_ok=True)
 
-    def _save_3d_plot(self, figure: dict, width: int, height: int) -> dict:
-        filename = Path(self.temp_dir) / "protspace_3d_plot.html"
+        df = self._prepare_dataframe(projection, feature)
+        projection_info = self.reader.get_projection_info(projection)
+        if projection_info["dimensions"] == 2:
+            fig = self._create_2d_plot(df, feature, [])
+            self._save_2d_plot(fig, width, height, output_file.with_suffix(".svg"))
+        else:
+            fig = self._create_3d_plot(df, feature, [])
+            self._save_3d_plot(fig, output_file.with_suffix(".html"))
+
+    def _save_2d_plot(self, figure: dict, width: int, height: int, filename: Optional[str] = None) -> Union[None, dict]:
         fig = go.Figure(figure)
-        fig.update_layout(width=width, height=height)
-        fig.write_html(filename, include_plotlyjs="cdn")
-        return dcc.send_file(filename)
+        if filename:
+            fig.write_image(filename, format="svg", width=width, height=height)
+        else:
+            buffer = io.BytesIO()
+            fig.write_image(buffer, format="svg", width=width, height=height)
+            buffer.seek(0)
+            return dcc.send_bytes(buffer.getvalue(), "protspace_2d_plot.svg")
+
+    def _save_3d_plot(self, figure: dict, filename: Optional[str] = None) -> Union[None, dict]:
+        fig = go.Figure(figure)
+        if filename:
+            fig.write_html(filename, include_plotlyjs="cdn")
+        else:
+            buffer = io.StringIO()
+            fig.write_html(buffer, include_plotlyjs="cdn")
+            buffer.seek(0)
+            return dcc.send_bytes(buffer.getvalue(), "protspace_3d_plot.html")
 
     def _prepare_dataframe(
         self, selected_projection: str, selected_feature: str
@@ -520,16 +537,8 @@ class ProtSpaceApp:
             "aspectmode": "cube",
         }
 
-    def _get_common_layout(self, selected_feature: str) -> Dict[str, Any]:
-        return {
-            "legend_title_text": selected_feature,
-            "height": 800,
-            "autosize": True,
-            "margin": dict(l=0, r=0, t=30, b=0),
-            "title": None,
-        }
-
     def run_server(self, debug: bool = True, port: int = 8050) -> None:
+        self.app = self._create_app()
         self.app.run_server(debug=debug, port=port)
 
 
@@ -546,12 +555,29 @@ def parse_arguments() -> argparse.Namespace:
     )
     return parser.parse_args()
 
+def create_file(json_file: str, projection: str, feature: str, output_dir: str = ".", width: int = 1600, height: int = 1000) -> None:
+    protspace = ProtSpaceApp(json_file)
+    available_projections = protspace.reader.get_projection_names()
+    available_features = protspace.reader.get_all_features()
 
-def main() -> None:
-    args = parse_arguments()
-    app = ProtSpaceApp(args.json, args.pdb_dir)
-    app.run_server(debug=True, port=args.port)
+    if projection not in available_projections:
+        raise ValueError(f"Projection '{projection}' not found. Available projections are: {', '.join(available_projections)}")
+
+    if feature not in available_features:
+        raise ValueError(f"Feature '{feature}' not found. Available features are: {', '.join(available_features)}")
+
+    protspace.generate_images(output_dir=output_dir, projection=projection, feature=feature, width=width, height=height)
+    print(f"Image generated and saved in {output_dir}")
+
+
+def main(json: str, port: int=8050, pdb_dir: Optional[str] = None) -> None:
+    protspace = ProtSpaceApp(json, pdb_dir)
+    protspace.run_server(debug=True, port=port)
 
 
 if __name__ == "__main__":
-    main()
+    args = parse_arguments()
+    for p in ["PCA2", "PCA3", "UMAP2", "UMAP3"]:
+        for f in ["group", "major_group"]:
+            create_file(json_file=args.json, output_dir="examples/out", projection=p, feature=f)
+    main(**vars(args))

@@ -1,7 +1,6 @@
 # ignore for now
 /backup
 /docs
-/script
 /tests
 .DS_Store
 

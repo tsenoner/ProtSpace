@@ -57,12 +57,22 @@ class ProtSpace:
                 fig, is_3d=True, filename=str(output_file.with_suffix(".html"))
             )
 
-    def run_server(self, port: int = 8050, debug: bool = False, supress_output: bool = True) -> None:
-        if supress_output:
-            print(f"Dash app is running on http://localhost:{port}/")
-            print("Press Ctrl+C to quit")
+    def run_server(self, port: int = 8050, debug: bool = False, quiet: bool = True) -> None:
+        import __main__
+        def is_interactive():
+            return not hasattr(__main__, '__file__')
+
+        def supress_output():
             sys.stdout = open(os.devnull, 'w')
             sys.stderr = open(os.devnull, 'w')
+
+        if is_interactive():
+            supress_output()
+        elif supress_output:
+            print(f"Dash app is running on http://localhost:{port}/")
+            print("Press Ctrl+C to quit")
+            supress_output()
+
 
         app = self.create_app()
         app.run_server(debug=debug, port=port)

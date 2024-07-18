@@ -58,7 +58,7 @@ def main(
     pdb_dir: Optional[str] = None,
 ) -> None:
     protspace = ProtSpace(json, pdb_dir)
-    protspace.run_server(debug=True, port=port, supress_output=False)
+    protspace.run_server(debug=True, port=port, quiet=False)
 
 if __name__ == "__main__":
     args = parse_arguments()

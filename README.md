@@ -6,6 +6,7 @@ ProtSpace is a powerful visualization tool for exploring protein embeddings and 
 
 - [ProtSpace](#protspace)
   - [Table of Contents](#table-of-contents)
+  - [Quick Start with Google Colab](#quick-start-with-google-colab)
   - [Example Outputs](#example-outputs)
     - [2D Scatter Plot (SVG)](#2d-scatter-plot-svg)
     - [3D Interactive Plot (HTML)](#3d-interactive-plot-html)
@@ -22,6 +23,23 @@ ProtSpace is a powerful visualization tool for exploring protein embeddings and 
   - [File Formats](#file-formats)
     - [Input Files](#input-files)
     - [Output File](#output-file)
+
+## Quick Start with Google Colab
+
+To quickly try out ProtSpace without installing anything on your local machine, you can use our Google Colab notebook. This notebook provides a dummy example that demonstrates the basic functionality of ProtSpace.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsenoner/ProtSpace/blob/main/examples/notebook/run_dummy_example.ipynb)
+
+Click on the "Open In Colab" button above to open the notebook in Google Colab. You can then run the cells in the notebook to see ProtSpace in action with a sample dataset.
+
+This notebook includes:
+- Installation of required dependencies
+- Generation of a dummy dataset
+- Data preparation using the `prepare_json.py` script
+- Visualization of the data using ProtSpace
+
+It's a great way to get familiar with ProtSpace before setting it up on your local machine or using it with your own data.
+
 
 ## Example Outputs
 
@@ -48,7 +66,7 @@ ProtSpace uses Poetry for dependency management and packaging. Make sure you hav
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/protspace.git
+   git clone https://github.com/tsenoner/ProtSpace.git
    cd protspace
    ```
 

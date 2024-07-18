@@ -68,7 +68,7 @@ class ProtSpace:
 
         if is_interactive():
             supress_output()
-        elif supress_output:
+        elif quiet:
             print(f"Dash app is running on http://localhost:{port}/")
             print("Press Ctrl+C to quit")
             supress_output()

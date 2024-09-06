@@ -78268,10 +78268,6 @@
         "Non-standard": "#788E42",
         "Plesiotypic": "#67BD45",
         "Short-chain": "#63CBE5"
-      },
-      "membran_prediction": {
-        "Membrane": "#FF0000",
-        "Secreted": "#00FF00"
       }
     }
   }

@@ -1,0 +1,38 @@
+{
+    "group": {
+      "frog Ly6": "rgba(0, 167, 157, 0.6)",
+      "GPIHBP1": "rgba(177, 224, 225, 0.3)",
+      "Long-chain": "rgba(36, 99, 143, 0.9)",
+      "Ly6 unique": "rgba(230, 214, 214, 0.5)",
+      "Ly6D": "rgba(224, 131, 182, 0.7)",
+      "Ly6E": "rgba(237, 32, 36, 0.4)",
+      "Ly6H": "rgba(154, 76, 157, 0.8)",
+      "Ly6K": "rgba(236, 185, 185, 0.2)",
+      "Ly6L": "rgba(144, 35, 35, 1.0)",
+      "LYNX1": "rgba(214, 185, 217, 0.6)",
+      "LYNX1-SLURP2 readthrough": "rgba(0, 0, 0, 0.3)",
+      "LYPD2": "rgba(61, 91, 169, 0.7)",
+      "Non-human mammalian Ly6": "rgba(107, 44, 140, 0.5)",
+      "Non-standard": "rgba(120, 142, 66, 0.9)",
+      "PSCA": "rgba(150, 138, 194, 0.4)",
+      "Plesiotypic": "rgba(103, 189, 69, 0.8)",
+      "Reptilian Ly6 group 1": "rgba(189, 82, 42, 0.6)",
+      "Reptilian Ly6 group 1-2": "rgba(189, 82, 42, 0.3)",
+      "Reptilian Ly6 group 2": "rgba(248, 172, 79, 0.7)",
+      "Reptilian Ly6 group 3": "rgba(247, 146, 30, 0.5)",
+      "Reptilian Ly6 group 4": "rgba(244, 119, 69, 0.9)",
+      "Reptilian Ly6 group 5": "rgba(255, 201, 25, 0.2)",
+      "Reptilian Ly6 group 6": "rgba(241, 90, 41, 1.0)",
+      "Reptilian Ly6 group 7": "rgba(247, 236, 19, 0.4)",
+      "Short-chain": "rgba(99, 203, 229, 0.8)",
+      "SLURP1": "rgba(72, 139, 202, 0.6)",
+      "SLURP2": "rgba(232, 56, 149, 0.3)"
+    },
+    "major_group": {
+      "Long-chain": "rgba(36, 99, 143, 0.7)",
+      "Ly-6": "rgba(204, 221, 44, 0.5)",
+      "Non-standard": "rgba(120, 142, 66, 0.9)",
+      "Plesiotypic": "rgba(103, 189, 69, 0.4)",
+      "Short-chain": "rgba(99, 203, 229, 0.6)"
+    }
+  }

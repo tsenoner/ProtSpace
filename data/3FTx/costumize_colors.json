@@ -1,0 +1,38 @@
+{
+  "group": {
+    "frog Ly6": "#00A79D",
+    "GPIHBP1": "#B1E0E1",
+    "Long-chain": "#24638F",
+    "Ly6 unique": "#E6D6D6",
+    "Ly6D": "#E083B6",
+    "Ly6E": "#ED2024",
+    "Ly6H": "#9A4C9D",
+    "Ly6K": "#ECB9B9",
+    "Ly6L": "#902323",
+    "LYNX1": "#D6B9D9",
+    "LYNX1-SLURP2 readthrough": "#000000",
+    "LYPD2": "#3D5BA9",
+    "Non-human mammalian Ly6": "#6B2C8C",
+    "Non-standard": "#788E42",
+    "PSCA": "#968AC2",
+    "Plesiotypic": "#67BD45",
+    "Reptilian Ly6 group 1": "#BD522A",
+    "Reptilian Ly6 group 1-2": "#BD522A",
+    "Reptilian Ly6 group 2": "#F8AC4F",
+    "Reptilian Ly6 group 3": "#F7921E",
+    "Reptilian Ly6 group 4": "#F47745",
+    "Reptilian Ly6 group 5": "#FFC919",
+    "Reptilian Ly6 group 6": "#F15A29",
+    "Reptilian Ly6 group 7": "#F7EC13",
+    "Short-chain": "#63CBE5",
+    "SLURP1": "#488BCA",
+    "SLURP2": "#E83895"
+  },
+  "major_group": {
+    "Long-chain": "#24638F",
+    "Ly-6": "#ccdd2c",
+    "Non-standard": "#788E42",
+    "Plesiotypic": "#67BD45",
+    "Short-chain": "#63CBE5"
+  }
+}

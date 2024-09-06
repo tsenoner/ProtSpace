@@ -3,12 +3,8 @@ import os
 # App settings
 DEFAULT_PORT = 8050
 
-# Data settings
-JSON_DIR = os.getenv('PROTSPACE_JSON_DIR', 'data/json')
-PDB_DIR = os.getenv('PROTSPACE_PDB_DIR', 'data/pdb')
-
 # Output settings
-IMAGE_OUTPUT_DIR = os.getenv('PROTSPACE_IMAGE_OUTPUT_DIR', 'output/images')
+IMAGE_OUTPUT_DIR = os.getenv('PROTSPACE_IMAGE_OUTPUT_DIR', 'out/images')
 
 # Plotting settings
 DEFAULT_MARKER_SIZE = 10

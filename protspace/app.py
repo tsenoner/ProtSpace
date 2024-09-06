@@ -1,7 +1,7 @@
 import os
 import sys
 from pathlib import Path
-from typing import Optional
+from typing import Dict, Optional
 
 from dash import Dash
 
@@ -26,6 +26,28 @@ class ProtSpace:
         app.layout = create_layout(self)
         setup_callbacks(app, self)
         return app
+
+    def run_server(
+        self, port: int = 8050, debug: bool = False, quiet: bool = True
+    ) -> None:
+        import __main__
+
+        def is_interactive():
+            return not hasattr(__main__, "__file__")
+
+        def supress_output():
+            sys.stdout = open(os.devnull, "w")
+            sys.stderr = open(os.devnull, "w")
+
+        if is_interactive():
+            supress_output()
+        elif quiet:
+            print(f"Dash app is running on http://localhost:{port}/")
+            print("Press Ctrl+C to quit")
+            supress_output()
+
+        app = self.create_app()
+        app.run_server(debug=debug, port=port)
 
     def generate_images(
         self,
@@ -57,22 +79,5 @@ class ProtSpace:
                 fig, is_3d=True, filename=str(output_file.with_suffix(".html"))
             )
 
-    def run_server(self, port: int = 8050, debug: bool = False, quiet: bool = True) -> None:
-        import __main__
-        def is_interactive():
-            return not hasattr(__main__, '__file__')
-
-        def supress_output():
-            sys.stdout = open(os.devnull, 'w')
-            sys.stderr = open(os.devnull, 'w')
-
-        if is_interactive():
-            supress_output()
-        elif quiet:
-            print(f"Dash app is running on http://localhost:{port}/")
-            print("Press Ctrl+C to quit")
-            supress_output()
-
-
-        app = self.create_app()
-        app.run_server(debug=debug, port=port)
+    def get_feature_colors(self, feature: str) -> Dict[str, str]:
+        return self.reader.get_feature_colors(feature)

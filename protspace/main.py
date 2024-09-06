@@ -5,23 +5,6 @@ from .app import ProtSpace
 from .config import DEFAULT_PORT, IMAGE_OUTPUT_DIR
 
 
-def parse_arguments() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="ProtSpace")
-    parser.add_argument("json", help="Path to the input JSON file")
-    parser.add_argument(
-        "--pdb_dir",
-        required=False,
-        help="Path to the directory containing PDB files",
-    )
-    parser.add_argument(
-        "--port",
-        type=int,
-        default=DEFAULT_PORT,
-        help="Port to run the server on",
-    )
-    return parser.parse_args()
-
-
 def create_file(
     app: ProtSpace,
     projection: str,
@@ -52,6 +35,24 @@ def create_file(
     )
     print(f"Image generated and saved in {output_dir}")
 
+
+def parse_arguments() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="ProtSpace")
+    parser.add_argument("json", help="Path to the input JSON file")
+    parser.add_argument(
+        "--pdb_dir",
+        required=False,
+        help="Path to the directory containing PDB files",
+    )
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=DEFAULT_PORT,
+        help="Port to run the server on",
+    )
+    return parser.parse_args()
+
+
 def main(
     json: str,
     port: int = DEFAULT_PORT,
@@ -59,6 +60,7 @@ def main(
 ) -> None:
     protspace = ProtSpace(json, pdb_dir)
     protspace.run_server(debug=True, port=port, quiet=False)
+
 
 if __name__ == "__main__":
     args = parse_arguments()

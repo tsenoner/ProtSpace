@@ -18,12 +18,13 @@ def setup_callbacks(app, protspace):
     )
     def update_graph(selected_projection, selected_feature, selected_proteins):
         df = prepare_dataframe(protspace.reader, selected_projection, selected_feature)
+        feature_colors = protspace.get_feature_colors(selected_feature)
         projection_info = protspace.reader.get_projection_info(selected_projection)
 
         if projection_info["dimensions"] == 2:
-            return create_2d_plot(df, selected_feature, selected_proteins)
+            return create_2d_plot(df, selected_feature, selected_proteins, feature_colors)
         else:
-            return create_3d_plot(df, selected_feature, selected_proteins)
+            return create_3d_plot(df, selected_feature, selected_proteins, feature_colors)
 
     if protspace.pdb_dir:
         @app.callback(

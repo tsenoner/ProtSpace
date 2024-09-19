@@ -13,6 +13,6 @@ DEFAULT_LINE_WIDTH = 0.5
 HIGHLIGHT_LINE_WIDTH = 3
 
 # Color settings
-NAN_COLOR = "lightgrey"
+NAN_COLOR = "rgba(200, 200, 200, 0.4)" #"lightgrey"
 HIGHLIGHT_COLOR = "rgba(255, 255, 0, 0.7)"
 HIGHLIGHT_BORDER_COLOR = "red"

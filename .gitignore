@@ -1,8 +1,11 @@
 # ignore for now
-/backup
-/docs
-/tests
 .DS_Store
+/.vscode
+/backup
+/bin
+/docs
+/notebooks
+/tests
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

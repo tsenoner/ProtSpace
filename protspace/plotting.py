@@ -14,6 +14,7 @@ from .config import (
     HIGHLIGHT_COLOR,
     HIGHLIGHT_LINE_WIDTH,
     HIGHLIGHT_MARKER_SIZE,
+    NAN_COLOR,
 )
 
 
@@ -33,7 +34,7 @@ def create_color_map(
                 i % len(px.colors.qualitative.Plotly)
             ]
 
-    color_discrete_map["<NaN>"] = "lightgrey"
+    color_discrete_map["<NaN>"] = NAN_COLOR
     return color_discrete_map
 
 
@@ -141,7 +142,7 @@ def create_3d_plot(
     fig.update_traces(
         marker=dict(
             size=DEFAULT_MARKER_SIZE,
-            line=dict(width=DEFAULT_LINE_WIDTH, color="black"),
+            line=dict(width=DEFAULT_LINE_WIDTH, color="rgba(240, 240, 240, 1)"),  # DEFAULT_LINE_WIDTH / 2
         )
     )
 

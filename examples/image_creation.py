@@ -17,7 +17,7 @@ def main():
             app.generate_images(
                 projection=projection,
                 feature=feature,
-                output_dir="examples/out",
+                output_dir="examples/3FTx/out",
                 width=1600,
                 height=1000,
             )

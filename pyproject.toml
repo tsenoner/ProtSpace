@@ -20,6 +20,8 @@ matplotlib = "^3.8.2"
 umap-learn = "^0.5.6"
 dash-bio = "^1.0.2"
 kaleido = "0.2.1"
+dash-daq = "^0.5.0"
+dash-iconify = "^0.1.2"
 
 
 [tool.poetry.group.dev.dependencies]

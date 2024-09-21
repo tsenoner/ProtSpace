@@ -3,18 +3,7 @@ from dash_bio import NglMoleculeViewer
 import dash_daq as daq
 from dash_iconify import DashIconify
 
-MARKER_SHAPES = [
-    'circle', 'circle-open', 'square', 'square-open', 'diamond', 'diamond-open',
-    'cross', 'x', 'triangle-up', 'triangle-down', 'pentagon', 'hexagon', 'star',
-    'hexagram', 'diamond-tall', 'diamond-wide', 'hourglass', 'bowtie',
-    'circle-cross', 'circle-x', 'square-cross', 'square-x', 'diamond-cross',
-    'diamond-x', 'asterisk', 'hash', 'y-up', 'y-down', 'arrow-up', 'arrow-down'
-]
-
-MARKER_SHAPES = [
-    'circle', 'circle-open', 'cross', 'diamond',
-    'diamond-open', 'square', 'square-open', 'x'
-    ]
+from .utils import MARKER_SHAPES
 
 def create_layout(app):
     common_layout = [

@@ -16,3 +16,9 @@ HIGHLIGHT_LINE_WIDTH = 3
 NAN_COLOR = "rgba(200, 200, 200, 0.4)" #"lightgrey"
 HIGHLIGHT_COLOR = "rgba(255, 255, 0, 0.7)"
 HIGHLIGHT_BORDER_COLOR = "red"
+
+# marker shapes
+MARKER_SHAPES = [
+    'circle', 'circle-open', 'cross', 'diamond',
+    'diamond-open', 'square', 'square-open', 'x'
+    ]

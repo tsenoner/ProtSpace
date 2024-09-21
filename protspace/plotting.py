@@ -7,7 +7,7 @@ import plotly.express as px
 import plotly.graph_objs as go
 from dash import dcc
 
-from .config import (
+from .utils import (
     DEFAULT_LINE_WIDTH,
     DEFAULT_MARKER_SIZE,
     HIGHLIGHT_BORDER_COLOR,
@@ -114,7 +114,7 @@ def create_3d_plot(
 
     fig.update_traces(
         marker=dict(
-            size=DEFAULT_MARKER_SIZE // 1.5,
+            size=DEFAULT_MARKER_SIZE,
             line=dict(width=DEFAULT_LINE_WIDTH, color="rgba(0, 0, 0, 0.1)"),
         )
     )

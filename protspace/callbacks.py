@@ -8,7 +8,7 @@ from dash_bio.utils import ngl_parser
 
 from .data_processing import prepare_dataframe
 from .plotting import create_2d_plot, create_3d_plot, save_plot
-from .config import NAN_COLOR
+from .utils import NAN_COLOR
 
 
 def setup_callbacks(app, protspace):

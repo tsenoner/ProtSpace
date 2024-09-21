@@ -2,7 +2,7 @@ import argparse
 from typing import Optional
 
 from .app import ProtSpace
-from .config import DEFAULT_PORT, IMAGE_OUTPUT_DIR
+from .utils import DEFAULT_PORT, IMAGE_OUTPUT_DIR
 
 
 def create_file(

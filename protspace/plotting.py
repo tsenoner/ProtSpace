@@ -248,7 +248,6 @@ def get_3d_scene_layout(df: pd.DataFrame) -> Dict[str, Any]:
         "aspectmode": "cube",
     }
 
-
 def save_plot(
     fig: go.Figure,
     is_3d: bool,
@@ -256,29 +255,80 @@ def save_plot(
     height: Optional[int] = None,
     filename: Optional[str] = None,
 ) -> Optional[Dict]:
-    if filename:
-        if is_3d:
+    if is_3d:
+        if filename:
             fig.write_html(filename, include_plotlyjs="cdn")
         else:
-            if width is None or height is None:
-                raise ValueError(
-                    "Width and height must be provided for 2D plots"
-                )
-            fig.write_image(filename, format="svg", width=width, height=height)
-    else:
-        if is_3d:
             buffer = io.StringIO()
             fig.write_html(buffer, include_plotlyjs="cdn")
             buffer.seek(0)
             return dcc.send_bytes(
                 buffer.getvalue().encode(), "protspace_3d_plot.html"
             )
+    else:
+        if width is None or height is None:
+            raise ValueError(
+                "Width and height must be provided for 2D plots"
+            )
+
+        # Base sizes for font and marker at a reference height
+        base_font_size = 14
+        base_marker_size = 10  # Adjust based on your default marker size
+        base_height = 600  # Reference height
+
+        # Calculate scaling factors
+        scaling_factor = height / base_height
+
+        # Adjust font size proportionally
+        font_size = base_font_size * scaling_factor
+
+        # Adjust marker size proportionally
+        legend_marker_size = base_marker_size * scaling_factor
+
+        # Optional: Set minimum and maximum values to avoid extremes
+        font_size = max(10, min(font_size, 30))
+        legend_marker_size = max(5, min(legend_marker_size, 20))
+
+        # Create a copy of the figure to modify for saving
+        fig_to_save = fig
+
+        # Update the legend for the saved version
+        fig_to_save.update_layout(
+            legend=dict(
+                font=dict(size=font_size),
+                itemsizing='constant',
+            )
+        )
+
+        # Loop over each trace in the original figure
+        for trace in fig.data:
+            # Add the original trace without the legend
+            original_trace = trace
+            original_trace.showlegend = False  # Hide original trace from legend
+            fig_to_save.add_trace(original_trace)
+
+            # Create a dummy trace for the legend
+            legend_trace = go.Scatter(
+                x=[None],  # No data point
+                y=[None],
+                mode=trace.mode,
+                name=trace.name,
+                marker=dict(
+                    color=trace.marker.color,
+                    size=legend_marker_size,
+                    symbol=trace.marker.symbol,
+                    line=eval(trace.marker.line.to_json()),
+                ),
+                showlegend=True,
+                legendgroup=trace.legendgroup,
+            )
+            fig_to_save.add_trace(legend_trace)
+
+        if filename:
+            fig_to_save.write_image(filename, format="svg", width=width, height=height)
         else:
-            if width is None or height is None:
-                raise ValueError(
-                    "Width and height must be provided for 2D plots"
-                )
             buffer = io.BytesIO()
-            fig.write_image(buffer, format="svg", width=width, height=height)
+            fig_to_save.write_image(buffer, format="svg", width=width, height=height)
             buffer.seek(0)
             return dcc.send_bytes(buffer.getvalue(), "protspace_2d_plot.svg")
+

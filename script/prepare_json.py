@@ -38,6 +38,7 @@ class DataProcessor:
     def __init__(self, args):
         self.args = args
         self.projection_params = {}
+        self.custom_names = args.custom_names or {}
 
     def process(self):
         logger.info("Starting data processing")
@@ -50,7 +51,7 @@ class DataProcessor:
         df = self._merge_data(metadata, pd.DataFrame(reduced_data))
         json_data = self._df2json(df)
 
-        self._save_json(json_data, self.args.output)
+        self._update_json(json_data, self.args.output)
         logger.info("Data processing completed")
 
     def _load_csv(self, csv_file: str) -> pd.DataFrame:
@@ -170,8 +171,9 @@ class DataProcessor:
         for method in self.args.methods:
             proj_cols = self.PROJECTION_COLS[method]
             if all(col in df.columns for col in proj_cols):
+                custom_name = self.custom_names.get(method, method.upper())
                 projection = {
-                    "name": method.upper(),
+                    "name": custom_name,
                     "dimensions": len(proj_cols),
                     "info": self._get_projection_info(method),
                     "data": [],
@@ -198,10 +200,34 @@ class DataProcessor:
     def _get_projection_info(self, method: str) -> dict:
         return self.projection_params.get(method, {})
 
-    def _save_json(self, json_data, output_file):
-        logger.info(f"Saving JSON data to: {output_file}")
-        with open(output_file, "w") as f:
-            json.dump(json_data, f, indent=2)
+    def _update_json(self, new_json_data, output_file):
+        logger.info(f"Updating JSON data in: {output_file}")
+
+        # Load existing JSON if it exists
+        if os.path.exists(output_file):
+            with open(output_file, 'r') as f:
+                existing_data = json.load(f)
+        else:
+            existing_data = {"protein_data": {}, "projections": []}
+
+        # Update protein_data
+        existing_data["protein_data"].update(new_json_data["protein_data"])
+
+        # Update projections
+        existing_projections = {proj["name"]: proj for proj in existing_data["projections"]}
+        for new_proj in new_json_data["projections"]:
+            if new_proj["name"] in existing_projections:
+                # Update existing projection
+                existing_proj = existing_projections[new_proj["name"]]
+                existing_proj["info"] = new_proj["info"]
+                existing_proj["data"] = new_proj["data"]
+            else:
+                # Add new projection
+                existing_data["projections"].append(new_proj)
+
+        # Save updated JSON
+        with open(output_file, 'w') as f:
+            json.dump(existing_data, f, indent=2)
 
 
 def setup_logging(log_level):
@@ -250,6 +276,12 @@ def main():
         help="Dimension reduction technique(s) to use. Can specify multiple.",
     )
     parser.add_argument(
+        "--custom-names",
+        nargs="+",
+        metavar="METHOD=NAME",
+        help="Custom names for projections in format METHOD=NAME (e.g., pca3=MyPCA)",
+    )
+    parser.add_argument(
         "-v",
         "--verbose",
         action="count",
@@ -283,6 +315,14 @@ def main():
     )
 
     args = parser.parse_args()
+
+    # Process custom names
+    custom_names = {}
+    if args.custom_names:
+        for custom_name in args.custom_names:
+            method, name = custom_name.split('=')
+            custom_names[method] = name
+    args.custom_names = custom_names
 
     # Set up logging based on verbosity level
     if args.verbose == 0:

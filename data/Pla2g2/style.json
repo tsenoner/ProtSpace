@@ -1,0 +1,72 @@
+{
+  "group": {
+    "colors": {
+      "A mammals": "rgba(255, 102, 102, 0.8)",
+      "B birds": "rgba(255, 178, 102, 0.8)",
+      "C birds": "rgba(108, 156, 204, 0.8)",
+      "C crocodile": "rgba(108, 156, 204, 0.8)",
+      "C mammals": "rgba(108, 156, 204, 0.8)",
+      "D birds": "rgba(102, 204, 102, 0.8)",
+      "D mammals": "rgba(102, 204, 102, 0.8)",
+      "D squamates": "rgba(204, 255, 204, 1)",
+      "D1 reptilia": "rgba(125, 232, 125, 1)",
+      "D2 reptilia": "rgba(61, 194, 61, 1)",
+      "D3 reptilia": "rgba(61, 92, 61, 1)",
+      "E birds": "rgba(255, 102, 255, 0.8)",
+      "E crocodile": "rgba(255, 102, 255, 0.8)",
+      "E mammals": "rgba(255, 102, 255, 0.8)",
+      "E serpentes": "rgba(255, 102, 255, 0.8)",
+      "E squamates": "rgba(255, 102, 255, 0.8)",
+      "E turtle": "rgba(255, 102, 255, 0.8)",
+      "F mammals": "rgba(150, 150, 41, 0.8)",
+      "F turtle": "rgba(150, 150, 41, 0.8)",
+      "F squamates": "rgba(150, 150, 41, 0.8)",
+      "G squamates": "rgba(48, 214, 214, 0.8)",
+      "V mammals": "rgba(178, 102, 255, 0.8)",
+      "pre-V": "rgba(138, 138, 138, 1)",
+      "pre g2": "rgba(204, 132, 0, 1)"
+    },
+    "shapes": {
+      "B birds": "cross",
+      "C birds": "cross",
+      "D birds": "cross",
+      "E birds": "cross",
+      "C crocodile": "diamond",
+      "E crocodile": "diamond",
+      "D squamates": "square",
+      "E squamates": "square",
+      "F squamates": "square",
+      "pre g2": "x",
+      "pre-V": "x",
+      "D1 reptilia": "square",
+      "D2 reptilia": "square",
+      "D3 reptilia": "square",
+      "G squamates": "square",
+      "E serpentes": "square-open",
+      "E turtle": "diamond-open",
+      "F turtle": "diamond-open"
+    }
+  },
+  "gene": {
+    "colors": {
+      "Pla2g2": "rgba(255, 102, 102, 0.8)",
+      "Pla2g2A": "rgba(255, 102, 102, 0.8)",
+      "Pla2g2B": "rgba(255, 102, 102, 0.8)",
+      "Pla2g2C": "rgba(255, 102, 102, 0.8)",
+      "Pla2g2D1": "rgba(102, 255, 102, 0.8)",
+      "Pla2g2D2": "rgba(102, 255, 102, 0.8)",
+      "Pla2g2D3": "rgba(102, 255, 102, 0.8)",
+      "Pla2g2E": "rgba(102, 178, 255, 0.8)",
+      "Pla2g2F": "rgba(255, 178, 102, 0.8)",
+      "Pla2g2G": "rgba(255, 102, 255, 0.8)",
+      "Pla2g2G0": "rgba(255, 102, 255, 0.8)",
+      "Pla2g2Ga": "rgba(255, 102, 255, 0.8)",
+      "Pla2g2Gb": "rgba(255, 102, 255, 0.8)",
+      "Pla2g2Gc": "rgba(255, 102, 255, 0.8)",
+      "Pla2g2Gk": "rgba(255, 102, 255, 0.8)",
+      "Pla2g2V": "rgba(178, 102, 255, 0.8)",
+      "Pla2g2V1": "rgba(178, 102, 255, 0.8)",
+      "Pla2g2V2": "rgba(178, 102, 255, 0.8)"
+    }
+  }
+}

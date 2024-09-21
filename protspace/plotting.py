@@ -14,43 +14,19 @@ from .config import (
     HIGHLIGHT_COLOR,
     HIGHLIGHT_LINE_WIDTH,
     HIGHLIGHT_MARKER_SIZE,
-    NAN_COLOR,
 )
-
-
-def create_color_map(
-    df: pd.DataFrame, selected_feature: str, feature_colors: Dict[str, str]
-) -> Dict[str, str]:
-    unique_values = df[selected_feature].unique()
-    sorted_values = sorted([val for val in unique_values if val != "<NaN>"])
-    sorted_values.append("<NaN>")
-
-    color_discrete_map = {}
-    for i, val in enumerate(sorted_values):
-        if val in feature_colors:
-            color_discrete_map[val] = feature_colors[val]
-        elif val != "<NaN>":
-            color_discrete_map[val] = px.colors.qualitative.Plotly[
-                i % len(px.colors.qualitative.Plotly)
-            ]
-
-    color_discrete_map["<NaN>"] = NAN_COLOR
-    return color_discrete_map
 
 
 def create_2d_plot(
     df: pd.DataFrame,
     selected_feature: str,
     selected_proteins: List[str],
-    feature_colors: Dict[str, str],
 ) -> go.Figure:
-    color_discrete_map = create_color_map(df, selected_feature, feature_colors)
     fig = px.scatter(
         df,
         x="x",
         y="y",
         color=selected_feature,
-        color_discrete_map=color_discrete_map,
         hover_data={
             "identifier": True,
             selected_feature: True,
@@ -117,16 +93,13 @@ def create_3d_plot(
     df: pd.DataFrame,
     selected_feature: str,
     selected_proteins: List[str],
-    feature_colors: Dict[str, str],
 ) -> go.Figure:
-    color_discrete_map = create_color_map(df, selected_feature, feature_colors)
     fig = px.scatter_3d(
         df,
         x="x",
         y="y",
         z="z",
         color=selected_feature,
-        color_discrete_map=color_discrete_map,
         hover_data={
             "identifier": True,
             selected_feature: True,

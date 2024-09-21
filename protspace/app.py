@@ -1,7 +1,7 @@
 import os
 import sys
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Optional
 
 from dash import Dash
 
@@ -15,10 +15,13 @@ from .plotting import create_2d_plot, create_3d_plot, save_plot
 class ProtSpace:
     def __init__(self, json_file: str, pdb_dir: Optional[str] = None):
         self.reader = JsonReader(json_file)
+        self.update_data()
+        self.pdb_dir = pdb_dir
+
+    def update_data(self):
         self.projections = sorted(self.reader.get_projection_names())
         self.features = sorted(self.reader.get_all_features())
         self.protein_ids = sorted(self.reader.get_protein_ids())
-        self.pdb_dir = pdb_dir
 
     def create_app(self):
         app = Dash(__name__, suppress_callback_exceptions=True)
@@ -78,6 +81,3 @@ class ProtSpace:
             save_plot(
                 fig, is_3d=True, filename=str(output_file.with_suffix(".html"))
             )
-
-    def get_feature_colors(self, feature: str) -> Dict[str, str]:
-        return self.reader.get_feature_colors(feature)

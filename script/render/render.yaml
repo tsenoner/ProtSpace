@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: protspace
+    runtime: python
+    repo: https://github.com/tsenoner/ProtSpace
+    plan: free
+    # envVars:
+    #   - key: PYTHON_VERSION
+    #     sync: false
+    region: frankfurt
+    buildCommand: poetry install #./build.sh
+    startCommand: poetry run gunicorn scripts.render.wsgi:server --bind 0.0.0.0:$PORT
+
+    # buildCommand: "./build.sh"
+    # startCommand: "python -m gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker"
+    # env: python
+    # buildCommand: pip install -r requirements.txt
+    # startCommand: python -m protspace.main data/example.json
+    # envVars:
+    #   - key: PYTHON_VERSION
+    #     value: 3.11.9
+
+# Exported from Render on 2024-09-22T14:51:08Z
+# services:
+# - type: web
+#   name: RostSpace
+#   runtime: python
+#   repo: https://github.com/tsenoner/RostSpace
+#   plan: free
+#   envVars:
+#   - key: PYTHON_VERSION
+#     sync: false
+#   region: frankfurt
+#   buildCommand: ./build.sh
+#   startCommand: gunicorn src.run_app:server
+# version: "1"

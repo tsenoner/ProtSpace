@@ -8,6 +8,6 @@ services:
     #   - key: PYTHON_VERSION
     #     sync: false
     region: frankfurt
-    buildCommand: poetry install
+    buildCommand: poetry install --no-dev
     startCommand: poetry run gunicorn protspace.wsgi:server --bind 0.0.0.0 #:$PORT
 # version: "1"

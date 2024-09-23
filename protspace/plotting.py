@@ -22,6 +22,7 @@ def create_2d_plot(
     selected_feature: str,
     selected_proteins: List[str],
 ) -> go.Figure:
+    """Create a 2D scatter plot."""
     fig = px.scatter(
         df,
         x="x",
@@ -47,8 +48,6 @@ def create_2d_plot(
 
     if selected_proteins:
         selected_df = df[df["identifier"].isin(selected_proteins)]
-        feature_value = selected_df[selected_feature].values[0]
-        identifier = selected_df["identifier"].values[0]
         fig.add_trace(
             go.Scatter(
                 x=selected_df["x"],
@@ -61,8 +60,7 @@ def create_2d_plot(
                         width=HIGHLIGHT_LINE_WIDTH, color=HIGHLIGHT_BORDER_COLOR
                     ),
                 ),
-                hoverinfo="text",
-                hovertext=f"{selected_feature}={feature_value}<br>identifier={identifier}",
+                hoverinfo="skip",
                 showlegend=False,
             )
         )
@@ -94,6 +92,7 @@ def create_3d_plot(
     selected_feature: str,
     selected_proteins: List[str],
 ) -> go.Figure:
+    """Create a 3D scatter plot."""
     fig = px.scatter_3d(
         df,
         x="x",
@@ -121,8 +120,6 @@ def create_3d_plot(
 
     if selected_proteins:
         selected_df = df[df["identifier"].isin(selected_proteins)]
-        feature_value = selected_df[selected_feature].values[0]
-        identifier = selected_df["identifier"].values[0]
         fig.add_trace(
             go.Scatter3d(
                 x=selected_df["x"],
@@ -136,8 +133,7 @@ def create_3d_plot(
                         width=HIGHLIGHT_LINE_WIDTH, color=HIGHLIGHT_BORDER_COLOR
                     ),
                 ),
-                hoverinfo="text",
-                hovertext=f"{selected_feature}={feature_value}<br>identifier={identifier}",
+                hoverinfo="skip",
                 showlegend=False,
             )
         )
@@ -152,6 +148,7 @@ def create_3d_plot(
 
 
 def create_bounding_box(df: pd.DataFrame) -> go.Scatter3d:
+    """Create a bounding box for the 3D scatter plot."""
     bounds = {
         dim: [df[dim].min() * 1.05, df[dim].max() * 1.05]
         for dim in ["x", "y", "z"]
@@ -196,6 +193,7 @@ def create_bounding_box(df: pd.DataFrame) -> go.Scatter3d:
 
 
 def get_3d_scene_layout(df: pd.DataFrame) -> Dict[str, Any]:
+    """Define the layout for the 3D scene."""
     axis_layout = dict(
         showbackground=False,
         showticklabels=False,
@@ -221,6 +219,7 @@ def get_3d_scene_layout(df: pd.DataFrame) -> Dict[str, Any]:
         "aspectmode": "cube",
     }
 
+
 def save_plot(
     fig: go.Figure,
     is_3d: bool,
@@ -228,6 +227,7 @@ def save_plot(
     height: Optional[int] = None,
     filename: Optional[str] = None,
 ) -> Optional[Dict]:
+    """Save the plot to a file or return it for download."""
     if is_3d:
         if filename:
             fig.write_html(filename, include_plotlyjs="cdn")
@@ -244,64 +244,22 @@ def save_plot(
                 "Width and height must be provided for 2D plots"
             )
 
-        # Base sizes for font and marker at a reference height
-        base_font_size = 14
-        base_marker_size = 10  # Adjust based on your default marker size
-        base_height = 600  # Reference height
-
-        # Calculate scaling factors
-        scaling_factor = height / base_height
-
         # Adjust font size proportionally
-        font_size = base_font_size * scaling_factor
+        scaling_factor = height / 600
+        font_size = max(10, min(14 * scaling_factor, 30))
 
         # Adjust marker size proportionally
-        legend_marker_size = base_marker_size * scaling_factor
+        marker_size = max(5, min(10 * scaling_factor, 20))
 
-        # Optional: Set minimum and maximum values to avoid extremes
-        font_size = max(10, min(font_size, 30))
-        legend_marker_size = max(5, min(legend_marker_size, 20))
-
-        # Create a copy of the figure to modify for saving
-        fig_to_save = fig
-
-        # Update the legend for the saved version
-        fig_to_save.update_layout(
-            legend=dict(
-                font=dict(size=font_size),
-                itemsizing='constant',
-            )
+        fig.update_layout(
+            legend=dict(font=dict(size=font_size)),
         )
-
-        # Loop over each trace in the original figure
-        for trace in fig.data:
-            # Add the original trace without the legend
-            original_trace = trace
-            original_trace.showlegend = False  # Hide original trace from legend
-            fig_to_save.add_trace(original_trace)
-
-            # Create a dummy trace for the legend
-            legend_trace = go.Scatter(
-                x=[None],  # No data point
-                y=[None],
-                mode=trace.mode,
-                name=trace.name,
-                marker=dict(
-                    color=trace.marker.color,
-                    size=legend_marker_size,
-                    symbol=trace.marker.symbol,
-                    line=eval(trace.marker.line.to_json()),
-                ),
-                showlegend=True,
-                legendgroup=trace.legendgroup,
-            )
-            fig_to_save.add_trace(legend_trace)
+        fig.update_traces(marker=dict(size=marker_size))
 
         if filename:
-            fig_to_save.write_image(filename, format="svg", width=width, height=height)
+            fig.write_image(filename, format="svg", width=width, height=height)
         else:
             buffer = io.BytesIO()
-            fig_to_save.write_image(buffer, format="svg", width=width, height=height)
+            fig.write_image(buffer, format="svg", width=width, height=height)
             buffer.seek(0)
             return dcc.send_bytes(buffer.getvalue(), "protspace_2d_plot.svg")
-

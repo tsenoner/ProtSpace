@@ -4,29 +4,54 @@ import dash_daq as daq
 from dash_iconify import DashIconify
 
 from .utils import MARKER_SHAPES
+from .data_loader import JsonReader
 
 def create_layout(app):
+    """Create the layout for the Dash application."""
+    dropdown_style = {"width": "24vw", "display": "inline-block"}
+
+    # Get default data if available
+    default_json_data = app.get_default_json_data()
+    if default_json_data:
+        reader = JsonReader(default_json_data)
+        features = sorted(reader.get_all_features())
+        projections = sorted(reader.get_projection_names())
+        protein_ids = sorted(reader.get_protein_ids())
+
+        feature_options = [{"label": feature, "value": feature} for feature in features]
+        projection_options = [{"label": proj, "value": proj} for proj in projections]
+        protein_options = [{"label": pid, "value": pid} for pid in protein_ids]
+
+        # Select the first feature and projection
+        first_feature = features[0] if features else None
+        first_projection = projections[0] if projections else None
+    else:
+        feature_options = []
+        projection_options = []
+        protein_options = []
+        first_feature = None
+        first_projection = None
+
     common_layout = [
         html.H1("ProtSpace", style={"textAlign": "center", "margin": "0", "padding": "10px 0"}),
         html.Div([
             dcc.Dropdown(
                 id="feature-dropdown",
-                options=[{"label": feature, "value": feature} for feature in app.features],
-                value=app.features[0],
+                options=feature_options,
+                value=first_feature,
                 placeholder="Select a feature",
-                style={"width": "24vw", "display": "inline-block"},
+                style=dropdown_style,
             ),
             dcc.Dropdown(
                 id="projection-dropdown",
-                options=[{"label": proj, "value": proj} for proj in app.projections],
-                value=app.projections[0],
+                options=projection_options,
+                value=first_projection,
                 placeholder="Select a projection",
-                style={"width": "24vw", "display": "inline-block"},
+                style=dropdown_style,
             ),
             dcc.Dropdown(
                 id="protein-search-dropdown",
-                options=[{"label": pid, "value": pid} for pid in app.protein_ids],
-                value=[],
+                options=protein_options,
                 placeholder="Search for protein identifiers",
                 multi=True,
                 style={"width": "40vw", "display": "inline-block"},
@@ -84,6 +109,7 @@ def create_layout(app):
                 html.Button("Apply", id="apply-style-button"),
             ], id="marker-style-controller", style={"display": "none", "width": "300px", "padding": "20px", "backgroundColor": "#f0f0f0", "borderRadius": "5px"}),
         ], style={"display": "flex", "justifyContent": "space-between"}),
+        dcc.Store(id='json-data-store', data=default_json_data),
     ]
 
     if app.pdb_dir:

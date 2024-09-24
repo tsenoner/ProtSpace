@@ -6,6 +6,7 @@
 /docs
 /notebooks
 /tests
+**/pdb/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

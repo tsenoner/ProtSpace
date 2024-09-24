@@ -6,7 +6,7 @@ from pathlib import Path
 
 import dash
 import plotly.graph_objs as go
-from dash import dcc, no_update
+from dash import no_update
 from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 
@@ -23,6 +23,7 @@ def get_reader(json_data):
     else:
         return None
 
+
 def parse_zip_contents(contents, filename):
     content_type, content_string = contents.split(',')
     decoded = base64.b64decode(content_string)
@@ -37,9 +38,10 @@ def parse_zip_contents(contents, filename):
     except Exception as e:
         return None, f"Error processing {filename}: {str(e)}"
 
+
 def setup_callbacks(app):
     @app.callback(
-        Output("json-data-store", "data"),
+        Output("json-data-store", "data", allow_duplicate=True),
         [
             Input("upload-json", "contents"),
             State("upload-json", "filename"),
@@ -125,19 +127,23 @@ def setup_callbacks(app):
         )
 
     @app.callback(
-        Output("scatter-plot", "figure"),
+        [
+            Output("scatter-plot", "figure"),
+            Output("json-data-store", "data", allow_duplicate=True),
+        ],
         [
             Input("projection-dropdown", "value"),
             Input("feature-dropdown", "value"),
             Input("protein-search-dropdown", "value"),
             Input("apply-style-button", "n_clicks"),
-            State("json-data-store", "data"),
         ],
         [
+            State("json-data-store", "data"),
             State("feature-value-dropdown", "value"),
             State("marker-color-picker", "value"),
             State("marker-shape-dropdown", "value"),
         ],
+        prevent_initial_call=True
     )
     def update_graph(
         selected_projection,
@@ -150,7 +156,7 @@ def setup_callbacks(app):
         selected_shape,
     ):
         if json_data is None or not selected_projection or not selected_feature:
-            # Return a blank figure
+            # Return a blank figure and no update to json_data
             fig = go.Figure()
             fig.update_layout(
                 xaxis=dict(visible=False),
@@ -158,19 +164,31 @@ def setup_callbacks(app):
                 plot_bgcolor="white",
                 margin=dict(l=0, r=0, t=0, b=0),
             )
-            return fig
+            return fig, no_update
 
         reader = JsonReader(json_data)
 
-        # Update the changed values
+        # Initialize json_data_output
+        json_data_output = no_update
+
         if n_clicks and selected_value:
             if selected_color:
                 color_hex = selected_color.get('hex', '#000000')
                 reader.update_feature_color(selected_feature, selected_value, color_hex)
             if selected_shape:
                 reader.update_marker_shape(selected_feature, selected_value, selected_shape)
+
+        # Update the changed values
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            trigger_id = None
+        else:
+            trigger_id = ctx.triggered[0]['prop_id'].split('.')[0]
+
+        if trigger_id == 'apply-style-button':
             # Update the JSON data in the store
             json_data = reader.get_data()
+            json_data_output = json_data
 
         df = prepare_dataframe(reader, selected_projection, selected_feature)
         feature_colors = reader.get_feature_colors(selected_feature)
@@ -199,7 +217,7 @@ def setup_callbacks(app):
             if marker_style:
                 fig.update_traces(marker=marker_style, selector=dict(name=str(value)))
 
-        return fig
+        return fig, json_data_output
 
     @app.callback(
         [

@@ -114,7 +114,7 @@ def create_3d_plot(
     fig.update_traces(
         marker=dict(
             size=DEFAULT_MARKER_SIZE,
-            line=dict(width=DEFAULT_LINE_WIDTH, color="rgba(0, 0, 0, 0.1)"),
+            line=dict(width=DEFAULT_LINE_WIDTH, color="black"), #"rgba(0, 0, 0, 0.1)"),
         )
     )
 
@@ -155,18 +155,9 @@ def create_bounding_box(df: pd.DataFrame) -> go.Scatter3d:
     }
     vertices = list(itertools.product(*bounds.values()))
     edges = [
-        (0, 1),
-        (1, 3),
-        (3, 2),
-        (2, 0),
-        (4, 5),
-        (5, 7),
-        (7, 6),
-        (6, 4),
-        (0, 4),
-        (1, 5),
-        (2, 6),
-        (3, 7),
+        (0, 1), (1, 3), (3, 2), (2, 0),
+        (4, 5), (5, 7), (7, 6), (6, 4),
+        (0, 4), (1, 5), (2, 6), (3, 7),
     ]
 
     x = []

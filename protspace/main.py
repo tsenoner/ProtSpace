@@ -13,9 +13,9 @@ def parse_arguments() -> argparse.Namespace:
         help="Path to the default JSON file",
     )
     parser.add_argument(
-        "--pdb_dir",
+        "--pdb_zip",
         required=False,
-        help="Path to the directory containing PDB files",
+        help="Path to the ZIP file containing PDB files",
     )
     parser.add_argument(
         "--port",
@@ -28,10 +28,10 @@ def parse_arguments() -> argparse.Namespace:
 
 def main(
     port: int = DEFAULT_PORT,
-    pdb_dir: Optional[str] = None,
+    pdb_zip: Optional[str] = None,
     json: Optional[str] = None,
 ) -> None:
-    protspace = ProtSpace(pdb_dir=pdb_dir, default_json_file=json)
+    protspace = ProtSpace(pdb_zip=pdb_zip, default_json_file=json)
     protspace.run_server(debug=True, port=port)
 
 

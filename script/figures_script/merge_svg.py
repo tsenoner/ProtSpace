@@ -24,13 +24,14 @@ def add_image_to_plot(ax, image_path, label):
     ax.set_title(header, fontsize=14, fontweight='bold', pad=20)
 
 # Create the figure and subplots
-fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(15, 5))
+fig = plt.figure(figsize=(16, 12))
+gs = fig.add_gridspec(2, 4)
 
 # Add images to subplots
 base_path = Path("examples/out/h_sapiens")
-add_image_to_plot(ax1, base_path / "ProtTucker.svg", "A")
-add_image_to_plot(ax2, base_path / "CLEAN.svg", "B")
-add_image_to_plot(ax3, base_path / "LightAttention.svg", "C")
+add_image_to_plot(fig.add_subplot(gs[0, 0:2]), base_path / "ProtTucker.svg", "A")
+add_image_to_plot(fig.add_subplot(gs[0, 2:]), base_path / "CLEAN.svg", "B")
+add_image_to_plot(fig.add_subplot(gs[1, 1:3]), base_path / "LightAttention.svg", "C")
 
 # Adjust the layout and save the figure
 plt.tight_layout()

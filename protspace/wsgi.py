@@ -1,8 +1,8 @@
 from protspace.app import ProtSpace
 
-# Initialize ProtSpace with default JSON data
+# Initialize ProtSpace with default JSON data and optional PDB ZIP
 protspace = ProtSpace(
-    # pdb_dir="data/3FTx/pdb",
+    # pdb_zip="data/3FTx/3FTx_pdb.zip",
     default_json_file="data/3FTx/3FTx_customized.json"
 )
 

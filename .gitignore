@@ -6,7 +6,12 @@
 /docs
 /notebooks
 /tests
+# data
 **/pdb/
+**/foldcomp/
+/data/light_attention
+/data/h_sapiens/embs/
+/data/h_sapiens/h_sapiens_uniprot20240909.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

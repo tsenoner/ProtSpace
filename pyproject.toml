@@ -20,7 +20,9 @@ dependencies = [
     "kaleido>=0.2.1,!=0.2.1.post1",
     "datashader>=0.16.3",
     "umap-learn>=0.5.6",
-    "numpy==2.0.2" # numpy 2.0.2 is required for compatibility with numba (datasahder, umap-learn)
+    # numpy 2.0.2 is required for compatibility with numba (datasahder, umap-learn)
+    "numpy==2.0.2",
+    "load-dotenv[webserver]>=0.1.0",
 ]
 
 [project.optional-dependencies]

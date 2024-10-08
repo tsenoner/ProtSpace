@@ -14,6 +14,5 @@ services:
         value: data/3FTx/3FTx_customized.json
 
     region: frankfurt
-    buildCommand: uv sync --frozen --all-extras
-    startCommand: uv run gunicorn protspace.wsgi:server --bind 0.0.0.0 #:$PORT
-# version: "1"
+    buildCommand: uv sync --frozen --all-extras --no-dev
+    startCommand: uv run gunicorn protspace.wsgi:server --bind 0.0.0.0

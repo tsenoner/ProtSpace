@@ -1,5 +1,8 @@
-scripts/
-examples/
-data/
 .venv/
+.vscode/
+backup/
+data/
+examples/
+notebooks/
+scripts/
 render.yaml

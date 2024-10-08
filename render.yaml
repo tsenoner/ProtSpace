@@ -4,16 +4,10 @@ services:
     runtime: python
     repo: https://github.com/tsenoner/ProtSpace
     plan: free
-    envVars:
-      - key: PYTHON_VERSION
-        sync: false
-        value: 3.12.9
-      - key: PDB_ZIP_PATH
-        value: data/3FTx/3FTx_pdb.zip
-      - key: DEFAULT_JSON_FILE_PATH
-        value: data/3FTx/3FTx_customized.json
-
+    # envVars:
+    #   - key: PYTHON_VERSION
+    #     sync: false
     region: frankfurt
-    buildCommand: uv sync --frozen --all-extras
-    startCommand: uv run gunicorn protspace.wsgi:server --bind 0.0.0.0 #:$PORT
+    buildCommand: poetry install --no-dev
+    startCommand: poetry run gunicorn protspace.wsgi:server --bind 0.0.0.0 #:$PORT
 # version: "1"

@@ -4,31 +4,31 @@ ProtSpace is a powerful visualization tool for exploring protein embeddings and 
 
 ## Table of Contents
 
--   [ProtSpace](#protspace)
-    -   [Table of Contents](#table-of-contents)
-    -   [Quick Start with Google Colab](#quick-start-with-google-colab)
-    -   [Example Outputs](#example-outputs)
-        -   [2D Scatter Plot (SVG)](#2d-scatter-plot-svg)
-        -   [3D Interactive Plot (HTML)](#3d-interactive-plot-html)
-    -   [Installation](#Running-Protspace)
-    -   [Usage](#usage)
-        -   [Preparing Data](#preparing-data)
-        -   [Running the ProtSpace App](#running-the-protspace-app)
-    -   [Features](#features)
-    -   [Data Preparation Script: prepare_json.py](#data-preparation-script-prepare_jsonpy)
-        -   [Usage](#usage-1)
-        -   [Arguments](#arguments)
-        -   [Additional Parameters](#additional-parameters)
-        -   [Example](#example)
-    -   [Adding Custom Feature Colors](#adding-custom-feature-colors)
-        -   [Usage of add_feature_colors.py](#usage-of-add_feature_colorspy)
-        -   [Arguments](#arguments-1)
-        -   [Feature Colors Input Format](#feature-colors-input-format)
-        -   [Example](#example-1)
-        -   [Notes](#notes)
-    -   [File Formats](#file-formats)
-        -   [Input Files](#input-files)
-        -   [Output File](#output-file)
+- [ProtSpace](#protspace)
+  - [Table of Contents](#table-of-contents)
+  - [Quick Start with Google Colab](#quick-start-with-google-colab)
+  - [Example Outputs](#example-outputs)
+    - [2D Scatter Plot (SVG)](#2d-scatter-plot-svg)
+    - [3D Interactive Plot (HTML)](#3d-interactive-plot-html)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Preparing Data](#preparing-data)
+    - [Running the ProtSpace App](#running-the-protspace-app)
+  - [Features](#features)
+  - [Data Preparation Script: prepare\_json.py](#data-preparation-script-prepare_jsonpy)
+    - [Usage](#usage-1)
+    - [Arguments](#arguments)
+    - [Additional Parameters](#additional-parameters)
+    - [Example](#example)
+  - [Adding Custom Feature Colors](#adding-custom-feature-colors)
+    - [Usage of add\_feature\_colors.py](#usage-of-add_feature_colorspy)
+    - [Arguments](#arguments-1)
+    - [Feature Colors Input Format](#feature-colors-input-format)
+    - [Example](#example-1)
+    - [Notes](#notes)
+  - [File Formats](#file-formats)
+    - [Input Files](#input-files)
+    - [Output File](#output-file)
 
 ## Quick Start with Google Colab
 
@@ -39,13 +39,13 @@ To quickly try out ProtSpace without installing anything on your local machine, 
 Click on the "Open In Colab" button above to open the notebook in Google Colab. You can then run the cells in the notebook to see ProtSpace in action with a sample dataset.
 
 This notebook includes:
-
--   Installation of required dependencies
--   Generation of a dummy dataset
--   Data preparation using the `prepare_json.py` script
--   Visualization of the data using ProtSpace
+- Installation of required dependencies
+- Generation of a dummy dataset
+- Data preparation using the `prepare_json.py` script
+- Visualization of the data using ProtSpace
 
 It's a great way to get familiar with ProtSpace before setting it up on your local machine or using it with your own data.
+
 
 ## Example Outputs
 
@@ -65,29 +65,28 @@ For 3D projections, ProtSpace generates interactive HTML plots. You can view an 
 
 [View 3D Interactive Plot](https://tsenoner.github.io/ProtSpace/examples/out/3FTx/UMAP3_major_group.html)
 
-## Running Protspace
 
-ProtSpace uses uv for dependency management and packaging. Make sure you have uv installed on your system. If not, you can install it by following the instructions on the [uv website](https://docs.astral.sh/uv/#getting-started).
+## Installation
 
-### Quickly running
+ProtSpace uses Poetry for dependency management and packaging. Make sure you have Poetry installed on your system. If not, you can install it by following the instructions on the [Poetry website](https://python-poetry.org/docs/#installation).
 
-```bash
-  uvx protspace
-```
+1. Clone the repository:
+   ```
+   git clone https://github.com/tsenoner/ProtSpace.git
+   cd protspace
+   ```
 
-### Permanent installation
+2. Install dependencies using Poetry:
+   ```
+   poetry install
+   ```
 
-```bash
-  uv tool install protspace
-  uv tool update-shell
-```
+   This command will create a virtual environment and install all the required dependencies specified in the `pyproject.toml` file.
 
-If you are looking for the latest stable version on GitHub, please use:
-
-```bash
-  uv tool install git+https://github.com/tsenoner/ProtSpace.git
-  uv tool update-shell
-```
+3. Activate the virtual environment:
+   ```
+   poetry shell
+   ```
 
 ## Usage
 
@@ -97,8 +96,8 @@ Before using the ProtSpace app, you need to prepare your data using the `prepare
 
 To prepare your data:
 
-```bash
-uvx --from protspace protspace-json -H path/to/embeddings.h5 -c path/to/features.csv -o output.json --methods pca3 umap2 tsne2
+```
+poetry run python prepare_json.py -H path/to/embeddings.h5 -c path/to/features.csv -o output.json --methods pca3 umap2 tsne2
 ```
 
 For more details on the `prepare_json.py` script, see the [Data Preparation Script](#data-preparation-script-prepare_jsonpy) section below.
@@ -107,13 +106,13 @@ For more details on the `prepare_json.py` script, see the [Data Preparation Scri
 
 To run the ProtSpace app:
 
-```bash
-uv tool run protspace <path/to/output.json> [--pdb_dir path/to/pdb/files] [--port 8050]
+```
+poetry run python -m app.main path/to/output.json [--pdb_dir path/to/pdb/files] [--port 8050]
 ```
 
--   `path/to/output.json`: Path to the JSON file generated by the `prepare_json.py` script.
--   `--pdb_dir` (optional): Path to a directory containing PDB files for protein structure visualization.
--   `--port` (optional): Port number to run the server on (default is 8050).
+- `path/to/output.json`: Path to the JSON file generated by the `prepare_json.py` script.
+- `--pdb_dir` (optional): Path to a directory containing PDB files for protein structure visualization.
+- `--port` (optional): Port number to run the server on (default is 8050).
 
 After running the command, open a web browser and navigate to `http://localhost:8050` (or the port you specified) to use the ProtSpace app.
 
@@ -137,34 +136,33 @@ The `prepare_json.py` script is used to preprocess protein embedding data and fe
 
 ### Usage
 
-```bash
-uvx --from protspace protspace-json -H <hdf_file> -c <csv_file> -o <output_json> [options]
+```
+poetry run python prepare_json.py -H <hdf_file> -c <csv_file> -o <output_json> [options]
 ```
 
 ### Arguments
 
--   `-H`, `--hdf`: Path to the HDF file containing protein embeddings.
--   `-c`, `--csv`: Path to the CSV file containing protein features.
--   `-o`, `--output`: Path to save the output JSON file.
--   `--methods`: Dimensionality reduction techniques to apply. Options: pca2, pca3, umap2, umap3, tsne2, tsne3. (Default: pca3)
--   `-v`, `--verbose`: Increase output verbosity. Use -v for INFO, -vv for DEBUG.
+- `-H`, `--hdf`: Path to the HDF file containing protein embeddings.
+- `-c`, `--csv`: Path to the CSV file containing protein features.
+- `-o`, `--output`: Path to save the output JSON file.
+- `--methods`: Dimensionality reduction techniques to apply. Options: pca2, pca3, umap2, umap3, tsne2, tsne3. (Default: pca3)
+- `-v`, `--verbose`: Increase output verbosity. Use -v for INFO, -vv for DEBUG.
 
 ### Additional Parameters
 
--   UMAP parameters:
+- UMAP parameters:
+  - `--n_neighbors`: UMAP n_neighbors parameter (default: 15)
+  - `--min_dist`: UMAP min_dist parameter (default: 0.1)
+  - `--metric`: UMAP metric parameter (default: euclidean)
 
-    -   `--n_neighbors`: UMAP n_neighbors parameter (default: 15)
-    -   `--min_dist`: UMAP min_dist parameter (default: 0.1)
-    -   `--metric`: UMAP metric parameter (default: euclidean)
-
--   t-SNE parameters:
-    -   `--perplexity`: t-SNE perplexity parameter (default: 30)
-    -   `--learning_rate`: t-SNE learning_rate parameter (default: 200)
+- t-SNE parameters:
+  - `--perplexity`: t-SNE perplexity parameter (default: 30)
+  - `--learning_rate`: t-SNE learning_rate parameter (default: 200)
 
 ### Example
 
-```bash
-uvx --from protspace protspace-json  -H data/3FTx/3FTx_prott5.h5 -c data/3FTx.csv -o data/3FTx.json --methods pca2 pca3 -v
+```
+poetry run python app/data/prepare_json.py -H data/3FTx/3FTx_prott5.h5 -c data/3FTx.csv -o data/3FTx.json --methods pca2 pca3 -v
 ```
 
 This command will process the embeddings from `data/3FTx/3FTx_prott5.h5`, combine them with features from `data/3FTx.csv`, apply PCA (2D) and PCA (3D) dimensionality reduction, and save the result to `data/3FTx.json`. It will also provide verbose output during processing.
@@ -175,43 +173,41 @@ ProtSpace allows you to customize the colors used for different feature values i
 
 ### Usage of add_feature_colors.py
 
-```bash
-uvx --from protspace protspace-feature-colors <input_json_file> <output_json_file> --feature_colors <feature_colors_input>
+```
+poetry run python add_feature_colors.py <input_json_file> <output_json_file> --feature_colors <feature_colors_input>
 ```
 
 ### Arguments
 
--   `<input_json_file>`: Path to the input JSON file (generated by `prepare_json.py`).
--   `<output_json_file>`: Path to save the updated JSON file.
--   `--feature_colors`: JSON string of feature colors or path to a JSON file containing feature colors.
+- `<input_json_file>`: Path to the input JSON file (generated by `prepare_json.py`).
+- `<output_json_file>`: Path to save the updated JSON file.
+- `--feature_colors`: JSON string of feature colors or path to a JSON file containing feature colors.
 
 ### Feature Colors Input Format
 
 The feature colors can be provided in two ways:
 
 1. As a JSON string:
-
-    ```
-    '{"feature1": {"value1": "#FF0000", "value2": "#00FF00"}}'
-    ```
+   ```
+   '{"feature1": {"value1": "#FF0000", "value2": "#00FF00"}}'
+   ```
 
 2. As a path to a JSON file containing the feature colors:
-    ```
-    path/to/colors.json
-    ```
+   ```
+   path/to/colors.json
+   ```
 
 The JSON structure should be:
-
 ```json
 {
-    "feature1": {
-        "value1": "#FF0000",
-        "value2": "#00FF00"
-    },
-    "feature2": {
-        "valueA": "#0000FF",
-        "valueB": "#FFFF00"
-    }
+  "feature1": {
+    "value1": "#FF0000",
+    "value2": "#00FF00"
+  },
+  "feature2": {
+    "valueA": "#0000FF",
+    "valueB": "#FFFF00"
+  }
 }
 ```
 
@@ -219,17 +215,17 @@ The JSON structure should be:
 
 To add custom colors for the "major_group" feature:
 
-```bash
-uvx --from protspace protspace-feature-colorsy data/3FTx/3FTx.json data/3FTx/3FTx_colored.json --feature_colors '{"major_group": {"3FTx": "#FF0000", "PLA2": "#00FF00", "SVMP": "#0000FF"}}'
+```
+poetry run python script/add_feature_colors.py data/3FTx/3FTx.json data/3FTx/3FTx_colored.json --feature_colors '{"major_group": {"3FTx": "#FF0000", "PLA2": "#00FF00", "SVMP": "#0000FF"}}'
 ```
 
 This command will update the `data/3FTx/3FTx.json` file with the specified colors for the "major_group" feature and save the result to `data/3FTx/3FTx_colored.json`.
 
 ### Notes
 
--   If a feature or value doesn't exist in the protein data, the script will raise an error.
--   You can update colors for multiple features in a single run.
--   If you're updating an existing color scheme, only the specified colors will be changed or added; existing colors for other values will be preserved.
+- If a feature or value doesn't exist in the protein data, the script will raise an error.
+- You can update colors for multiple features in a single run.
+- If you're updating an existing color scheme, only the specified colors will be changed or added; existing colors for other values will be preserved.
 
 After adding custom colors, you can use the updated JSON file with the ProtSpace app to visualize your data with the new color scheme.
 
@@ -238,24 +234,22 @@ After adding custom colors, you can use the updated JSON file with the ProtSpace
 ### Input Files
 
 1. **HDF File (Embeddings)**
-
-    - Format: HDF5
-    - Contents: Protein embeddings, where each key is a protein identifier, and the corresponding value is the embedding vector.
+   - Format: HDF5
+   - Contents: Protein embeddings, where each key is a protein identifier, and the corresponding value is the embedding vector.
 
 2. **CSV File (Features)**
-
-    - Format: CSV
-    - Contents: Protein features, with one row per protein and columns for different features. Must include an '**identifier**' column matching the protein IDs in the HDF file.
+   - Format: CSV
+   - Contents: Protein features, with one row per protein and columns for different features. Must include an '**identifier**' column matching the protein IDs in the HDF file.
 
 3. **PDB Files (Optional)**
-    - Format: PDB
-    - Contents: 3D structure information for proteins. File names should match the protein identifiers (with underscores instead of dots).
+   - Format: PDB
+   - Contents: 3D structure information for proteins. File names should match the protein identifiers (with underscores instead of dots).
 
 ### Output File
 
 1. **JSON File**
-    - Format: JSON
-    - Contents: Processed data including protein features and dimensionality-reduced coordinates for each projection method.
+   - Format: JSON
+   - Contents: Processed data including protein features and dimensionality-reduced coordinates for each projection method.
 
 ---
 

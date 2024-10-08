@@ -13,7 +13,7 @@ from dash.exceptions import PreventUpdate
 from .data_loader import JsonReader
 from .data_processing import prepare_dataframe
 from .plotting import create_2d_plot, create_3d_plot, save_plot
-from .config import NAN_COLOR
+from .utils import NAN_COLOR
 
 
 def get_reader(json_data):
@@ -25,19 +25,16 @@ def get_reader(json_data):
 
 
 def parse_zip_contents(contents, filename):
-    content_type, content_string = contents.split(",")
+    content_type, content_string = contents.split(',')
     decoded = base64.b64decode(content_string)
     pdb_files = {}
     try:
         with zipfile.ZipFile(io.BytesIO(decoded)) as z:
             for file in z.namelist():
-                if file.endswith(".pdb") or file.endswith(".cif"):
+                if file.endswith('.pdb') or file.endswith('.cif'):
                     with z.open(file) as f:
                         pdb_files[file] = f.read()
-        return (
-            pdb_files,
-            f"Successfully extracted {len(pdb_files)} PDB files from {filename}",
-        )
+        return pdb_files, f"Successfully extracted {len(pdb_files)} PDB files from {filename}"
     except Exception as e:
         return None, f"Error processing {filename}: {str(e)}"
 
@@ -87,8 +84,7 @@ def setup_callbacks(app):
 
         # Convert PDB files content to base64 strings for storage
         pdb_files_base64 = {
-            Path(k).stem.replace(".", "_"): base64.b64encode(v).decode("utf-8")
-            for k, v in pdb_files.items()
+            Path(k).stem.replace(".", "_"): base64.b64encode(v).decode('utf-8') for k, v in pdb_files.items()
         }
 
         # Merge with existing pdb_files_store_data
@@ -114,25 +110,13 @@ def setup_callbacks(app):
             return [], None, [], None, []
 
         reader = get_reader(json_data)
-        feature_options = [
-            {"label": feature, "value": feature}
-            for feature in sorted(reader.get_all_features())
-        ]
-        projection_options = [
-            {"label": proj, "value": proj}
-            for proj in sorted(reader.get_projection_names())
-        ]
-        protein_options = [
-            {"label": pid, "value": pid} for pid in sorted(reader.get_protein_ids())
-        ]
+        feature_options = [{"label": feature, "value": feature} for feature in sorted(reader.get_all_features())]
+        projection_options = [{"label": proj, "value": proj} for proj in sorted(reader.get_projection_names())]
+        protein_options = [{"label": pid, "value": pid} for pid in sorted(reader.get_protein_ids())]
 
         # Select the first feature and projection
-        first_feature = (
-            reader.get_all_features()[0] if reader.get_all_features() else None
-        )
-        first_projection = (
-            reader.get_projection_names()[0] if reader.get_projection_names() else None
-        )
+        first_feature = reader.get_all_features()[0] if reader.get_all_features() else None
+        first_projection = reader.get_projection_names()[0] if reader.get_projection_names() else None
 
         return (
             feature_options,
@@ -159,7 +143,7 @@ def setup_callbacks(app):
             State("marker-color-picker", "value"),
             State("marker-shape-dropdown", "value"),
         ],
-        prevent_initial_call=True,
+        prevent_initial_call=True
     )
     def update_graph(
         selected_projection,
@@ -189,21 +173,19 @@ def setup_callbacks(app):
 
         if n_clicks and selected_value:
             if selected_color:
-                color_hex = selected_color.get("hex", "#000000")
+                color_hex = selected_color.get('hex', '#000000')
                 reader.update_feature_color(selected_feature, selected_value, color_hex)
             if selected_shape:
-                reader.update_marker_shape(
-                    selected_feature, selected_value, selected_shape
-                )
+                reader.update_marker_shape(selected_feature, selected_value, selected_shape)
 
         # Update the changed values
         ctx = dash.callback_context
         if not ctx.triggered:
             trigger_id = None
         else:
-            trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
+            trigger_id = ctx.triggered[0]['prop_id'].split('.')[0]
 
-        if trigger_id == "apply-style-button":
+        if trigger_id == 'apply-style-button':
             # Update the JSON data in the store
             json_data = reader.get_data()
             json_data_output = json_data
@@ -223,14 +205,14 @@ def setup_callbacks(app):
         for value in df[selected_feature].unique():
             marker_style = {}
             if value == "<NaN>":
-                marker_style["color"] = NAN_COLOR
+                marker_style['color'] = NAN_COLOR
             else:
                 color = feature_colors.get(value)
                 shape = marker_shapes.get(value)
                 if color:
-                    marker_style["color"] = color
+                    marker_style['color'] = color
                 if shape:
-                    marker_style["symbol"] = shape
+                    marker_style['symbol'] = shape
 
             if marker_style:
                 fig.update_traces(marker=marker_style, selector=dict(name=str(value)))
@@ -255,15 +237,15 @@ def setup_callbacks(app):
         click_data, current_selected_proteins, pdb_files_data
     ):
         ctx = dash.callback_context
-        triggered_input = ctx.triggered[0]["prop_id"].split(".")[0]
+        triggered_input = ctx.triggered[0]['prop_id'].split('.')[0]
 
         # Update `current_selected_proteins` list
-        if triggered_input == "scatter-plot":
-            if (click_data is None) or ("customdata" not in click_data["points"][0]):
+        if triggered_input == 'scatter-plot':
+            if (click_data is None) or ("customdata" not in click_data['points'][0]):
                 raise PreventUpdate
 
-            point = click_data["points"][0]
-            protein_id = point["customdata"][0]
+            point = click_data['points'][0]
+            protein_id = point['customdata'][0]
             if current_selected_proteins and protein_id in current_selected_proteins:
                 current_selected_proteins.remove(protein_id)
             else:
@@ -289,7 +271,7 @@ def setup_callbacks(app):
             protein_id_key = protein_id.replace(".", "_")
             if protein_id_key in pdb_files_data:
                 pdb_content_base64 = pdb_files_data[protein_id_key]
-                pdb_content = base64.b64decode(pdb_content_base64).decode("utf-8")
+                pdb_content = base64.b64decode(pdb_content_base64).decode('utf-8')
 
                 data_structure = {
                     "filename": f"{protein_id}.pdb",

@@ -1,50 +1,59 @@
-[tool.poetry]
+[project]
 name = "protspace"
 version = "0.1.0"
 description = "A visualisation tool for protein embeddings from pLMs"
-authors = ["Tobias Senoner <tobias.senoner@tum.de>"]
-license = "AGPL-3.0-or-later"
+authors = [{ name = "Tobias Senoner", email = "tobias.senoner@tum.de" }]
 readme = "README.md"
-packages = [{include = "protspace"}]
+license = "AGPL-3.0-or-later"
 
-[tool.poetry.dependencies]
-python = "^3.11"
-pandas = "^2.2.0"
-h5py = "^3.10.0"
-numpy = "^1.26.4"
-dash = "^2.15.0"
-plotly = "^5.18.0"
-datashader = "^0.16.0"
-scikit-learn = "^1.4.0"
-matplotlib = "^3.8.2"
-umap-learn = "^0.5.6"
-dash-bio = "^1.0.2"
-kaleido = "0.2.1"
-dash-daq = "^0.5.0"
-dash-iconify = "^0.1.2"
-gunicorn = "^23.0.0"
+requires-python = ">=3.12"
+dependencies = [
+    "dash>=2.18.1",
+    "dash-bio>=1.0.2",
+    "dash-daq>=0.5.0",
+    "dash-iconify>=0.1.2",
+    "h5py>=3.12.1",
+    "matplotlib>=3.9.2",
+    "pandas>=2.2.3",
+    "plotly>=5.24.1",
+    "scikit-learn>=1.5.2",
+    "kaleido>=0.2.1,!=0.2.1.post1",
+    "datashader>=0.16.3",
+    "umap-learn>=0.5.6",
+    # numpy 2.0.2 is required for compatibility with numba (datasahder, umap-learn)
+    "numpy==2.0.2",
+    "load-dotenv[webserver]>=0.1.0",
+]
 
+[project.optional-dependencies]
+webserver = [
+    "gunicorn>=23.0.0",
+]
 
-[tool.poetry.group.dev.dependencies]
-jupyter-black = "^0.3.4"
-jupyter = "^1.0.0"
-pyarrow = "^15.0.0"
-holoviews = "^1.18.2"
-hvplot = "^0.9.2"
-panel = "^1.3.8"
-xarray = "^2024.1.1"
-jupyter-bokeh = "^3.0.7"
-dash-treeview-antd = "^0.0.1"
-dash-bootstrap-components = "^1.5.0"
-dash-mantine-components = "^0.12.1"
-biopython = "^1.83"
-ijson = "^3.3.0"
-torch = "2.2"
-cairosvg = "^2.7.1"
+[tool.uv]
+dev-dependencies = [
+    "biopython>=1.84",
+    "cairosvg>=2.7.1",
+    "dash-bootstrap-components>=1.6.0",
+    "dash-mantine-components>=0.14.5",
+    "dash-treeview-antd>=0.0.1",
+    "holoviews>=1.19.1",
+    "hvplot>=0.11.0",
+    "ijson>=3.3.0",
+    "jupyter>=1.1.1",
+    "jupyter-black>=0.4.0",
+    "jupyter-bokeh>=4.0.5",
+    "panel>=1.5.2",
+    "pyarrow>=17.0.0",
+    "xarray>=2024.9.0",
+    "torch==2.2",
+]
+
+[project.scripts]
+protspace = "protspace.main:main"
+protspace-json = "protspace.utils.prepare_json:main"
+protspace-feature-colors = "protspace.utils.add_feature_style:main"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
-start = "app.main:main"
+requires = ["hatchling"]
+build-backend = "hatchling.build"

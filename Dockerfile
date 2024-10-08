@@ -64,4 +64,4 @@ python -Im site
 python -Ic 'import protspace'
 EOT
 EXPOSE 8000
-CMD ["gunicorn", "protspace.wsgi:server", "--bind", "0.0.0.0:8000", "--workers", "4"]
+CMD ["gunicorn", "protspace.wsgi:server", "--bind", "0.0.0.0:8000"]

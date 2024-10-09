@@ -51,7 +51,7 @@ dev-dependencies = [
 ]
 
 [project.scripts]
-protspace = "protspace.main:main"
+protspace = "protspace.main:run"
 protspace-json = "protspace.utils.prepare_json:main"
 protspace-feature-colors = "protspace.utils.add_feature_style:main"
 

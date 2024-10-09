@@ -1,12 +1,14 @@
+from dotenv import load_dotenv
+import os
+
 from protspace.app import ProtSpace
+
+load_dotenv(".env.example")
 
 # Initialize ProtSpace with default JSON data and optional PDB ZIP
 protspace = ProtSpace(
-    # pdb_zip="data/3FTx/3FTx_pdb.zip",
-    # default_json_file="data/3FTx/3FTx_customized.json"
-    pdb_zip="data/Pla2g2/Pla2g2_pdb.zip",
-    default_json_file="data/Pla2g2/protspace_files/Pla2g2_noTransperancy.json"
-
+    pdb_zip=os.getenv("PDB_ZIP_PATH"),
+    default_json_file=os.getenv("DEFAULT_JSON_FILE_PATH"),
 )
 
 # Create the Dash app

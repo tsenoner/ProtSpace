@@ -2,7 +2,7 @@ import argparse
 from typing import Optional
 
 from .app import ProtSpace
-from .utils import DEFAULT_PORT
+from .config import DEFAULT_PORT
 
 
 def parse_arguments() -> argparse.Namespace:

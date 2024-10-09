@@ -7,7 +7,7 @@ import plotly.express as px
 import plotly.graph_objs as go
 from dash import dcc
 
-from .utils import (
+from .config import (
     DEFAULT_LINE_WIDTH,
     DEFAULT_MARKER_SIZE,
     HIGHLIGHT_BORDER_COLOR,
@@ -34,9 +34,7 @@ def create_2d_plot(
             "x": False,
             "y": False,
         },
-        category_orders={
-            selected_feature: sorted(df[selected_feature].unique())
-        },
+        category_orders={selected_feature: sorted(df[selected_feature].unique())},
     )
 
     fig.update_traces(
@@ -56,9 +54,7 @@ def create_2d_plot(
                 marker=dict(
                     size=HIGHLIGHT_MARKER_SIZE,
                     color=HIGHLIGHT_COLOR,
-                    line=dict(
-                        width=HIGHLIGHT_LINE_WIDTH, color=HIGHLIGHT_BORDER_COLOR
-                    ),
+                    line=dict(width=HIGHLIGHT_LINE_WIDTH, color=HIGHLIGHT_BORDER_COLOR),
                 ),
                 hoverinfo="skip",
                 showlegend=False,
@@ -106,15 +102,15 @@ def create_3d_plot(
             "y": False,
             "z": False,
         },
-        category_orders={
-            selected_feature: sorted(df[selected_feature].unique())
-        },
+        category_orders={selected_feature: sorted(df[selected_feature].unique())},
     )
 
     fig.update_traces(
         marker=dict(
             size=DEFAULT_MARKER_SIZE,
-            line=dict(width=DEFAULT_LINE_WIDTH, color="black"), #"rgba(0, 0, 0, 0.1)"),
+            line=dict(
+                width=DEFAULT_LINE_WIDTH, color="black"
+            ),  # "rgba(0, 0, 0, 0.1)"),
         )
     )
 
@@ -129,9 +125,7 @@ def create_3d_plot(
                 marker=dict(
                     size=HIGHLIGHT_MARKER_SIZE,
                     color=HIGHLIGHT_COLOR,
-                    line=dict(
-                        width=HIGHLIGHT_LINE_WIDTH, color=HIGHLIGHT_BORDER_COLOR
-                    ),
+                    line=dict(width=HIGHLIGHT_LINE_WIDTH, color=HIGHLIGHT_BORDER_COLOR),
                 ),
                 hoverinfo="skip",
                 showlegend=False,
@@ -150,14 +144,22 @@ def create_3d_plot(
 def create_bounding_box(df: pd.DataFrame) -> go.Scatter3d:
     """Create a bounding box for the 3D scatter plot."""
     bounds = {
-        dim: [df[dim].min() * 1.05, df[dim].max() * 1.05]
-        for dim in ["x", "y", "z"]
+        dim: [df[dim].min() * 1.05, df[dim].max() * 1.05] for dim in ["x", "y", "z"]
     }
     vertices = list(itertools.product(*bounds.values()))
     edges = [
-        (0, 1), (1, 3), (3, 2), (2, 0),
-        (4, 5), (5, 7), (7, 6), (6, 4),
-        (0, 4), (1, 5), (2, 6), (3, 7),
+        (0, 1),
+        (1, 3),
+        (3, 2),
+        (2, 0),
+        (4, 5),
+        (5, 7),
+        (7, 6),
+        (6, 4),
+        (0, 4),
+        (1, 5),
+        (2, 6),
+        (3, 7),
     ]
 
     x = []
@@ -226,14 +228,10 @@ def save_plot(
             buffer = io.StringIO()
             fig.write_html(buffer, include_plotlyjs="cdn")
             buffer.seek(0)
-            return dcc.send_bytes(
-                buffer.getvalue().encode(), "protspace_3d_plot.html"
-            )
+            return dcc.send_bytes(buffer.getvalue().encode(), "protspace_3d_plot.html")
     else:
         if width is None or height is None:
-            raise ValueError(
-                "Width and height must be provided for 2D plots"
-            )
+            raise ValueError("Width and height must be provided for 2D plots")
 
         # Adjust font size proportionally
         scaling_factor = height / 600

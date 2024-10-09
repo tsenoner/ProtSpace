@@ -35,6 +35,10 @@ def main(
     protspace.run_server(debug=True, port=port)
 
 
-if __name__ == "__main__":
+def run():
     args = parse_arguments()
     main(**vars(args))
+
+
+if __name__ == "__main__":
+    run()

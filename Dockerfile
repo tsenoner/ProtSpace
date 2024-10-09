@@ -42,6 +42,10 @@ uv pip install \
 #########################################################################
 FROM python:3.12-slim
 
+LABEL org.opencontainers.image.source=https://github.com/tsenoner/protspace
+LABEL org.opencontainers.image.licenses=GPL-3.0
+
+
 SHELL ["sh", "-exc"]
 WORKDIR /app
 

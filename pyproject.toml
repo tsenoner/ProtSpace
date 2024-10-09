@@ -22,12 +22,12 @@ dependencies = [
     "umap-learn>=0.5.6",
     # numpy 2.0.2 is required for compatibility with numba (datasahder, umap-learn)
     "numpy==2.0.2",
-    "python-dotenv>=1.0.1",
 ]
 
 [project.optional-dependencies]
 webserver = [
     "gunicorn>=23.0.0",
+    "python-dotenv>=1.0.1",
 ]
 
 [tool.uv]

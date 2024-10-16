@@ -1,6 +1,6 @@
 # ProtSpace
 
-ProtSpace is a powerful visualization tool for exploring protein embeddings and structures. It allows users to interactively visualize high-dimensional protein languade model data in 2D or 3D space, color-code proteins based on various features, and view protein structures when available.
+ProtSpace is a powerful visualization tool for exploring protein embeddings and structures. It allows users to interactively visualize high-dimensional protein language model data in 2D or 3D space, color-code proteins based on various features, and view protein structures when available.
 
 ## Table of Contents
 

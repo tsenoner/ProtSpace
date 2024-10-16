@@ -42,17 +42,23 @@ jobs:
 
       - name: Install uv
         uses: astral-sh/setup-uv@v3
+        if: steps.release.outputs.released == 'true'
         with:
             enable-cache: true
             cache-dependency-glob: "uv.lock"
 
       - name: Set up Python
         uses: actions/setup-python@v5
+        if: steps.release.outputs.released == 'true'
         with:
           python-version-file: "pyproject.toml"
+        
     
       - name: Build Python
         run: uv build
+        if: steps.release.outputs.released == 'true'
+
+        
 
       - name: Publish | Upload package to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1

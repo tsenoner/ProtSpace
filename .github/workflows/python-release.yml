@@ -54,11 +54,8 @@ jobs:
       - name: Build Python
         run: uv build
 
-      - name: Publish distribution 📦 to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-
       - name: Publish | Upload package to PyPI
-        uses:  uses: pypa/gh-action-pypi-publish@release/v1
+        uses: pypa/gh-action-pypi-publish@release/v1
         if: steps.release.outputs.released == 'true'
 
       - name: Publish | Upload to GitHub Release Assets

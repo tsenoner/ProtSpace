@@ -57,3 +57,11 @@ protspace-feature-colors = "protspace.utils.add_feature_style:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:project.version",
+]
+version_variable = [
+    "src/protspace/__init__.py:__version__",
+]

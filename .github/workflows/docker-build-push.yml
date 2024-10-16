@@ -3,9 +3,20 @@ name: Docker Build, Push to ghcr.io, and Deploy to Render
 on:
   push:
     branches: [ "main" ]
+    paths: 
+      - src/**
+      - uv.lock
+      - pyproject.toml
+      - Dockerfile
+      - .python-version
   pull_request:
     branches: [ "main" ]
-
+    paths: 
+      - src/**
+      - uv.lock
+      - pyproject.toml
+      - Dockerfile
+      - .python-version
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}

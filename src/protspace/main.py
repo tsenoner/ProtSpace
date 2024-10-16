@@ -1,8 +1,11 @@
 import argparse
+import warnings
 from typing import Optional
 
 from .app import ProtSpace
 from .config import DEFAULT_PORT
+
+warnings.filterwarnings("ignore", category=SyntaxWarning)
 
 
 def parse_arguments() -> argparse.Namespace:

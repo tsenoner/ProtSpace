@@ -12,6 +12,9 @@ jobs:
     permissions:
         id-token: write
         contents: write
+    environment:
+      name: pypi
+      url: https://pypi.org/p/protspace
 
     steps:
       - name: Setup | Checkout Repository at workflow sha
@@ -55,7 +58,7 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
 
       - name: Publish | Upload package to PyPI
-        uses: pypa/gh-action-pypi-publish@v1
+        uses:  uses: pypa/gh-action-pypi-publish@release/v1
         if: steps.release.outputs.released == 'true'
 
       - name: Publish | Upload to GitHub Release Assets

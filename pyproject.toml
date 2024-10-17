@@ -65,7 +65,7 @@ assets = [
 version_toml = [
     "pyproject.toml:project.version",
 ]
-version_variable = [
+version_variables = [
     "src/protspace/__init__.py:__version__",
 ]
 build_command = "uv lock"

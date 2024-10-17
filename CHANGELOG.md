@@ -1,7 +1,18 @@
 # CHANGELOG
 
 
+## v0.10.0 (2024-10-17)
+
+### Unknown
+
+* Merge branch 'main' of github.com:tsenoner/ProtSpace ([`4202f71`](https://github.com/tsenoner/ProtSpace/commit/4202f7110a561d683393cf1852ce897c82da2496))
+
+
 ## v0.9.5 (2024-10-17)
+
+### Features
+
+* feat: update uv caching strategy ([`131e963`](https://github.com/tsenoner/ProtSpace/commit/131e963669807cb8a6fb5919f448af7961fe35d8))
 
 ### Fixes
 

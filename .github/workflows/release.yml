@@ -58,7 +58,11 @@ jobs:
           output=$(uv tool run semantic-release version --commit --changelog --push --tag --vcs-release)
           echo "$output"
           version=$(uv tool run semantic-release version --no-commit --no-push --no-vcs-release --print-last-released-tag)
-          echo "released=true" >> $GITHUB_OUTPUT
+          if echo "$output" | grep -q "No release will be made"; then
+            echo "release_needed=false" >> $GITHUB_OUTPUT
+          else
+            echo "release_needed=true" >> $GITHUB_OUTPUT
+          fi
           echo "tag=$version" >> $GITHUB_OUTPUT
 
 

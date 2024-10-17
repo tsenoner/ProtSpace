@@ -17,7 +17,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          ref: v${{ github.event.client_payload.version }}
+          ref: v${{ github.event.client_payload.tag }}
 
       - name: Install uv
         uses: astral-sh/setup-uv@v3
@@ -28,7 +28,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version-file: "pyproject.toml"
+          python-tag-file: "pyproject.toml"
 
       - name: Build Python Package
         run: uv build
@@ -40,4 +40,4 @@ jobs:
         uses: python-semantic-release/publish-action@v9.8.9
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          tag: v${{ github.event.client_payload.version }}
+          tag: v${{ github.event.client_payload.tag }}

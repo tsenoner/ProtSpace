@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.10.4 (2024-10-17)
+
+### Fixes
+
+* fix: fix detached history problem ([`8dc8923`](https://github.com/tsenoner/ProtSpace/commit/8dc89237a2a42ea274acb67cdf53d0d365c6a639))
+
+
 ## v0.10.3 (2024-10-17)
 
 ### Unknown

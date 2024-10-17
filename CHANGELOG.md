@@ -1,9 +1,18 @@
 # CHANGELOG
 
 
+## v0.9.3 (2024-10-17)
+
+### Unknown
+
+* Merge branch 'main' of github.com:tsenoner/ProtSpace ([`459ca4b`](https://github.com/tsenoner/ProtSpace/commit/459ca4b11bf9207f02d5569034abe201583c7d93))
+
+
 ## v0.9.2 (2024-10-17)
 
 ### Fixes
+
+* fix: add token permissions ([`878201d`](https://github.com/tsenoner/ProtSpace/commit/878201d8d99ee42c02d89b482d3657499a732e94))
 
 * fix: add version ([`f24300b`](https://github.com/tsenoner/ProtSpace/commit/f24300b2b258bb746f91a651b690d019d644910a))
 

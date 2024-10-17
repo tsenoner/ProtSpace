@@ -62,11 +62,12 @@ jobs:
           else
             echo "release_needed=true" >> $GITHUB_OUTPUT
           fi
-
       - name: Update uv.lock
         if: steps.check_release.outputs.release_needed == 'true'
         run: |
           uv lock
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add uv.lock
           git commit -m "chore: update uv.lock file [skip ci]"
 

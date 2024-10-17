@@ -15,6 +15,9 @@ jobs:
     outputs:
       released: ${{ steps.semantic_release.outputs.released }}
       tag: ${{ steps.semantic_release.outputs.tag }}
+    env:
+      UV_CACHE_DIR: /tmp/.uv-cache
+      UV_TOOL_DIR: /tmp/.uv-tool
 
     steps:
       - name: Checkout Repository
@@ -29,22 +32,20 @@ jobs:
 
       - name: Install uv
         uses: astral-sh/setup-uv@v3
-        with:
-          enable-cache: true
-          cache-dependency-glob: "uv.lock"
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version-file: "pyproject.toml"
 
-      - name: Cache Python Semantic Release
-        uses: actions/cache@v3
+      - name: Restore uv tools
+        uses: actions/cache@v4
         with:
-          path: ~/.cache/uv
-          key: ${{ runner.os }}-uv-semantic-release-v9.11.1
+          path: /tmp/.uv-tools
+          key: uv-tools-${{ runner.os }}-psr-v9.11.1
           restore-keys: |
-            ${{ runner.os }}-uv-semantic-release-
+            uv-tools-${{ runner.os }}-psr-v9.11.1
+            uv-tools-${{ runner.os }}
 
       - name: Install Python Semantic Release
         run: uv tool install python-semantic-release@v9.11.1
@@ -57,7 +58,7 @@ jobs:
           output=$(uv tool run semantic-release version --commit --push --tag --vcs-release --changelog)
           echo "$output"
           
-          version=$(uv tool run semantic-release version --no-commit --no-push --no-vcs-release --print-print-last-released-tag)
+          version=$(uv tool run semantic-release version --no-commit --no-push --no-vcs-release --print-last-released-tag)
           if echo "$output" | grep -q "No release will be made"; then
             echo "released=false" >> $GITHUB_OUTPUT
           else

@@ -36,7 +36,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=semver,pattern={{tag}},value=${{ github.event.client_payload.tag }}
+            type=semver,pattern={{version}},value=${{ github.event.client_payload.tag }}
             type=semver,pattern={{major}}.{{minor}},value=${{ github.event.client_payload.tag }}
             type=semver,pattern={{major}},value=${{ github.event.client_payload.tag }}
             type=raw,value=latest

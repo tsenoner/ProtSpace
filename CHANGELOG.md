@@ -1,9 +1,18 @@
 # CHANGELOG
 
 
+## v0.10.3 (2024-10-17)
+
+### Unknown
+
+* Merge branch 'main' of github.com:tsenoner/ProtSpace ([`aa354eb`](https://github.com/tsenoner/ProtSpace/commit/aa354ebcc6cbe0315646bd83102d86a7a844de1e))
+
+
 ## v0.10.2 (2024-10-17)
 
 ### Fixes
+
+* fix: update config option in pyproject.toml ([`a021cbe`](https://github.com/tsenoner/ProtSpace/commit/a021cbe0f73a5bec6f35e9c80d852c66ca147c03))
 
 * fix: check for release ([`efd1cf8`](https://github.com/tsenoner/ProtSpace/commit/efd1cf82724049cb689c91f2f546faafa9b9dc11))
 

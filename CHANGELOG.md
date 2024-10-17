@@ -1,9 +1,18 @@
 # CHANGELOG
 
 
+## v0.10.6 (2024-10-17)
+
+### Unknown
+
+* Merge branch 'main' of github.com:tsenoner/ProtSpace ([`0382e2d`](https://github.com/tsenoner/ProtSpace/commit/0382e2d00db5c73d53a86aeadb6c236ac543c8b9))
+
+
 ## v0.10.5 (2024-10-17)
 
 ### Fixes
+
+* fix: psr toolname ([`8f67118`](https://github.com/tsenoner/ProtSpace/commit/8f671188eb70bfa1f112bfd0b8354967e49291ef))
 
 * fix: github release ([`4e49c45`](https://github.com/tsenoner/ProtSpace/commit/4e49c45e81e03fdc13111f129b4e13e38a50e327))
 

@@ -1,0 +1,59 @@
+name: Release Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    concurrency: release
+    permissions:
+      id-token: write
+      contents: write
+    outputs:
+      released: ${{ steps.semantic_release.outputs.released }}
+      version: ${{ steps.semantic_release.outputs.version }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.sha }}
+
+      - name: Force correct release branch
+        run: |
+          git checkout -B ${{ github.ref_name }} ${{ github.sha }}
+
+      - name: Python Semantic Release
+        id: semantic_release
+        uses: python-semantic-release/python-semantic-release@v9.11.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git_committer_name: "github-actions"
+          git_committer_email: "actions@users.noreply.github.com"
+          build: false
+          changelog: true
+          commit: true
+          push: true
+          tag: true
+          vcs_release: true
+
+  trigger-builds:
+    needs: release
+    if: needs.release.outputs.released == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Python Build
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: trigger-python-build
+          client-payload: '{"version": "${{ needs.release.outputs.version }}"}'
+
+      - name: Trigger Docker Build
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: trigger-docker-build
+          client-payload: '{"version": "${{ needs.release.outputs.version }}"}'

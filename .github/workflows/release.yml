@@ -49,12 +49,6 @@ jobs:
       - name: Install Python Semantic Release
         run: uv tool install python-semantic-release@v9.11.1
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --system --add safe.directory "*"
-
       - name: Run Semantic Release
         id: semantic_release
         env:

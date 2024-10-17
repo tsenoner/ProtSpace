@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.10.5 (2024-10-17)
+
+### Fixes
+
+* fix: github release ([`4e49c45`](https://github.com/tsenoner/ProtSpace/commit/4e49c45e81e03fdc13111f129b4e13e38a50e327))
+
+
 ## v0.10.4 (2024-10-17)
 
 ### Fixes

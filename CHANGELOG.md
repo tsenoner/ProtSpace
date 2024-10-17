@@ -1,7 +1,26 @@
 # CHANGELOG
 
 
+## v0.9.5 (2024-10-17)
+
+### Fixes
+
+* fix: version command ([`db50547`](https://github.com/tsenoner/ProtSpace/commit/db50547156088c40b2e405e62e3bef54b43f46ce))
+
+* fix: correct semantic-release command ([`845791c`](https://github.com/tsenoner/ProtSpace/commit/845791c2f7c09da2ddda8f25a1a2d145e8645f6f))
+
+* fix: remove git setup ([`028703e`](https://github.com/tsenoner/ProtSpace/commit/028703ed1887b3235f54f493885c513034b2e06d))
+
+### Unknown
+
+* Merge branch 'main' of github.com:tsenoner/ProtSpace ([`24001ce`](https://github.com/tsenoner/ProtSpace/commit/24001ce7bc78ec72c6e7fac881ee64ca4d2cf063))
+
+
 ## v0.9.4 (2024-10-17)
+
+### Fixes
+
+* fix: improve uv build process ([`8948c34`](https://github.com/tsenoner/ProtSpace/commit/8948c346d1326accb86d13167e09da889cc81864))
 
 ### Unknown
 

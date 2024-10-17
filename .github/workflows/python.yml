@@ -65,5 +65,5 @@ jobs:
       - name: Publish to GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: uv tool run semantic-release publish --tag ${{ github.event.client_payload.tag }}
+        run: uv tool run --from python-semantic-release semantic-release publish --tag ${{ github.event.client_payload.tag }}
         

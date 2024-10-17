@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.10.2 (2024-10-17)
+
+### Fixes
+
+* fix: check for release ([`efd1cf8`](https://github.com/tsenoner/ProtSpace/commit/efd1cf82724049cb689c91f2f546faafa9b9dc11))
+
+### Unknown
+
+* Merge branch 'main' of github.com:tsenoner/ProtSpace ([`cbf01e5`](https://github.com/tsenoner/ProtSpace/commit/cbf01e560279e768a64a3b99db7f5065d176d566))
+
+
 ## v0.10.1 (2024-10-17)
 
 ### Chores
@@ -12,6 +23,10 @@
 * fix: add uv lock git username ([`021b743`](https://github.com/tsenoner/ProtSpace/commit/021b7430bc45699b2dee9d4f226da5557553e0f6))
 
 * fix: add manual uv.lock update ([`e3b5a19`](https://github.com/tsenoner/ProtSpace/commit/e3b5a192bd847fcf38fe04e25f7614f0c6506147))
+
+### Unknown
+
+* Add uv.lock as build asset to be commited ([`b5ae5e5`](https://github.com/tsenoner/ProtSpace/commit/b5ae5e56ef6fe0e1bc79b962ab3949f218589f96))
 
 
 ## v0.10.0 (2024-10-17)

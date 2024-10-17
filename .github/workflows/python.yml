@@ -15,7 +15,7 @@ jobs:
         UV_TOOL_DIR: /tmp/.uv-tools
     permissions:
       id-token: write
-      contents: read
+      contents: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -63,5 +63,7 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
 
       - name: Publish to GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: uv tool run semantic-release publish --tag ${{ github.event.client_payload.tag }}
         

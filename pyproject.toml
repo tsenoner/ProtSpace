@@ -1,6 +1,6 @@
 [project]
 name = "protspace"
-version = "0.9.3"
+version = "0.9.4"
 description = "A visualisation tool for protein embeddings from pLMs"
 authors = [{ name = "Tobias Senoner", email = "tobias.senoner@tum.de" }]
 readme = "README.md"

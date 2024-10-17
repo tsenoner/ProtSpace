@@ -65,3 +65,4 @@ version_toml = [
 version_variable = [
     "src/protspace/__init__.py:__version__",
 ]
+build_command = "uv lock"

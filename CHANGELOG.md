@@ -1,11 +1,26 @@
 # CHANGELOG
 
 
+## v0.9.2 (2024-10-17)
+
+### Fixes
+
+* fix: add version ([`f24300b`](https://github.com/tsenoner/ProtSpace/commit/f24300b2b258bb746f91a651b690d019d644910a))
+
+### Unknown
+
+* Merge branch 'main' of github.com:tsenoner/ProtSpace ([`93948d2`](https://github.com/tsenoner/ProtSpace/commit/93948d2ee8d9be4485da11c56c87ba1ad4b8b9d6))
+
+
 ## v0.9.1 (2024-10-16)
 
 ### Chores
 
 * chore: fix build process ([`a0b7907`](https://github.com/tsenoner/ProtSpace/commit/a0b79077a6d805f7409fa754dd0b988f26809901))
+
+### Continuous Integration
+
+* ci: modularize build process ([`af78bed`](https://github.com/tsenoner/ProtSpace/commit/af78bed0340d8f9bb865f44ce5b52a8d4d7dc39d))
 
 ### Fixes
 

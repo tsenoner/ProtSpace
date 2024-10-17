@@ -1,6 +1,19 @@
 # CHANGELOG
 
 
+## v0.10.1 (2024-10-17)
+
+### Chores
+
+* chore: update uv.lock file [skip ci] ([`f6e41ee`](https://github.com/tsenoner/ProtSpace/commit/f6e41ee3be97f0988780c9b1304a9c4536eae816))
+
+### Fixes
+
+* fix: add uv lock git username ([`021b743`](https://github.com/tsenoner/ProtSpace/commit/021b7430bc45699b2dee9d4f226da5557553e0f6))
+
+* fix: add manual uv.lock update ([`e3b5a19`](https://github.com/tsenoner/ProtSpace/commit/e3b5a192bd847fcf38fe04e25f7614f0c6506147))
+
+
 ## v0.10.0 (2024-10-17)
 
 ### Unknown

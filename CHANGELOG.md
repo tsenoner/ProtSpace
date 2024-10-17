@@ -1,7 +1,18 @@
 # CHANGELOG
 
 
+## v0.9.4 (2024-10-17)
+
+### Unknown
+
+* Merge branch 'main' of github.com:tsenoner/ProtSpace ([`98b94b7`](https://github.com/tsenoner/ProtSpace/commit/98b94b74e957f6a8c38e2d1caddbd963e1bf43e6))
+
+
 ## v0.9.3 (2024-10-17)
+
+### Fixes
+
+* fix: change repository version ([`ac2d97c`](https://github.com/tsenoner/ProtSpace/commit/ac2d97c71b596500986ed105afa3aa9b6b72a69a))
 
 ### Unknown
 

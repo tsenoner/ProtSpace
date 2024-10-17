@@ -16,7 +16,6 @@ jobs:
       released: ${{ steps.semantic_release.outputs.released }}
       tag: ${{ steps.semantic_release.outputs.tag }}
     env:
-      UV_CACHE_DIR: /tmp/.uv-cache
       UV_TOOL_DIR: /tmp/.uv-tool
 
     steps:

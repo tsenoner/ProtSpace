@@ -53,10 +53,10 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           event-type: trigger-python-build
-          client-payload: '{"version": "${{ needs.release.outputs.tag }}"}'
+          client-payload: '{"tag": "${{ needs.release.outputs.tag }}"}'
 
       - name: Trigger Docker Build
         uses: peter-evans/repository-dispatch@v3
         with:
           event-type: trigger-docker-build
-          client-payload: '{"version": "${{ needs.release.outputs.tag }}"}'
+          client-payload: '{"tag": "${{ needs.release.outputs.tag }}"}'

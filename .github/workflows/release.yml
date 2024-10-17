@@ -50,21 +50,43 @@ jobs:
       - name: Install Python Semantic Release
         run: uv tool install python-semantic-release@v9.11.1
 
-      - name: Run Semantic Release
-        id: semantic_release
+      - name: Check for release
+        id: check_release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          output=$(uv tool run semantic-release version --commit --push --tag --vcs-release --changelog)
+          output=$(uv tool run semantic-release version --no-commit --no-push --no-vcs-release --print)
           echo "$output"
-          
-          version=$(uv tool run semantic-release version --no-commit --no-push --no-vcs-release --print-last-released-tag)
           if echo "$output" | grep -q "No release will be made"; then
-            echo "released=false" >> $GITHUB_OUTPUT
+            echo "release_needed=false" >> $GITHUB_OUTPUT
           else
-            echo "released=true" >> $GITHUB_OUTPUT
+            echo "release_needed=true" >> $GITHUB_OUTPUT
           fi
+
+      - name: Update uv.lock
+        if: steps.check_release.outputs.release_needed == 'true'
+        run: |
+          uv lock
+          git add uv.lock
+          git commit -m "chore: update uv.lock file [skip ci]"
+
+      - name: Run Semantic Release
+        id: semantic_release
+        if: steps.check_release.outputs.release_needed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          output=$(uv tool run semantic-release version --commit --changelog --push --tag --vcs-release)
+          echo "$output"
+          version=$(uv tool run semantic-release version --no-commit --no-push --no-vcs-release --print-last-released-tag)
+          echo "released=true" >> $GITHUB_OUTPUT
           echo "tag=$version" >> $GITHUB_OUTPUT
+
+      - name: No Release
+        if: steps.check_release.outputs.release_needed == 'false'
+        run: |
+          echo "No release will be made."
+          echo "released=false" >> $GITHUB_OUTPUT
 
   trigger-builds:
     needs: release

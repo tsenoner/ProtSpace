@@ -17,7 +17,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          ref: v${{ github.event.client_payload.tag }}
+          ref: ${{ github.event.client_payload.tag }}
 
       - name: Install uv
         uses: astral-sh/setup-uv@v3
@@ -28,16 +28,25 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-tag-file: "pyproject.toml"
+          python-version-file: "pyproject.toml"
+
+      - name: Cache Python Semantic Release
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/uv
+          key: ${{ runner.os }}-uv-semantic-release-v9.11.1
+          restore-keys: |
+            ${{ runner.os }}-uv-semantic-release-
+
+      - name: Install Python Semantic Release
+        run: uv tool install python-semantic-release@v9.11.1
 
       - name: Build Python Package
         run: uv build
-
+    
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
 
-      - name: Publish to GitHub Release Assets
-        uses: python-semantic-release/publish-action@v9.8.9
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          tag: v${{ github.event.client_payload.tag }}
+      - name: Publish to GitHub Release
+        run: uv tool run semantic-release publish --tag ${{ github.event.client_payload.tag }}
+        

@@ -1,7 +1,24 @@
 # CHANGELOG
 
 
+## v0.11.0 (2024-10-24)
+
+### Features
+
+* feat: add PaCMAP as a DR method ([`4f38f4a`](https://github.com/tsenoner/ProtSpace/commit/4f38f4a2ca644474c781e4b0f984f418666d8488))
+
+### Unknown
+
+* Merge branch 'main' of github.com:tsenoner/ProtSpace ([`7b94281`](https://github.com/tsenoner/ProtSpace/commit/7b9428169831838e3a60747bcf4b6f4eeadad2d1))
+
+
 ## v0.10.6 (2024-10-17)
+
+### Chores
+
+* chore: fix docker container version tagging ([`11960e9`](https://github.com/tsenoner/ProtSpace/commit/11960e94ce675745bb87a2c91c671d027e878cb1))
+
+* chore: improve uv caching ([`b38950d`](https://github.com/tsenoner/ProtSpace/commit/b38950d6c72341182e4929a2bdc12ad97f4ce17d))
 
 ### Unknown
 

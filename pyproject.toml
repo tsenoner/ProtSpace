@@ -28,6 +28,10 @@ webserver = [
     "gunicorn>=23.0.0",
     "python-dotenv>=1.0.1",
 ]
+test = [
+    "pytest",
+    "pytest-cov",
+]
 
 [tool.uv]
 dev-dependencies = [
@@ -47,6 +51,9 @@ dev-dependencies = [
     "ruff>=0.6.9",
     "xarray>=2024.9.0",
     "torch==2.2",
+    "seaborn>=0.13.2",
+    "pacmap>=0.7.3",
+    "pytest>=8.3.3",
 ]
 
 [project.scripts]

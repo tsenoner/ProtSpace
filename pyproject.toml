@@ -28,10 +28,6 @@ webserver = [
     "gunicorn>=23.0.0",
     "python-dotenv>=1.0.1",
 ]
-test = [
-    "pytest",
-    "pytest-cov",
-]
 
 [tool.uv]
 dev-dependencies = [

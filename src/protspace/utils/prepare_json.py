@@ -1,394 +1,423 @@
 import argparse
 import json
 import logging
-import os
-import sys
-import warnings
+from abc import ABC, abstractmethod
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import h5py
 import numpy as np
 import pandas as pd
 from sklearn.decomposition import PCA
-from sklearn.manifold import TSNE
+from sklearn.manifold import MDS, TSNE
 
-warnings.filterwarnings("ignore", category=UserWarning, module="umap")
-os.environ["KMP_WARNINGS"] = "off"
-
+# Configure logging
+logging.basicConfig(format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
+# Valid file extensions
+EMBEDDING_EXTENSIONS = {'.hdf', '.hdf5', '.h5'}
+
+@dataclass
+class DimensionReductionConfig:
+    """Configuration for dimension reduction methods."""
+    n_components: int
+    # General parameters
+    n_neighbors: int = 15
+    metric: str = "euclidean"
+    random_state: int = 42
+    # UMAP specific
+    min_dist: float = 0.1
+    # t-SNE specific
+    perplexity: int = 30
+    learning_rate: int = 200
+    # PaCMAP specific
+    mn_ratio: float = 0.5
+    fp_ratio: float = 2.0
+    # MDS specific
+    n_init: int = 4
+    max_iter: int = 300
+    eps: float = 1e-3
+    dissimilarity: str = "euclidean"
+
+class DimensionReducer(ABC):
+    """Abstract base class for dimension reduction methods."""
+
+    def __init__(self, config: DimensionReductionConfig):
+        self.config = config
+
+    @abstractmethod
+    def fit_transform(self, data: np.ndarray) -> np.ndarray:
+        """Transform data to lower dimensions."""
+        pass
+
+    @abstractmethod
+    def get_params(self) -> Dict[str, Any]:
+        """Get parameters used for the reduction."""
+        pass
+
+class PCAReducer(DimensionReducer):
+    """Principal Component Analysis reduction."""
+    def fit_transform(self, data: np.ndarray) -> np.ndarray:
+        pca = PCA(
+            n_components=self.config.n_components,
+            random_state=self.config.random_state
+        )
+        result = pca.fit_transform(data)
+        self.explained_variance = pca.explained_variance_ratio_.tolist()
+        return result
+
+    def get_params(self) -> Dict[str, Any]:
+        return {
+            "n_components": self.config.n_components,
+            "explained_variance_ratio": self.explained_variance
+        }
+
+class TSNEReducer(DimensionReducer):
+    """t-SNE (t-Distributed Stochastic Neighbor Embedding) reduction."""
+    def fit_transform(self, data: np.ndarray) -> np.ndarray:
+        return TSNE(
+            n_components=self.config.n_components,
+            perplexity=self.config.perplexity,
+            learning_rate=self.config.learning_rate,
+            random_state=self.config.random_state,
+            metric=self.config.metric
+        ).fit_transform(data)
+
+    def get_params(self) -> Dict[str, Any]:
+        return {
+            "n_components": self.config.n_components,
+            "perplexity": self.config.perplexity,
+            "learning_rate": self.config.learning_rate,
+            "metric": self.config.metric
+        }
+
+class UMAPReducer(DimensionReducer):
+    """UMAP (Uniform Manifold Approximation and Projection) reduction."""
+    def fit_transform(self, data: np.ndarray) -> np.ndarray:
+        from umap import UMAP
+        return UMAP(
+            n_components=self.config.n_components,
+            n_neighbors=self.config.n_neighbors,
+            min_dist=self.config.min_dist,
+            metric=self.config.metric,
+            random_state=self.config.random_state
+        ).fit_transform(data)
+
+    def get_params(self) -> Dict[str, Any]:
+        return {
+            "n_components": self.config.n_components,
+            "n_neighbors": self.config.n_neighbors,
+            "min_dist": self.config.min_dist,
+            "metric": self.config.metric
+        }
+
+class PaCMAPReducer(DimensionReducer):
+    """PaCMAP (Pairwise Controlled Manifold Approximation) reduction."""
+    def fit_transform(self, data: np.ndarray) -> np.ndarray:
+        from pacmap import PaCMAP
+        return PaCMAP(
+            n_components=self.config.n_components,
+            n_neighbors=self.config.n_neighbors,
+            MN_ratio=self.config.mn_ratio,
+            FP_ratio=self.config.fp_ratio,
+            random_state=self.config.random_state
+        ).fit_transform(data)
+
+    def get_params(self) -> Dict[str, Any]:
+        return {
+            "n_components": self.config.n_components,
+            "n_neighbors": self.config.n_neighbors,
+            "MN_ratio": self.config.mn_ratio,
+            "FP_ratio": self.config.fp_ratio
+        }
+
+class MDSReducer(DimensionReducer):
+    """Multidimensional Scaling reduction."""
+    def fit_transform(self, data: np.ndarray) -> np.ndarray:
+        return MDS(
+            n_components=self.config.n_components,
+            metric=bool(self.config.dissimilarity == "euclidean"),
+            n_init=self.config.n_init,
+            max_iter=self.config.max_iter,
+            eps=self.config.eps,
+            dissimilarity=self.config.dissimilarity,
+            random_state=self.config.random_state
+        ).fit_transform(data)
+
+    def get_params(self) -> Dict[str, Any]:
+        return {
+            "n_components": self.config.n_components,
+            "dissimilarity": self.config.dissimilarity,
+            "n_init": self.config.n_init,
+            "max_iter": self.config.max_iter,
+            "eps": self.config.eps
+        }
 
 class DataProcessor:
-    IDENTIFIER_COL = "identifier"
-    PCA2_COLS = ["pca2_x", "pca2_y"]
-    PCA3_COLS = ["pca3_x", "pca3_y", "pca3_z"]
-    UMAP2_COLS = ["umap2_x", "umap2_y"]
-    UMAP3_COLS = ["umap3_x", "umap3_y", "umap3_z"]
-    TSNE2_COLS = ["tsne2_x", "tsne2_y"]
-    TSNE3_COLS = ["tsne3_x", "tsne3_y", "tsne3_z"]
-    PACMAP2_COLS = ["pacmap2_x", "pacmap2_y"]
-    PACMAP3_COLS = ["pacmap3_x", "pacmap3_y", "pacmap3_z"]
+    """Main class for processing and reducing dimensionality of data."""
 
-    PROJECTION_COLS = {
-        "pca2": PCA2_COLS,
-        "pca3": PCA3_COLS,
-        "umap2": UMAP2_COLS,
-        "umap3": UMAP3_COLS,
-        "tsne2": TSNE2_COLS,
-        "tsne3": TSNE3_COLS,
-        "pacmap2": PACMAP2_COLS,
-        "pacmap3": PACMAP3_COLS,
+    REDUCERS = {
+        "pca": PCAReducer,
+        "tsne": TSNEReducer,
+        "umap": UMAPReducer,
+        "pacmap": PaCMAPReducer,
+        "mds": MDSReducer
     }
 
-    def __init__(self, args):
-        self.args = args
-        self.projection_params = {}
-        self.custom_names = args.custom_names or {}
+    def __init__(self, config: Dict[str, Any]):
+        self.config = config
+        self.identifier_col = "identifier"
 
-    def process(self):
-        logger.info("Starting data processing")
-        headers, embs = load_hdf(h5_file=self.args.hdf)
-        metadata = self._load_csv(self.args.csv)
+    @staticmethod
+    def load_data(input_path: Path, metadata_path: Path) -> Tuple[pd.DataFrame, np.ndarray, List[str]]:
+        """Load and align input data with metadata, handling missing values gracefully."""
+        # Load metadata if available
+        try:
+            metadata = pd.read_csv(metadata_path)
+            if "identifier" not in metadata.columns:
+                logger.warning("Metadata CSV missing 'identifier' column - creating empty metadata")
+                metadata = pd.DataFrame(columns=["identifier"])
+        except Exception as e:
+            logger.warning(f"Could not load metadata ({str(e)}) - creating empty metadata")
+            metadata = pd.DataFrame(columns=["identifier"])
 
-        reduced_data = self._reduce_dimensions(embs)
-        reduced_data[self.IDENTIFIER_COL] = headers
+        # Load input data based on file extension
+        if input_path.suffix.lower() in EMBEDDING_EXTENSIONS:
+            logger.info("Loading embeddings from HDF file")
+            data, headers = [], []
+            with h5py.File(input_path, "r") as hdf_handle:
+                for header, emb in hdf_handle.items():
+                    emb = np.array(emb).flatten()
+                    data.append(emb)
+                    headers.append(header)
+            data = np.array(data)
 
-        df = self._merge_data(metadata, pd.DataFrame(reduced_data))
-        json_data = self._df2json(df)
+        elif input_path.suffix.lower() == '.csv':
+            logger.info("Loading similarity matrix from CSV file")
+            sim_matrix = pd.read_csv(input_path, index_col=0)
+            if not sim_matrix.index.equals(sim_matrix.columns):
+                raise ValueError("Similarity matrix must have matching row and column labels")
 
-        self._update_json(json_data, self.args.output)
-        logger.info("Data processing completed")
+            headers = sim_matrix.index.tolist()
+            data = sim_matrix.values
 
-    def _load_csv(self, csv_file: str) -> pd.DataFrame:
-        metadata = pd.read_csv(csv_file)
-        if self.IDENTIFIER_COL not in metadata.columns:
-            raise ValueError(
-                f"CSV file must contain an '{self.IDENTIFIER_COL}' column"
+            if not np.allclose(data, data.T, rtol=1e-5, atol=1e-8):
+                logger.warning("Similarity matrix is not perfectly symmetric - using (A + A.T)/2")
+                data = (data + data.T) / 2
+
+        else:
+            raise ValueError("Input file must be either HDF (.hdf, .hdf5, .h5) or CSV (.csv)")
+
+        # Create full metadata with NaN for missing entries
+        full_metadata = pd.DataFrame({'identifier': headers})
+        if len(metadata.columns) > 1:
+            full_metadata = full_metadata.merge(
+                metadata.drop_duplicates('identifier'),
+                on='identifier',
+                how='left'
             )
-        logger.debug(f"Loaded {len(metadata)} entries from CSV file")
-        return metadata
 
-    def _merge_data(
-        self, metadata: pd.DataFrame, reduced_data: pd.DataFrame
-    ) -> pd.DataFrame:
-        logger.debug("Merging metadata with reduced dimensions data")
-        df = pd.merge(
-            metadata, reduced_data, on=self.IDENTIFIER_COL, how="inner"
-        )
-        logger.debug(f"Merged {len(df)} entries")
-        return df
+        return full_metadata, data, headers
 
-    def _reduce_dimensions(self, embeddings):
-        reduced_data = {}
+    def process_reduction(self, data: np.ndarray, method: str, dims: int) -> Dict[str, Any]:
+        """Process a single reduction method."""
+        config = DimensionReductionConfig(n_components=dims, **self.config)
+        reducer = self.REDUCERS[method](config)
+        reduced_data = reducer.fit_transform(data)
 
-        for method in self.args.methods:
-            logger.info(f"Applying {method.upper()} dimension reduction")
-            if method.startswith("pca"):
-                pca_data = self._apply_pca(embeddings, int(method[-1]))
-                reduced_data.update(pca_data)
-            elif method.startswith("umap"):
-                umap_data = self._apply_umap(embeddings, int(method[-1]))
-                reduced_data.update(umap_data)
-            elif method.startswith("tsne"):
-                tsne_data = self._apply_tsne(embeddings, int(method[-1]))
-                reduced_data.update(tsne_data)
-            elif method.startswith("pacmap"):
-                pacmap_data = self._apply_pacmap(embeddings, int(method[-1]))
-                reduced_data.update(pacmap_data)
-
-        return reduced_data
-
-    def _apply_pca(self, embeddings, dimensions):
-        pca = PCA(n_components=dimensions)
-        pca_components = pca.fit_transform(embeddings)
-        explained_variance_ratio = pca.explained_variance_ratio_
-
-        self.projection_params[f"pca{dimensions}"] = {
-            "n_components": dimensions,
-            "explained_variance_ratio": explained_variance_ratio.tolist(),
+        return {
+            "name": f"{method.upper()}{dims}",
+            "dimensions": dims,
+            "info": reducer.get_params(),
+            "data": reduced_data
         }
 
-        logger.debug(f"PCA{dimensions} variance explained:")
-        for i, var in enumerate(explained_variance_ratio, 1):
-            logger.debug(f"  PC{i}: {var:.4f}")
-
-        result = {}
-        for i, col in enumerate(self.PROJECTION_COLS[f"pca{dimensions}"]):
-            result[col] = pca_components[:, i]
-        return result
-
-    def _apply_umap(self, embeddings, dimensions):
-        from umap import UMAP
-
-        params = {
-            k: v
-            for k, v in vars(self.args).items()
-            if k in ["n_neighbors", "min_dist", "metric"]
+    def create_output(self, metadata: pd.DataFrame, reductions: List[Dict[str, Any]],
+                     headers: List[str]) -> Dict[str, Any]:
+        """Create the final output dictionary."""
+        output = {
+            "protein_data": {},
+            "projections": []
         }
-        params["n_components"] = dimensions
 
-        umap = UMAP(**params, random_state=42)
-        umap_components = umap.fit_transform(embeddings)
+        # Process features
+        for _, row in metadata.iterrows():
+            protein_id = row[self.identifier_col]
+            features = row.drop(self.identifier_col).to_dict()
+            output["protein_data"][protein_id] = {"features": features}
 
-        self.projection_params[f"umap{dimensions}"] = params
-        logger.debug(f"UMAP{dimensions} parameters: {params}")
-
-        result = {}
-        for i, col in enumerate(self.PROJECTION_COLS[f"umap{dimensions}"]):
-            result[col] = umap_components[:, i]
-        return result
-
-    def _apply_tsne(self, embeddings, dimensions):
-        params = {
-            k: v
-            for k, v in vars(self.args).items()
-            if k in ["perplexity", "learning_rate"]
-        }
-        params["n_components"] = dimensions
-
-        tsne = TSNE(**params, random_state=42)
-        tsne_components = tsne.fit_transform(embeddings)
-
-        self.projection_params[f"tsne{dimensions}"] = params
-        logger.debug(f"t-SNE{dimensions} parameters: {params}")
-
-        result = {}
-        for i, col in enumerate(self.PROJECTION_COLS[f"tsne{dimensions}"]):
-            result[col] = tsne_components[:, i]
-        return result
-
-    def _apply_pacmap(self, embeddings, dimensions):
-        from pacmap import PaCMAP
-        params = {
-            k: v
-            for k, v in vars(self.args).items()
-            if k in ["n_neighbors", "MN_ratio", "FP_ratio"]
-        }
-        params["n_components"] = dimensions
-        params["n_neighbors"] = params.get("n_neighbors", 10)
-
-        pacmap = PaCMAP(
-            n_components=dimensions,
-            n_neighbors=params["n_neighbors"],
-            MN_ratio=params.get("MN_ratio", 0.5),
-            FP_ratio=params.get("FP_ratio", 2.0),
-            random_state=42
-        )
-
-        pacmap_components = pacmap.fit_transform(embeddings)
-
-        self.projection_params[f"pacmap{dimensions}"] = params
-        logger.debug(f"PaCMAP{dimensions} parameters: {params}")
-
-        result = {}
-        for i, col in enumerate(self.PROJECTION_COLS[f"pacmap{dimensions}"]):
-            result[col] = pacmap_components[:, i]
-        return result
-
-    def _df2json(self, df):
-        df = df.where(pd.notna(df), None)
-        json_data = {"protein_data": {}, "projections": []}
-
-        feature_columns = [
-            col
-            for col in df.columns
-            if col
-            not in [self.IDENTIFIER_COL]
-            + sum(self.PROJECTION_COLS.values(), [])
-        ]
-
-        for _, row in df.iterrows():
-            protein_id = row[self.IDENTIFIER_COL]
-            json_data["protein_data"][protein_id] = {
-                "features": {col: row[col] for col in feature_columns}
+        # Process projections
+        for reduction in reductions:
+            projection = {
+                "name": reduction["name"],
+                "dimensions": reduction["dimensions"],
+                "info": reduction["info"],
+                "data": []
             }
 
-        for method in self.args.methods:
-            proj_cols = self.PROJECTION_COLS[method]
-            if all(col in df.columns for col in proj_cols):
-                custom_name = self.custom_names.get(method, method.upper())
-                projection = {
-                    "name": custom_name,
-                    "dimensions": len(proj_cols),
-                    "info": self._get_projection_info(method),
-                    "data": [],
+            for i, header in enumerate(headers):
+                coordinates = {
+                    "x": float(reduction["data"][i][0]),
+                    "y": float(reduction["data"][i][1])
                 }
+                if reduction["dimensions"] == 3:
+                    coordinates["z"] = float(reduction["data"][i][2])
 
-                for _, row in df.iterrows():
-                    coordinates = {
-                        "x": row[proj_cols[0]],
-                        "y": row[proj_cols[1]],
-                    }
-                    if len(proj_cols) == 3:
-                        coordinates["z"] = row[proj_cols[2]]
+                projection["data"].append({
+                    "identifier": header,
+                    "coordinates": coordinates
+                })
 
-                    projection["data"].append(
-                        {
-                            "identifier": row[self.IDENTIFIER_COL],
-                            "coordinates": coordinates,
-                        }
-                    )
+            output["projections"].append(projection)
 
-                json_data["projections"].append(projection)
-        return json_data
+        return output
 
-    def _get_projection_info(self, method: str) -> dict:
-        return self.projection_params.get(method, {})
+def save_output(data: Dict[str, Any], output_path: Path):
+    """Save output data to JSON file."""
+    if output_path.exists():
+        with output_path.open('r') as f:
+            existing = json.load(f)
+            existing["protein_data"].update(data["protein_data"])
 
-    def _update_json(self, new_json_data, output_file):
-        logger.info(f"Updating JSON data in: {output_file}")
+            # Update or add projections
+            existing_projs = {p["name"]: p for p in existing["projections"]}
+            for new_proj in data["projections"]:
+                existing_projs[new_proj["name"]] = new_proj
+            existing["projections"] = list(existing_projs.values())
 
-        # Load existing JSON if it exists
-        if os.path.exists(output_file):
-            with open(output_file, 'r') as f:
-                existing_data = json.load(f)
-        else:
-            existing_data = {"protein_data": {}, "projections": []}
+        data = existing
 
-        # Update protein_data
-        existing_data["protein_data"].update(new_json_data["protein_data"])
-
-        # Update projections
-        existing_projections = {proj["name"]: proj for proj in existing_data["projections"]}
-        for new_proj in new_json_data["projections"]:
-            if new_proj["name"] in existing_projections:
-                # Update existing projection
-                existing_proj = existing_projections[new_proj["name"]]
-                existing_proj["info"] = new_proj["info"]
-                existing_proj["data"] = new_proj["data"]
-            else:
-                # Add new projection
-                existing_data["projections"].append(new_proj)
-
-        # Save updated JSON
-        with open(output_file, 'w') as f:
-            json.dump(existing_data, f, indent=2)
-
-
-def setup_logging(log_level):
-    # Remove all handlers associated with the root logger object
-    for handler in logging.root.handlers[:]:
-        logging.root.removeHandler(handler)
-
-    # Set up our script's logger
-    logger.setLevel(log_level)
-    handler = logging.StreamHandler()
-    formatter = logging.Formatter("%(levelname)s: %(message)s")
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-
-
-def load_hdf(h5_file: str) -> tuple[list[str], np.array]:
-    embs, headers = [], []
-    with h5py.File(h5_file, "r") as hdf_handle:
-        for header, emb in hdf_handle.items():
-            emb = np.array(emb).flatten()
-            embs.append(emb)
-            headers.append(header)
-    embs = np.array(embs)
-    logger.debug(f"Loaded {len(headers)} entries from HDF file")
-    return headers, embs
-
+    with output_path.open('w') as f:
+        json.dump(data, f, indent=2)
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate JSON data from HDF and CSV files"
+        description="Dimensionality reduction for protein embeddings or similarity matrices",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter
+    )
+
+    # Required arguments
+    parser.add_argument(
+        "-i", "--input", type=Path, required=True,
+        help="Path to input data: HDF file (.hdf, .hdf5, .h5) for embeddings or CSV file for similarity matrix"
     )
     parser.add_argument(
-        "-H", "--hdf", required=True, help="Path to the HDF file"
+        "-m", "--metadata", type=Path, required=True,
+        help="Path to CSV file containing metadata and features"
     )
     parser.add_argument(
-        "-c", "--csv", required=True, help="Path to the CSV feature file"
+        "-o", "--output", type=Path, required=True,
+        help="Path to output JSON file"
     )
+
+    # Reduction methods
     parser.add_argument(
-        "-o", "--output", required=True, help="Path to the output JSON file"
+        "--methods", nargs="+", default=["pca3"],
+        help="Reduction methods to use (e.g., pca2, tsne3, mds2). Format: method_name + dimensions"
     )
+
+    # Verbosity control
     parser.add_argument(
-        "--methods",
-        nargs="+",
-        choices=["pca2", "pca3", "umap3", "umap2", "tsne3", "tsne2", "pacmap2", "pacmap3"],
-        default=["pca3"],
-        help="Dimension reduction technique(s) to use. Can specify multiple.",
+        "-v", "--verbose", action="count", default=0,
+        help="Increase output verbosity (-v for INFO, -vv for DEBUG)"
     )
-    parser.add_argument(
-        "--custom-names",
-        nargs="+",
-        metavar="METHOD=NAME",
-        help="Custom names for projections in format METHOD=NAME (e.g., pca3=MyPCA)",
+
+    # General parameters
+    general_group = parser.add_argument_group('General Parameters')
+    general_group.add_argument(
+        "--metric", default="euclidean",
+        help="Distance metric to use (applies to UMAP, t-SNE, MDS)"
     )
-    parser.add_argument(
-        "-v",
-        "--verbose",
-        action="count",
-        default=0,
-        help="Increase output verbosity (e.g., -v for INFO, -vv for DEBUG)",
+    general_group.add_argument(
+        "--random-state", type=int, default=42,
+        help="Random seed for reproducibility"
     )
 
     # UMAP parameters
-    parser.add_argument(
-        "--n_neighbors", type=int, default=15, help="UMAP and PaCMAP n_neighbors parameter"
+    umap_group = parser.add_argument_group('UMAP Parameters')
+    umap_group.add_argument(
+        "--n_neighbors", type=int, default=15,
+        help="Number of neighbors to consider (UMAP, PaCMAP)"
     )
-    parser.add_argument(
-        "--min_dist", type=float, default=0.1, help="UMAP min_dist parameter"
-    )
-    parser.add_argument(
-        "--metric", default="euclidean", help="UMAP metric parameter"
+    umap_group.add_argument(
+        "--min_dist", type=float, default=0.1,
+        help="Minimum distance between points in UMAP"
     )
 
     # t-SNE parameters
-    parser.add_argument(
-        "--perplexity",
-        type=int,
-        default=30,
-        help="t-SNE perplexity parameter",
+    tsne_group = parser.add_argument_group('t-SNE Parameters')
+    tsne_group.add_argument(
+        "--perplexity", type=int, default=30,
+        help="Perplexity parameter for t-SNE"
     )
-    parser.add_argument(
-        "--learning_rate",
-        type=int,
-        default=200,
-        help="t-SNE learning_rate parameter",
+    tsne_group.add_argument(
+        "--learning_rate", type=int, default=200,
+        help="Learning rate for t-SNE"
     )
 
     # PaCMAP parameters
-    parser.add_argument(
-        "--MN_ratio",
-        type=float,
-        default=0.5,
-        help="PaCMAP MN_ratio parameter"
+    pacmap_group = parser.add_argument_group('PaCMAP Parameters')
+    pacmap_group.add_argument(
+        "--mn_ratio", type=float, default=0.5,
+        help="MN ratio for PaCMAP"
     )
-    parser.add_argument(
-        "--FP_ratio",
-        type=float,
-        default=2.0,
-        help="PaCMAP FP_ratio parameter"
+    pacmap_group.add_argument(
+        "--fp_ratio", type=float, default=2.0,
+        help="FP ratio for PaCMAP"
+    )
+
+    # MDS parameters
+    mds_group = parser.add_argument_group('MDS Parameters')
+    mds_group.add_argument(
+        "--n_init", type=int, default=4,
+        help="Number of initialization runs for MDS"
+    )
+    mds_group.add_argument(
+        "--max_iter", type=int, default=300,
+        help="Maximum number of iterations for MDS"
+    )
+    mds_group.add_argument(
+        "--eps", type=float, default=1e-3,
+        help="Relative tolerance for MDS convergence"
+    )
+    mds_group.add_argument(
+        "--dissimilarity", choices=['euclidean', 'precomputed'],
+        default='euclidean',
+        help="Dissimilarity measure for MDS"
     )
 
     args = parser.parse_args()
 
-    # Process custom names
-    custom_names = {}
-    if args.custom_names:
-        for custom_name in args.custom_names:
-            method, name = custom_name.split('=')
-            custom_names[method] = name
-    args.custom_names = custom_names
-
-    # Set up logging based on verbosity level
-    if args.verbose == 0:
-        log_level = logging.WARNING
-    elif args.verbose == 1:
-        log_level = logging.INFO
-    else:
-        log_level = logging.DEBUG
-
-    setup_logging(log_level)
+    # Set logging level
+    logger.setLevel([logging.WARNING, logging.INFO, logging.DEBUG][min(args.verbose, 2)])
 
     try:
-        processor = DataProcessor(args)
-        processor.process()
+        # Process data
+        processor = DataProcessor(vars(args))
+        metadata, data, headers = processor.load_data(args.input, args.metadata)
+
+        # Process each method
+        reductions = []
+        for method_spec in args.methods:
+            method = ''.join(filter(str.isalpha, method_spec))
+            dims = int(''.join(filter(str.isdigit, method_spec)))
+
+            if method not in processor.REDUCERS:
+                raise ValueError(f"Unknown reduction method: {method}")
+
+            logger.info(f"Applying {method.upper()}{dims} reduction")
+            reductions.append(processor.process_reduction(data, method, dims))
+
+        # Create and save output
+        output = processor.create_output(metadata, reductions, headers)
+        save_output(output, args.output)
+        logger.info(f"Successfully processed {len(headers)} items using {len(args.methods)} reduction methods")
+
     except Exception as e:
         logger.error(f"Error: {str(e)}")
-        sys.exit(1)
-
+        raise
 
 if __name__ == "__main__":
     main()

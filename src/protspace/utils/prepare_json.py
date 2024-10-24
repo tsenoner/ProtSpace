@@ -25,6 +25,8 @@ class DataProcessor:
     UMAP3_COLS = ["umap3_x", "umap3_y", "umap3_z"]
     TSNE2_COLS = ["tsne2_x", "tsne2_y"]
     TSNE3_COLS = ["tsne3_x", "tsne3_y", "tsne3_z"]
+    PACMAP2_COLS = ["pacmap2_x", "pacmap2_y"]
+    PACMAP3_COLS = ["pacmap3_x", "pacmap3_y", "pacmap3_z"]
 
     PROJECTION_COLS = {
         "pca2": PCA2_COLS,
@@ -33,6 +35,8 @@ class DataProcessor:
         "umap3": UMAP3_COLS,
         "tsne2": TSNE2_COLS,
         "tsne3": TSNE3_COLS,
+        "pacmap2": PACMAP2_COLS,
+        "pacmap3": PACMAP3_COLS,
     }
 
     def __init__(self, args):
@@ -71,7 +75,6 @@ class DataProcessor:
             metadata, reduced_data, on=self.IDENTIFIER_COL, how="inner"
         )
         logger.debug(f"Merged {len(df)} entries")
-
         return df
 
     def _reduce_dimensions(self, embeddings):
@@ -88,6 +91,9 @@ class DataProcessor:
             elif method.startswith("tsne"):
                 tsne_data = self._apply_tsne(embeddings, int(method[-1]))
                 reduced_data.update(tsne_data)
+            elif method.startswith("pacmap"):
+                pacmap_data = self._apply_pacmap(embeddings, int(method[-1]))
+                reduced_data.update(pacmap_data)
 
         return reduced_data
 
@@ -148,6 +154,34 @@ class DataProcessor:
         result = {}
         for i, col in enumerate(self.PROJECTION_COLS[f"tsne{dimensions}"]):
             result[col] = tsne_components[:, i]
+        return result
+
+    def _apply_pacmap(self, embeddings, dimensions):
+        from pacmap import PaCMAP
+        params = {
+            k: v
+            for k, v in vars(self.args).items()
+            if k in ["n_neighbors", "MN_ratio", "FP_ratio"]
+        }
+        params["n_components"] = dimensions
+        params["n_neighbors"] = params.get("n_neighbors", 10)
+
+        pacmap = PaCMAP(
+            n_components=dimensions,
+            n_neighbors=params["n_neighbors"],
+            MN_ratio=params.get("MN_ratio", 0.5),
+            FP_ratio=params.get("FP_ratio", 2.0),
+            random_state=42
+        )
+
+        pacmap_components = pacmap.fit_transform(embeddings)
+
+        self.projection_params[f"pacmap{dimensions}"] = params
+        logger.debug(f"PaCMAP{dimensions} parameters: {params}")
+
+        result = {}
+        for i, col in enumerate(self.PROJECTION_COLS[f"pacmap{dimensions}"]):
+            result[col] = pacmap_components[:, i]
         return result
 
     def _df2json(self, df):
@@ -271,7 +305,7 @@ def main():
     parser.add_argument(
         "--methods",
         nargs="+",
-        choices=["pca2", "pca3", "umap3", "umap2", "tsne3", "tsne2"],
+        choices=["pca2", "pca3", "umap3", "umap2", "tsne3", "tsne2", "pacmap2", "pacmap3"],
         default=["pca3"],
         help="Dimension reduction technique(s) to use. Can specify multiple.",
     )
@@ -291,7 +325,7 @@ def main():
 
     # UMAP parameters
     parser.add_argument(
-        "--n_neighbors", type=int, default=15, help="UMAP n_neighbors parameter"
+        "--n_neighbors", type=int, default=15, help="UMAP and PaCMAP n_neighbors parameter"
     )
     parser.add_argument(
         "--min_dist", type=float, default=0.1, help="UMAP min_dist parameter"
@@ -312,6 +346,20 @@ def main():
         type=int,
         default=200,
         help="t-SNE learning_rate parameter",
+    )
+
+    # PaCMAP parameters
+    parser.add_argument(
+        "--MN_ratio",
+        type=float,
+        default=0.5,
+        help="PaCMAP MN_ratio parameter"
+    )
+    parser.add_argument(
+        "--FP_ratio",
+        type=float,
+        default=2.0,
+        help="PaCMAP FP_ratio parameter"
     )
 
     args = parser.parse_args()

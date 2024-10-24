@@ -1,11 +1,22 @@
 # CHANGELOG
 
 
+## v0.11.1 (2024-10-24)
+
+### Unknown
+
+* Merge branch 'main' of https://github.com/tsenoner/ProtSpace ([`e886504`](https://github.com/tsenoner/ProtSpace/commit/e886504e7c0d91a95322d88636d4de8c5eba3ee0))
+
+
 ## v0.11.0 (2024-10-24)
 
 ### Features
 
 * feat: add PaCMAP as a DR method ([`4f38f4a`](https://github.com/tsenoner/ProtSpace/commit/4f38f4a2ca644474c781e4b0f984f418666d8488))
+
+### Performance Improvements
+
+* perf: add dev dependencies ([`e24dbbd`](https://github.com/tsenoner/ProtSpace/commit/e24dbbd2693156f57e928d4d8356fc63970940b6))
 
 ### Unknown
 

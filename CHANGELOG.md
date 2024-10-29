@@ -1,7 +1,31 @@
 # CHANGELOG
 
 
+## v0.12.0 (2024-10-29)
+
+### Features
+
+* feat(utils): add JSON analyzer for data inspection
+
+Add a CLI utility that provides insights into ProtSpace JSON files
+with configurable detail levels. The tool helps inspect:
+- Number of proteins and available features
+- Dimensionality reduction methods
+- Feature distributions
+- Visualization settings ([`7d88c9c`](https://github.com/tsenoner/ProtSpace/commit/7d88c9c4d9c49e81359c1f8a1375b1aa74b856da))
+
+### Unknown
+
+* add natural key sorting to legend ([`98f2d97`](https://github.com/tsenoner/ProtSpace/commit/98f2d9792862f73e9757b6d30bf4565363ceadd3))
+
+* Merge branch 'main' of https://github.com/tsenoner/ProtSpace ([`f295eeb`](https://github.com/tsenoner/ProtSpace/commit/f295eeb8cd9869ec5756a15591fd5f94fb5eb14f))
+
+
 ## v0.11.1 (2024-10-24)
+
+### Testing
+
+* test: add tests for the prepare_json script ([`ddd9e9b`](https://github.com/tsenoner/ProtSpace/commit/ddd9e9b8cdc9b7b7b23fcc9469d977dd34b4b826))
 
 ### Unknown
 

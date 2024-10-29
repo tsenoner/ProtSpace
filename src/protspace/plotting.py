@@ -1,5 +1,6 @@
 import io
 import itertools
+import re
 from typing import Any, Dict, List, Optional
 
 import pandas as pd
@@ -16,6 +17,16 @@ from .config import (
     HIGHLIGHT_MARKER_SIZE,
 )
 
+
+def natural_sort_key(text):
+    """
+    Create a key function for sorting strings containing numbers in a natural way.
+    For example: ['a1', 'a10', 'a2'] will sort as ['a1', 'a2', 'a10']
+    """
+    def convert(text):
+        return int(text) if text.isdigit() else text.lower()
+
+    return [convert(c) for c in re.split('([0-9]+)', text)]
 
 def create_2d_plot(
     df: pd.DataFrame,
@@ -34,7 +45,7 @@ def create_2d_plot(
             "x": False,
             "y": False,
         },
-        category_orders={selected_feature: sorted(df[selected_feature].unique())},
+        category_orders={selected_feature: sorted(df[selected_feature].unique(), key=natural_sort_key)},
     )
 
     fig.update_traces(
@@ -102,7 +113,7 @@ def create_3d_plot(
             "y": False,
             "z": False,
         },
-        category_orders={selected_feature: sorted(df[selected_feature].unique())},
+        category_orders={selected_feature: sorted(df[selected_feature].unique(), key=natural_sort_key)},
     )
 
     fig.update_traces(

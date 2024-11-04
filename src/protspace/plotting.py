@@ -118,7 +118,7 @@ def create_3d_plot(
 
     fig.update_traces(
         marker=dict(
-            size=DEFAULT_MARKER_SIZE,
+            size=DEFAULT_MARKER_SIZE//2,
             line=dict(
                 width=DEFAULT_LINE_WIDTH, color="black"
             ),  # "rgba(0, 0, 0, 0.1)"),

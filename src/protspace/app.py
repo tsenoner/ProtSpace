@@ -8,6 +8,9 @@ from dash import Dash
 
 from .callbacks import setup_callbacks
 from .layout import create_layout
+from .data_loader import JsonReader
+from .data_processing import prepare_dataframe
+from .plotting import create_styled_plot, save_plot
 
 
 class ProtSpace:
@@ -59,3 +62,25 @@ class ProtSpace:
         """Run the Dash server."""
         app = self.create_app()
         app.run_server(debug=debug, port=port)
+
+    #TODO: avoid duplicated code generalize the plotting logic into the plotting.py script and the callback uses that, so we canuse that too here
+    def generate_plot(
+        self,
+        projection: str,
+        feature: str,
+        filename: str,
+        width: int = 1600,
+        height: int = 1000,
+    ) -> None:
+        """Generate a plot image for a specific projection and feature."""
+        if not self.default_json_data:
+            raise ValueError("No JSON data loaded")
+
+        reader = JsonReader(self.default_json_data)
+        df = prepare_dataframe(reader, projection, feature)
+        fig, is_3d = create_styled_plot(df, reader, projection, feature)
+        if is_3d:
+            filename = Path(filename).with_suffix(".html")
+        else:
+            filename = Path(filename).with_suffix(".svg")
+        save_plot(fig, is_3d, width, height, filename)

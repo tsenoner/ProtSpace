@@ -1,23 +1,31 @@
-from protspace import ProtSpace
+from protspace.app import ProtSpace
+from pathlib import Path
 
 
 def main():
     # Path to the JSON file
-    json_file = "data/3FTx/3FTx.json"
+    json_file = "data/gfp/protspace/gfp_style.json"
 
     # Initialize the ProtSpaceApp
-    app = ProtSpace(json_file)
+    protspace = ProtSpace(default_json_file=json_file)
 
     # Generate images for specific projections and features
-    projections = ["PCA2", "PCA3", "UMAP2", "UMAP3"]
-    features = ["group", "major_group"]
+    projections = [
+        "prott5_umap2",
+        "prott5_umap3",
+        "seq_sim_umap2",
+        "seq_sim_mds2",
+        "struct_sim_umap2",
+        "struct_sim_mds2",
+    ]
+    features = ["nr_mutations", "brightness_category"]
 
     for projection in projections:
         for feature in features:
-            app.generate_images(
+            protspace.generate_plot(
                 projection=projection,
                 feature=feature,
-                output_dir="examples/3FTx/out",
+                filename=Path("examples/out/gfp") / f"{projection}_{feature}",
                 width=1600,
                 height=1000,
             )

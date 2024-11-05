@@ -28,6 +28,33 @@ def natural_sort_key(text):
 
     return [convert(c) for c in re.split('([0-9]+)', text)]
 
+
+def create_styled_plot(df, reader, selected_projection, selected_feature, selected_proteins=None):
+    """Create a styled plot with visualization state applied."""
+    projection_info = reader.get_projection_info(selected_projection)
+    is_3d = projection_info["dimensions"] == 3
+
+    # Create base plot
+    fig = create_3d_plot(df, selected_feature, selected_proteins or []) if is_3d else create_2d_plot(df, selected_feature, selected_proteins or [])
+
+    # Apply visualization state
+    feature_colors = reader.get_feature_colors(selected_feature)
+    marker_shapes = reader.get_marker_shape(selected_feature)
+
+    for value in df[selected_feature].unique():
+        if str(value) != "<NaN>":
+            marker_style = {}
+            if value in feature_colors:
+                marker_style["color"] = feature_colors[value]
+            if value in marker_shapes:
+                marker_style["symbol"] = marker_shapes[value]
+
+            if marker_style:
+                fig.update_traces(marker=marker_style, selector=dict(name=str(value)))
+
+    return fig, is_3d
+
+
 def create_2d_plot(
     df: pd.DataFrame,
     selected_feature: str,

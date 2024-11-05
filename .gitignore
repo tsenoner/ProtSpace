@@ -12,6 +12,8 @@
 /data/h_sapiens/embs/
 /data/h_sapiens/h_sapiens_uniprot20240909.json
 # gfp
+/data/gfp/foldseek_pdb_subset_1000
+/data/gfp/mmseqs_subset_1000
 /data/gfp/raw_data/*
 /data/gfp/processed_data/prott5.h5
 

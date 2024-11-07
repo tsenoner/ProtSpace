@@ -1,0 +1,16 @@
+base_path: examples/out
+images:
+  - path: toxins/toxin/protein_category_umap.svg
+    subtitle: Toxin dataset colored by Protein Category
+  - path: toxins/toxin/order_umap.svg
+    subtitle: Toxin dataset colored by Order rank
+  - path: phages/foldseek.svg
+    subtitle: Phages dataset
+  - path: Pla2g2/group.svg
+    subtitle: Phospholipase 2 group 2
+  - path: h_sapiens/ProtTucker.svg
+    subtitle: "Protein Structure Analysis"
+  - path: h_sapiens/CLEAN.svg
+    subtitle: "CLEAN Architecture"
+  # - path: h_sapiens/LightAttention.svg
+  #   subtitle: "Attention Mechanism"

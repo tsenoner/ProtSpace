@@ -1,16 +1,41 @@
 base_path: examples/out
+out_path: examples/out/final/for_paper.png
+num_columns: 2
 images:
   - path: toxins/toxin/protein_category_umap.svg
     subtitle: Toxin dataset colored by Protein Category
   - path: toxins/toxin/order_umap.svg
     subtitle: Toxin dataset colored by Order rank
-  - path: phages/foldseek.svg
-    subtitle: Phages dataset
-  - path: Pla2g2/group.svg
-    subtitle: Phospholipase 2 group 2
-  - path: h_sapiens/ProtTucker.svg
-    subtitle: "Protein Structure Analysis"
-  - path: h_sapiens/CLEAN.svg
-    subtitle: "CLEAN Architecture"
+  - path: phages/function_umap.svg
+    subtitle: Phages - function - UMAP
+  - path: phages/product_category_umap.svg
+    subtitle: Phages - product category - UMAP
+
+# --- Pla2g2 ---
+  # - path: Pla2g2/group.svg
+  #   subtitle: Phospholipase 2 group 2
+
+# --- GFP ---
+  # - path: gfp/seq_sim_umap2_brightness_category.svg
+  #   subtitle: "GFP - sequence similarity - brightness"
+  # - path: gfp/seq_sim_umap2_nr_mutations.svg
+  #   subtitle: "GFP - sequence similarity - nr. mutations"
+  # - path: gfp/struct_sim_mds2_brightness_category.svg
+  #   subtitle: "GFP - structure similarity - brightness"
+  # - path: gfp/struct_sim_mds2_nr_mutations.svg
+  #   subtitle: "GFP - structure similarity - nr. mutations"
+
+# --- nuclease ---
+  # - path: nuclease/nuclease_umap.svg
+  #   subtitle: "Nuclease"
+  # - path: nuclease/lora_umap.svg
+  #   subtitle: "Nuclease LoRA"
+
+# --- homo sapiens ---
+  # - path: h_sapiens/ProtTucker.svg
+  #   subtitle: "Homo sapiens - ProtTucker - Gene3D"
+  # - path: h_sapiens/CLEAN.svg
+  #   subtitle: "Homo sapiens - CLEAN Architecture"
+
   # - path: h_sapiens/LightAttention.svg
   #   subtitle: "Attention Mechanism"

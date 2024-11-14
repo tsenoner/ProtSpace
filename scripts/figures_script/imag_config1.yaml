@@ -1,0 +1,16 @@
+base_path: examples/out
+out_path: examples/out/final/gfp.png
+num_columns: 3
+images:
+  - path: gfp/prott5_umap2_nr_mutations.svg
+    subtitle: "protT5 - UMAP - nr. mutations"
+  - path: gfp/seq_sim_umap2_nr_mutations.svg
+    subtitle: "sequence similarity - UMAP - nr. mutations"
+  - path: gfp/struct_sim_mds2_nr_mutations.svg
+    subtitle: "structure similarity - MDS - nr. mutations"
+  - path: gfp/prott5_umap2_brightness_category.svg
+    subtitle: "protT5 - UMAP - brightness"
+  - path: gfp/seq_sim_umap2_brightness_category.svg
+    subtitle: "sequence similarity - UMAP - brightness"
+  - path: gfp/struct_sim_mds2_brightness_category.svg
+    subtitle: "structure similarity - MDS - brightness"

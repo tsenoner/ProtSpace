@@ -77,6 +77,10 @@ mmseqs search \
     --cov-mode 2 \
     -c "$COVERAGE" \
     --max-seqs "$MAX_SEQS" \
+    --exhaustive-search-filter 1 \
+    --add-self-matches 1 \
+    --prefilter-mode 2 \
+    -e "inf" \
     || check_error "Search failed"
 
 # Convert results to readable format
@@ -88,7 +92,7 @@ mmseqs convertalis \
     "${MMSEQS_DIR}/results.tsv" \
     --format-mode 4 \
     --format-output \
-    query,target,fident,evalue,bits
+    query,target,fident,evalue,bits \
     || check_error "Failed to convert results"
 
 echo "All done! Results can be found in: ${MMSEQS_DIR}/results.tsv"

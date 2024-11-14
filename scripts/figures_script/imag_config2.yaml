@@ -1,0 +1,15 @@
+base_path: examples/out
+out_path: examples/out/final/for_sm.png
+num_columns: 2
+images:
+  - path: nuclease/nuclease_umap.svg
+    subtitle: "Nuclease"
+  - path: nuclease/lora_umap.svg
+    subtitle: "Nuclease LoRA"
+  - path: h_sapiens/ProtTucker.svg
+    subtitle: "Homo sapiens - ProtTucker - Gene3D"
+  - path: h_sapiens/CLEAN.svg
+    subtitle: "Homo sapiens - CLEAN Architecture"
+
+  # - path: h_sapiens/LightAttention.svg
+  #   subtitle: "Attention Mechanism"

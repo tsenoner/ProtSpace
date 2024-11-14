@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v0.14.0 (2024-11-14)
+
+### Features
+
+* feat: update datasets ([`a7349ab`](https://github.com/tsenoner/ProtSpace/commit/a7349ab1ed209d057b75e8d73cd167987ec55fc4))
+
+### Refactoring
+
+* refactor: move pacmap dependence out of dev ([`8e46e5f`](https://github.com/tsenoner/ProtSpace/commit/8e46e5f0a9842bac769fde92a3dce9320d405c06))
+
+### Testing
+
+* test: add figures yaml files ([`49aaa7f`](https://github.com/tsenoner/ProtSpace/commit/49aaa7f28fc42a8b3ac94685133b16d7f6b3b8a1))
+
+
 ## v0.13.0 (2024-11-14)
 
 ### Features

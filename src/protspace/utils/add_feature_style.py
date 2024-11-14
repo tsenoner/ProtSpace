@@ -60,8 +60,8 @@ def add_feature_styles(
             for value, shape in styles["shapes"].items():
                 if value not in all_values:
                     raise ValueError(f"Value '{value}' does not exist for feature '{feature}'.")
-                if shape not in ALLOWED_SHAPES:
-                    raise ValueError(f"Shape '{shape}' is not allowed. Allowed shapes are: {', '.join(ALLOWED_SHAPES)}")
+                # if shape not in ALLOWED_SHAPES:
+                #     raise ValueError(f"Shape '{shape}' is not allowed. Allowed shapes are: {', '.join(ALLOWED_SHAPES)}")
                 data["visualization_state"]["marker_shapes"][feature][value] = shape
 
     with open(output_file, "w") as f:

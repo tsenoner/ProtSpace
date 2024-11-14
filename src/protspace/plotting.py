@@ -273,10 +273,10 @@ def save_plot(
 
         # Adjust font size proportionally
         scaling_factor = height / 600
-        font_size = max(10, min(14 * scaling_factor, 30))
+        font_size = max(10, min(12 * scaling_factor, 30))
 
         # Adjust marker size proportionally
-        marker_size = max(5, min(10 * scaling_factor, 20))
+        marker_size = max(5, min(7 * scaling_factor, 20))
 
         fig.update_layout(
             legend=dict(font=dict(size=font_size)),

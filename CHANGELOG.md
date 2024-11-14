@@ -1,6 +1,29 @@
 # CHANGELOG
 
 
+## v0.13.0 (2024-11-14)
+
+### Features
+
+* feat: test update ([`df90729`](https://github.com/tsenoner/ProtSpace/commit/df907292b4427e8e6e29e88b1bfa1100266b4ae9))
+
+### Unknown
+
+* make images creation easier with a YAML config file ([`1943d43`](https://github.com/tsenoner/ProtSpace/commit/1943d43dba40208bd878a253c70079916844fdfa))
+
+* update example and code to generate imgs from cli ([`73d0f6c`](https://github.com/tsenoner/ProtSpace/commit/73d0f6c90c9211f1a5d94c0cb92b289e86c50ca2))
+
+* add notebook to create embeddings ([`3b6eedf`](https://github.com/tsenoner/ProtSpace/commit/3b6eedff51119c47e8a7297c0505e6fa3030060a))
+
+* remove foldseek and mmseqs GFP data ([`7888d29`](https://github.com/tsenoner/ProtSpace/commit/7888d29c22820f0071d423c9e27cda4fb29c9ec9))
+
+* add GFP data and output examples ([`1e733de`](https://github.com/tsenoner/ProtSpace/commit/1e733de84b27f467d2857723071313e32210a9cd))
+
+* add costum naming in prepare_json.py ([`461a83b`](https://github.com/tsenoner/ProtSpace/commit/461a83b7b12505193bae04111a9e140175a90df2))
+
+* reduce dot size on 3D plots ([`00ae71e`](https://github.com/tsenoner/ProtSpace/commit/00ae71e062474f6a552f9840632267429ab95a82))
+
+
 ## v0.12.0 (2024-10-29)
 
 ### Features

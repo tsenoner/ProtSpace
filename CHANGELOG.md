@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.14.1 (2024-11-18)
+
+### Fixes
+
+* fix: allow for python version 3.10, 3.11, 3.12 ([`99678d7`](https://github.com/tsenoner/ProtSpace/commit/99678d77f8548d735190a5147738efe86adf1b53))
+
+
 ## v0.14.0 (2024-11-14)
 
 ### Features

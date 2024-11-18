@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.14.2 (2024-11-18)
+
+### Fixes
+
+* fix: jupyter notebook call ([`47c7499`](https://github.com/tsenoner/ProtSpace/commit/47c749912eeb33b0dbce8d771a287a01646664d7))
+
+### Unknown
+
+* remove github action pythonversion test ([`54ec6b1`](https://github.com/tsenoner/ProtSpace/commit/54ec6b106a3fd96a6c47b682163e3ae3c7ab4a72))
+
+
 ## v0.14.1 (2024-11-18)
 
 ### Fixes

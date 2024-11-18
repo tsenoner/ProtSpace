@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.14.3 (2024-11-18)
+
+### Fixes
+
+* fix: populate __init__ file with scripts ([`678a7f6`](https://github.com/tsenoner/ProtSpace/commit/678a7f606a0cceee12fa6209162a11c259c86336))
+
+
 ## v0.14.2 (2024-11-18)
 
 ### Fixes

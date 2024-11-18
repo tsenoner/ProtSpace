@@ -56,10 +56,32 @@ class ProtSpace:
         """Return the PDB files data."""
         return self.pdb_files_data
 
-    def run_server(
-        self, port: int = 8050, debug: bool = False, quiet: bool = True
-    ) -> None:
-        """Run the Dash server."""
+    # def run_server(
+    #     self, port: int = 8050, debug: bool = False, quiet: bool = True
+    # ) -> None:
+    #     """Run the Dash server."""
+    #     app = self.create_app()
+    #     app.run_server(debug=debug, port=port)
+
+    def run_server(self, port: int = 8050, debug: bool = False, quiet: bool = True) -> None:
+        import __main__
+        import sys
+        import os
+        def is_interactive():
+            return not hasattr(__main__, '__file__')
+
+        def supress_output():
+            sys.stdout = open(os.devnull, 'w')
+            sys.stderr = open(os.devnull, 'w')
+
+        if is_interactive():
+            supress_output()
+        elif quiet:
+            print(f"Dash app is running on http://localhost:{port}/")
+            print("Press Ctrl+C to quit")
+            supress_output()
+
+
         app = self.create_app()
         app.run_server(debug=debug, port=port)
 

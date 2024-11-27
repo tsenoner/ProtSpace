@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.14.6 (2024-11-27)
+
+### Fixes
+
+* fix: remove dash-bio dependency ([`f40c54b`](https://github.com/tsenoner/ProtSpace/commit/f40c54bcd92e4bcbfbbd921d0c83a67326aab0c9))
+
+
 ## v0.14.5 (2024-11-27)
 
 ### Fixes

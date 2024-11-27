@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.14.9 (2024-11-27)
+
+### Fixes
+
+* fix: go back to square 1 ([`65a6a21`](https://github.com/tsenoner/ProtSpace/commit/65a6a2164e367e51f2bb174a65fecffdf96401c2))
+
+
 ## v0.14.8 (2024-11-27)
 
 ### Fixes

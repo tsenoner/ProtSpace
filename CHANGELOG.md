@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.14.8 (2024-11-27)
+
+### Fixes
+
+* fix: adjust python version for numba ([`d19c430`](https://github.com/tsenoner/ProtSpace/commit/d19c4309f3bc180e1555598b9e4f5920b0ae8943))
+
+
 ## v0.14.7 (2024-11-27)
 
 ### Fixes

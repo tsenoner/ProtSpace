@@ -1,10 +1,10 @@
-from dash import dcc, html
-from dash_bio import NglMoleculeViewer
 import dash_daq as daq
+from dash import dcc, html
 from dash_iconify import DashIconify
 
 from .config import MARKER_SHAPES
 from .data_loader import JsonReader
+from .NglMoleculViewer import NglMoleculeViewer
 
 
 def create_layout(app):
@@ -19,8 +19,12 @@ def create_layout(app):
         projections = sorted(reader.get_projection_names())
         protein_ids = sorted(reader.get_protein_ids())
 
-        feature_options = [{"label": feature, "value": feature} for feature in features]
-        projection_options = [{"label": proj, "value": proj} for proj in projections]
+        feature_options = [
+            {"label": feature, "value": feature} for feature in features
+        ]
+        projection_options = [
+            {"label": proj, "value": proj} for proj in projections
+        ]
         protein_options = [{"label": pid, "value": pid} for pid in protein_ids]
 
         # Select the first feature and projection
@@ -90,7 +94,9 @@ def create_layout(app):
                     [
                         html.Button(
                             DashIconify(
-                                icon="material-symbols:download", width=24, height=24
+                                icon="material-symbols:download",
+                                width=24,
+                                height=24,
                             ),
                             id="download-json-button",
                             title="Download JSON",
@@ -101,7 +107,9 @@ def create_layout(app):
                             id="upload-json",
                             children=html.Button(
                                 DashIconify(
-                                    icon="material-symbols:upload", width=24, height=24
+                                    icon="material-symbols:upload",
+                                    width=24,
+                                    height=24,
                                 ),
                                 title="Upload JSON",
                                 style={"marginLeft": "5px"},
@@ -112,7 +120,9 @@ def create_layout(app):
                             id="upload-pdb-zip",
                             children=html.Button(
                                 DashIconify(
-                                    icon="fa6-solid:file-zipper", width=24, height=24
+                                    icon="fa6-solid:file-zipper",
+                                    width=24,
+                                    height=24,
                                 ),
                                 title="Upload PDB ZIP",
                                 style={"marginLeft": "5px"},
@@ -120,7 +130,9 @@ def create_layout(app):
                             multiple=False,
                         ),
                         html.Button(
-                            DashIconify(icon="carbon:settings", width=24, height=24),
+                            DashIconify(
+                                icon="carbon:settings", width=24, height=24
+                            ),
                             id="settings-button",
                             title="Settings",
                             style={"marginLeft": "5px"},
@@ -145,7 +157,9 @@ def create_layout(app):
                 html.Div(
                     [
                         dcc.Graph(
-                            id="scatter-plot", style={"height": "100%"}, responsive=True
+                            id="scatter-plot",
+                            style={"height": "100%"},
+                            responsive=True,
                         )
                     ],
                     id="scatter-plot-div",
@@ -184,7 +198,8 @@ def create_layout(app):
                 html.Div(
                     [
                         html.H4(
-                            "Marker Style Settings", style={"marginBottom": "10px"}
+                            "Marker Style Settings",
+                            style={"marginBottom": "10px"},
                         ),
                         html.Div(
                             [
@@ -211,7 +226,9 @@ def create_layout(app):
                                     id="marker-shape-dropdown",
                                     options=[
                                         {
-                                            "label": shape.replace("-", " ").title(),
+                                            "label": shape.replace(
+                                                "-", " "
+                                            ).title(),
                                             "value": shape,
                                         }
                                         for shape in MARKER_SHAPES

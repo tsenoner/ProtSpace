@@ -1,10 +1,10 @@
 import dash_daq as daq
 from dash import dcc, html
+from dash_bio import NglMoleculeViewer
 from dash_iconify import DashIconify
 
 from .config import MARKER_SHAPES
 from .data_loader import JsonReader
-from .NglMoleculViewer import NglMoleculeViewer
 
 
 def create_layout(app):

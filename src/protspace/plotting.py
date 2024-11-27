@@ -257,8 +257,25 @@ def save_plot(
     width: Optional[int] = None,
     height: Optional[int] = None,
     filename: Optional[str] = None,
+    force_svg: bool = False,
 ) -> Optional[Dict]:
     """Save the plot to a file or return it for download."""
+    # Convert WebGL traces to their SVG equivalents
+    if force_svg and not is_3d:
+        # Create a new figure with converted traces
+        new_traces = []
+        for trace in fig.data:
+            trace_dict = trace.to_plotly_json()
+
+            # Convert WebGL traces to their SVG equivalents
+            if trace.type == 'scattergl':
+                trace_dict['type'] = 'scatter'
+
+            new_traces.append(trace_dict)
+
+        # Create new figure with converted traces
+        fig = go.Figure(data=new_traces, layout=fig.layout)
+
     if is_3d:
         if filename:
             fig.write_html(filename, include_plotlyjs="cdn")

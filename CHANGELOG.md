@@ -1,11 +1,28 @@
 # CHANGELOG
 
 
+## v0.14.7 (2024-11-27)
+
+### Fixes
+
+* fix: remove support for 3.10
+
+Python 3.10 requires an only numy that is troublesome. ([`a9cfdcc`](https://github.com/tsenoner/ProtSpace/commit/a9cfdcc83d3161e1564853c9129f305dd67a1d3f))
+
+### Unknown
+
+* Merge branch 'main' of https://github.com/tsenoner/ProtSpace ([`7dd902d`](https://github.com/tsenoner/ProtSpace/commit/7dd902d9d99761d4290ee949521fc5fd1b024e42))
+
+
 ## v0.14.6 (2024-11-27)
 
 ### Fixes
 
 * fix: remove dash-bio dependency ([`f40c54b`](https://github.com/tsenoner/ProtSpace/commit/f40c54bcd92e4bcbfbbd921d0c83a67326aab0c9))
+
+### Unknown
+
+* add option to force SVG creation, also with many dots ([`1afaee3`](https://github.com/tsenoner/ProtSpace/commit/1afaee336af0843f1a8c688f74306c11b530db71))
 
 
 ## v0.14.5 (2024-11-27)

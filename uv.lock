@@ -5,9 +5,6 @@ resolution-markers = [
     "python_full_version >= '3.12'",
 ]
 
-[manifest]
-constraints = [{ name = "llvmlite", specifier = ">=0.43.0" }]
-
 [[package]]
 name = "annoy"
 version = "1.17.3"
@@ -2062,7 +2059,7 @@ wheels = [
 
 [[package]]
 name = "protspace"
-version = "0.14.6"
+version = "0.14.7"
 source = { editable = "." }
 dependencies = [
     { name = "dash" },

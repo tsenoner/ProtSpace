@@ -63,7 +63,7 @@ class ProtSpace:
     #     app = self.create_app()
     #     app.run_server(debug=debug, port=port)
 
-    def run_server(self, port: int = 8050, debug: bool = False, quiet: bool = True) -> None:
+    def run_server(self, port: int = 8050, debug: bool = False, quiet: bool = False) -> None:
         import __main__
         import sys
         import os

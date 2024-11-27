@@ -1,6 +1,19 @@
 # CHANGELOG
 
 
+## v0.14.5 (2024-11-27)
+
+### Fixes
+
+* fix: remove explicit bio-dash dep ([`cd7ee57`](https://github.com/tsenoner/ProtSpace/commit/cd7ee57e616a26c5bd86499318c70d3f8ab9f734))
+
+### Unknown
+
+* update noteboks to be more user friendly ([`2fcf0f5`](https://github.com/tsenoner/ProtSpace/commit/2fcf0f5b52c3c924beba87ecbcb1bb68a87bb82c))
+
+* update README.md ([`b1ea21f`](https://github.com/tsenoner/ProtSpace/commit/b1ea21f75deed81895b36d2f918d26270e69a57f))
+
+
 ## v0.14.4 (2024-11-19)
 
 ### Fixes

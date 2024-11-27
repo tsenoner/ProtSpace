@@ -6,31 +6,25 @@ authors = [{ name = "Tobias Senoner", email = "tobias.senoner@tum.de" }]
 readme = "README.md"
 license = "GPL-3.0"
 # requires-python = ">=3.12"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 
 dependencies = [
     "dash>=2.18.1",
-    "dash-bio>=1.0.2",
     "dash-daq>=0.5.0",
     "dash-iconify>=0.1.2",
     "h5py>=3.12.1",
     "matplotlib>=3.9.2",
-    # "pandas>=2.2.3",
     "plotly>=5.24.1",
     "scikit-learn>=1.5.2",
     "kaleido>=0.2.1,!=0.2.1.post1",
-    "umap-learn>=0.5.6",
-    # "numpy==2.0.2",
-    "pacmap>=0.7.3",
+    "umap-learn>=0.5.7",
+    #"pacmap>=0.7.6",
     "numpy>=1.23.0,<3.0.0",
     "pandas>=2.0.0",
 ]
 
 [project.optional-dependencies]
-webserver = [
-    "gunicorn>=23.0.0",
-    "python-dotenv>=1.0.1",
-]
+webserver = ["gunicorn>=23.0.0", "python-dotenv>=1.0.1"]
 
 [tool.uv]
 dev-dependencies = [
@@ -68,12 +62,8 @@ assets = [
     "uv.lock",
     "requirements-py310.txt",
     "requirements-py311.txt",
-    "requirements-py312.txt"
+    "requirements-py312.txt",
 ]
-version_toml = [
-    "pyproject.toml:project.version",
-]
-version_variables = [
-    "src/protspace/__init__.py:__version__",
-]
+version_toml = ["pyproject.toml:project.version"]
+version_variables = ["src/protspace/__init__.py:__version__"]
 build_command = "bash update_deps.sh"

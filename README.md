@@ -13,7 +13,7 @@ ProtSpace is a visualization tool for exploring protein embeddings or similarity
   - [Installation](#installation)
   - [Usage](#usage)
     - [Data Preparation](#data-preparation)
-    - [Running ProtSpace](#running-protspace)
+    - [Running protspace](#running-protspace)
   - [Features](#features)
   - [Data Preparation](#data-preparation-1)
     - [Required Arguments](#required-arguments)
@@ -29,13 +29,13 @@ ProtSpace is a visualization tool for exploring protein embeddings or similarity
 Try ProtSpace instantly using our Google Colab notebooks:
 
 1. **Explore Pre-computed Visualizations**:
-[![Open Explorer In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsenoner/ProtSpace/blob/main/examples/notebook/Explore_ProtSpace.ipynb)
+[![Open Explorer In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsenoner/protspace/blob/main/examples/notebook/Explore_ProtSpace.ipynb)
 
 2. **Generate Protein Embeddings**:
-[![Open Embeddings In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsenoner/ProtSpace/blob/main/examples/notebook/ClickThrough_GenerateEmbeddings.ipynb)
+[![Open Embeddings In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsenoner/protspace/blob/main/examples/notebook/ClickThrough_GenerateEmbeddings.ipynb)
 
 3. **Full Pipeline Demo**:
-[![Open Pipeline In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsenoner/ProtSpace/blob/main/examples/notebook/Run_ProtSpace.ipynb)
+[![Open Pipeline In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsenoner/protspace/blob/main/examples/notebook/Run_ProtSpace.ipynb)
 
 ## Example Outputs
 
@@ -43,7 +43,7 @@ Try ProtSpace instantly using our Google Colab notebooks:
 ![2D Scatter Plot Example](examples/out/toxins/protein_category_umap.svg)
 
 ### 3D Interactive Plot
-[View 3D Interactive Plot](https://tsenoner.github.io/ProtSpace/examples/out/3FTx/UMAP3_major_group.html)
+[View 3D Interactive Plot](https://tsenoner.github.io/protspace/examples/out/3FTx/UMAP3_major_group.html)
 
 ## Installation
 
@@ -58,7 +58,7 @@ pip install protspace
 protspace-json -i embeddings.h5 -m features.csv -o output.json --methods pca3 umap2 tsne2
 ```
 
-### Running ProtSpace
+### Running protspace
 ```bash
 protspace output.json [--pdb_zip pdb_files.zip] [--port 8050]
 ```

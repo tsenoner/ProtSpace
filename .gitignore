@@ -22,13 +22,21 @@ data/h_sapiens
 data/toxins/mmseqs_toxins
 data/toxins/raw_data
 data/toxins/seline
+data/toxins/processed_data/bits.csv
+data/toxins/processed_data/evalue.csv
+data/toxins/processed_data/similarity_matrix.csv
 # phages
 data/phages/embs
 # sub_loc
 data/sub_loc
 #nuclease
 data/nuclease
-
+# --- out ---
+examples/out/h_sapiens
+examples/out/nuclease
+examples/out/final
+# --- scripts ---
+scripts
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

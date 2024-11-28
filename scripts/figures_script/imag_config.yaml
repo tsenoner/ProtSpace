@@ -1,11 +1,11 @@
 base_path: examples/out
-out_path: examples/out/final/for_paper.png
-num_columns: 2
+out_path: examples/out/final/phages.png
+num_columns: 1
 images:
-  - path: toxins/toxin/protein_category_umap.svg
-    subtitle: Toxin dataset colored by Protein Category
-  - path: toxins/toxin/order_umap.svg
-    subtitle: Toxin dataset colored by Order rank
+  # - path: toxins/toxin/protein_category_umap.svg
+  #   subtitle: Toxin dataset colored by Protein Category
+  # - path: toxins/toxin/order_umap.svg
+  #   subtitle: Toxin dataset colored by Order rank
   - path: phages/function_umap.svg
     subtitle: Phages - function - UMAP
   - path: phages/product_category_umap.svg

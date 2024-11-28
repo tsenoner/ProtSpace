@@ -149,8 +149,10 @@ def main():
     base_path = Path("scripts/figures_script")
     config_paths = [
         base_path / "imag_config.yaml",
-        base_path / "imag_config1.yaml",
-        base_path / "imag_config2.yaml",
+        # base_path / "imag_config1.yaml",
+        # base_path / "imag_config2.yaml",
+        # base_path / "imag_config3.yaml",
+        # base_path / "imag_config4.yaml",
     ]
     for config_file in config_paths:
         print(config_file)
@@ -161,7 +163,7 @@ def main():
             dpi=600,
             border_color='black',
             border_width=1,
-            h_spacing=0.0,
+            h_spacing=0.15,
             v_spacing=0.0
         )
     print(f"Plot created using config: {config_file}")

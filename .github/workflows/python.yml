@@ -44,14 +44,14 @@ jobs:
             key: uv-tools-${{ runner.os }}-psr-v9.11.1
             restore-keys: |
               uv-tools-${{ runner.os }}-psr-v9.11.1
-              uv-tools-${{ runner.os }}  
+              uv-tools-${{ runner.os }}
 
       - name: Install Python Semantic Release
         run: uv tool install python-semantic-release@v9.11.1
-        
+
       - name: Build Python Package
         run: uv build
-    
+
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
 
@@ -59,4 +59,3 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: uv tool run --from python-semantic-release semantic-release publish --tag ${{ github.event.client_payload.tag }}
-        

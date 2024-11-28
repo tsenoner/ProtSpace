@@ -1,0 +1,68 @@
+{
+  "function": {
+    "colors": {
+      "head and packaging": "rgba(255, 51, 51, 0.8)",
+      "tail": "rgba(255, 128, 0, 0.8)",
+      "connector": "rgba(255, 204, 0, 0.8)",
+      "DNA, RNA and nucleotide metabolism": "rgba(0, 102, 255, 0.8)",
+      "transcription regulation": "rgba(0, 204, 255, 0.8)",
+      "integration and excision": "rgba(102, 0, 255, 0.8)",
+      "lysis": "rgba(153, 0, 204, 0.8)",
+      "moron, auxiliary metabolic gene and host takeover": "rgba(249, 142, 249, 0.8)",
+      "other": "rgba(128, 128, 128, 0.5)",
+      "unknown function": "rgba(192, 192, 192, 0.5)"
+    },
+    "shapes": {
+      "head and packaging": "hexagon",
+      "tail": "pentagon",
+      "connector": "octagon",
+      "DNA, RNA and nucleotide metabolism": "star-triangle-up",
+      "transcription regulation": "star-diamond",
+      "integration and excision": "star-square",
+      "lysis": "cross",
+      "moron, auxiliary metabolic gene and host takeover": "x",
+      "other": "circle",
+      "unknown function": "square"
+    }
+  },
+  "product_category": {
+    "colors": {
+      "major_capsid": "rgba(255, 51, 51, 0.8)",
+      "tail_proteins": "rgba(255, 128, 0, 0.8)",
+      "baseplate": "rgba(255, 204, 0, 0.8)",
+      "portal_connector": "rgba(255, 153, 51, 0.8)",
+      "dna_replication": "rgba(0, 102, 255, 0.8)",
+      "dna_packaging": "rgba(51, 153, 255, 0.8)",
+      "transcription": "rgba(0, 204, 255, 0.8)",
+      "nucleases": "rgba(0, 153, 204, 0.8)",
+      "lysis": "rgba(153, 0, 204, 0.8)",
+      "host_manipulation": "rgba(255, 0, 255, 0.8)",
+      "transferases": "rgba(51, 204, 51, 0.8)",
+      "hydrolases": "rgba(0, 153, 0, 0.8)",
+      "ligases": "rgba(194, 62, 242, 0.8)",
+      "regulators": "rgba(29, 73, 155, 0.8)",
+      "morphogenesis": "rgba(255, 102, 0, 0.8)",
+      "structural": "rgba(153, 51, 0, 0.8)",
+      "membrane_associated": "rgba(60, 3, 89, 0.8)"
+    },
+    "shapes": {
+      "major_capsid": "hexagon",
+      "tail_proteins": "pentagon",
+      "baseplate": "octagon",
+      "portal_connector": "hexagram",
+      "dna_replication": "star",
+      "dna_packaging": "star-triangle-up",
+      "transcription": "star-diamond",
+      "nucleases": "star-square",
+      "lysis": "cross",
+      "host_manipulation": "x",
+      "transferases": "diamond-tall",
+      "hydrolases": "diamond",
+      "ligases": "diamond-wide",
+      "regulators": "bowtie",
+      "morphogenesis": "triangle-up",
+      "structural": "circle",
+      "membrane_associated": "hexagon2"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "function": {
+    "colors": {
+      "head and packaging": "rgba(255, 51, 51, 0.8)",
+      "tail": "rgba(255, 128, 0, 0.8)",
+      "connector": "rgba(255, 204, 0, 0.8)",
+      "DNA, RNA and nucleotide metabolism": "rgba(0, 102, 255, 0.8)",
+      "transcription regulation": "rgba(0, 204, 255, 0.8)",
+      "integration and excision": "rgba(102, 0, 255, 0.8)",
+      "lysis": "rgba(153, 0, 204, 0.8)",
+      "moron, auxiliary metabolic gene and host takeover": "rgba(249, 142, 249, 0.8)",
+      "other": "rgba(128, 128, 128, 0.5)",
+      "unknown function": "rgba(192, 192, 192, 0.5)"
+    },
+    "shapes": {
+      "head and packaging": "hexagon",
+      "tail": "pentagon",
+      "connector": "octagon",
+      "DNA, RNA and nucleotide metabolism": "star-triangle-up",
+      "transcription regulation": "star-diamond",
+      "integration and excision": "star-square",
+      "lysis": "cross",
+      "moron, auxiliary metabolic gene and host takeover": "x",
+      "other": "circle",
+      "unknown function": "square"
+    }
+  },
+  "product_category": {
+    "colors": {
+      "major_capsid": "rgba(255, 51, 51, 0.8)",
+      "minor_capsid": "rgba(255, 71, 71, 0.8)",
+      "head_assembly": "rgba(255, 91, 91, 0.8)",
+
+      "major_tail": "rgba(255, 128, 0, 0.8)",
+      "minor_tail": "rgba(255, 148, 20, 0.8)",
+      "tail_assembly": "rgba(255, 168, 40, 0.8)",
+      "tail_tape_measure": "rgba(255, 188, 60, 0.8)",
+
+      "portal": "rgba(255, 204, 0, 0.8)",
+      "connector": "rgba(255, 214, 20, 0.8)",
+      "baseplate": "rgba(255, 224, 40, 0.8)",
+
+      "dna_replication": "rgba(0, 102, 255, 0.8)",
+      "dna_packaging": "rgba(20, 122, 255, 0.8)",
+      "dna_modification": "rgba(40, 142, 255, 0.8)",
+      "recombination": "rgba(60, 162, 255, 0.8)",
+
+      "transcription": "rgba(0, 204, 255, 0.8)",
+      "transcription_regulation": "rgba(20, 224, 255, 0.8)",
+
+      "endonucleases": "rgba(102, 0, 255, 0.8)",
+      "exonucleases": "rgba(122, 20, 255, 0.8)",
+
+      "lysis": "rgba(153, 0, 204, 0.8)",
+      "peptidases": "rgba(173, 20, 224, 0.8)",
+      "host_takeover": "rgba(193, 40, 244, 0.8)",
+      "immunity": "rgba(213, 60, 255, 0.8)",
+
+      "transferases": "rgba(51, 204, 51, 0.8)",
+      "hydrolases": "rgba(0, 153, 0, 0.8)",
+      "oxidoreductases": "rgba(20, 173, 20, 0.8)",
+      "ligases": "rgba(194, 62, 242, 0.8)",
+
+      "membrane_proteins": "rgba(60, 3, 89, 0.8)",
+      "structural": "rgba(153, 51, 0, 0.8)",
+      "transcriptional_control": "rgba(29, 73, 155, 0.8)",
+      "regulatory_proteins": "rgba(49, 93, 175, 0.8)",
+      "toxin_systems": "rgba(249, 142, 249, 0.8)"
+    },
+    "shapes": {
+      "major_capsid": "hexagon",
+      "minor_capsid": "hexagon-dot",
+      "head_assembly": "hexagram",
+
+      "major_tail": "pentagon",
+      "minor_tail": "pentagon-dot",
+      "tail_assembly": "triangle-down",
+      "tail_tape_measure": "triangle-up",
+
+      "portal": "octagon",
+      "connector": "octagon-dot",
+      "baseplate": "diamond-tall",
+
+      "dna_replication": "star",
+      "dna_packaging": "star-triangle-up",
+      "dna_modification": "star-diamond",
+      "recombination": "star-square",
+
+      "transcription": "diamond",
+      "transcription_regulation": "diamond-dot",
+
+      "endonucleases": "diamond-cross",
+      "exonucleases": "diamond-x",
+
+      "lysis": "cross",
+      "peptidases": "cross-dot",
+      "host_takeover": "x",
+      "immunity": "x-dot",
+
+      "transferases": "triangle-right",
+      "hydrolases": "triangle-left",
+      "oxidoreductases": "triangle-se",
+      "ligases": "triangle-sw",
+
+      "membrane_proteins": "hexagon2",
+      "structural": "circle",
+      "transcriptional_control": "bowtie",
+      "regulatory_proteins": "asterisk",
+      "toxin_systems": "circle-cross"
+    }
+  }
+}

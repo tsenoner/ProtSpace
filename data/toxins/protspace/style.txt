@@ -1,0 +1,220 @@
+{
+  "Family": {
+    "colors": {
+      "Terebridae": "rgba(255, 99, 71, 1)",      // Marine snails - red
+      "Conidae": "rgba(255, 127, 80, 1)",        // Marine snails - coral
+      "Turridae": "rgba(255, 160, 122, 1)",      // Marine snails - salmon
+
+      "Buthidae": "rgba(255, 215, 0, 1)",        // Scorpions - gold
+      "Hemiscorpiidae": "rgba(218, 165, 32, 1)", // Scorpions - goldenrod
+      "Scorpionidae": "rgba(184, 134, 11, 1)",   // Scorpions - dark goldenrod
+      "Caraboctonidae": "rgba(238, 232, 170, 1)", // Scorpions - pale goldenrod
+      "Hormuridae": "rgba(240, 230, 140, 1)",    // Scorpions - khaki
+      "Euscorpiidae": "rgba(189, 183, 107, 1)",  // Scorpions - dark khaki
+      "Chaerilidae": "rgba(233, 214, 107, 1)",   // Scorpions - khaki gold
+      "Chactidae": "rgba(218, 200, 75, 1)",      // Scorpions - dark khaki gold
+
+      "Agelenidae": "rgba(147, 112, 219, 1)",    // Spiders - medium purple
+      "Zodariidae": "rgba(138, 43, 226, 1)",     // Spiders - blue violet
+      "Theraphosidae": "rgba(153, 50, 204, 1)",  // Spiders - dark orchid
+      "Ctenidae": "rgba(148, 0, 211, 1)",        // Spiders - dark violet
+      "Hexathelidae": "rgba(186, 85, 211, 1)",   // Spiders - medium orchid
+      "Oxyopidae": "rgba(221, 160, 221, 1)",     // Spiders - plum
+      "Theridiidae": "rgba(218, 112, 214, 1)",   // Spiders - orchid
+      "Lycosidae": "rgba(199, 21, 133, 1)",      // Spiders - medium violet red
+      "Thomisidae": "rgba(219, 112, 147, 1)",    // Spiders - pale violet red
+      "Sicariidae": "rgba(255, 20, 147, 1)",     // Spiders - deep pink
+      "Nephilidae": "rgba(255, 105, 180, 1)",    // Spiders - hot pink
+      "Euctenizidae": "rgba(255, 182, 193, 1)",  // Spiders - light pink
+      "Segestriidae": "rgba(255, 192, 203, 1)",  // Spiders - pink
+      "Diguetidae": "rgba(220, 20, 60, 1)",      // Spiders - crimson
+      "Sparassidae": "rgba(176, 48, 96, 1)",     // Spiders - maroon
+      "Macrothelidae": "rgba(188, 63, 68, 1)",   // Spiders - dark maroon
+      "Actinopodidae": "rgba(204, 71, 120, 1)",  // Spiders - rose
+      "Araneidae": "rgba(145, 95, 109, 1)",      // Spiders - mauve
+      "Nemesiidae": "rgba(157, 52, 119, 1)",     // Spiders - plum purple
+      "Filistatidae": "rgba(135, 38, 87, 1)",    // Spiders - burgundy
+      "Scytodidae": "rgba(120, 24, 74, 1)",      // Spiders - dark burgundy
+      "Cheiracanthiidae": "rgba(150, 34, 100, 1)", // Spiders - magenta purple
+      "Philodromidae": "rgba(165, 42, 126, 1)",  // Spiders - dark magenta
+
+      "Viperidae": "rgba(0, 128, 0, 1)",         // Snakes - green
+      "Lamprophiidae": "rgba(34, 139, 34, 1)",   // Snakes - forest green
+      "Elapidae": "rgba(0, 100, 0, 1)",          // Snakes - dark green
+      "Homalopsidae": "rgba(46, 139, 87, 1)",    // Snakes - sea green
+      "Colubridae": "rgba(60, 179, 113, 1)",     // Snakes - medium sea green
+      "Dipsadidae": "rgba(32, 178, 170, 1)",     // Snakes - light sea green
+      "Hydrophiidae": "rgba(47, 79, 79, 1)",     // Sea snakes - dark slate gray
+
+      "Vespidae": "rgba(255, 165, 0, 1)",        // Wasps/Bees - orange
+      "Pompilidae": "rgba(255, 140, 0, 1)",      // Wasps - dark orange
+      "Apidae": "rgba(255, 69, 0, 1)",           // Bees - orange red
+      "Formicidae": "rgba(255, 99, 71, 1)",      // Ants - tomato
+      "Sphecidae": "rgba(255, 127, 80, 1)",      // Wasps - coral
+      "Megachilidae": "rgba(240, 128, 128, 1)",  // Bees - light coral
+      "Scoliidae": "rgba(250, 128, 114, 1)",     // Wasps - salmon
+      "Eulophidae": "rgba(233, 150, 122, 1)",    // Wasps - dark salmon
+
+      "Blenniidae": "rgba(0, 191, 255, 1)",      // Fish - deep sky blue
+      "Synanceiidae": "rgba(30, 144, 255, 1)",   // Fish - dodger blue
+      "Batrachoididae": "rgba(65, 105, 225, 1)", // Fish - royal blue
+      "Scorpaenidae": "rgba(0, 0, 205, 1)",      // Fish - medium blue
+      "Potamotrygonidae": "rgba(0, 0, 139, 1)",  // Fish - dark blue
+
+      "Scolopendridae": "rgba(128, 128, 0, 1)",  // Centipedes - olive
+      "Scutigeridae": "rgba(107, 142, 35, 1)",   // Centipedes - olive drab
+
+      "Helodermatidae": "rgba(139, 69, 19, 1)",  // Lizards - saddle brown
+      "Varanidae": "rgba(160, 82, 45, 1)",       // Lizards - sienna
+      "Diploglossidae": "rgba(210, 105, 30, 1)", // Lizards - chocolate
+
+      "Ornithorhynchidae": "rgba(128, 0, 0, 1)", // Mammals - maroon
+
+      "Reduviidae": "rgba(85, 107, 47, 1)",      // True bugs - dark olive green
+
+      "Limacodidae": "rgba(102, 205, 170, 1)",   // Moths - medium aquamarine
+
+      "Trebouxiaceae": "rgba(143, 188, 143, 1)", // Green algae - dark sea green
+
+      "Acanthasteridae": "rgba(72, 61, 139, 1)", // Starfish - dark slate blue
+
+      "Speleonectidae": "rgba(25, 25, 112, 1)"   // Crustaceans - midnight blue
+    },
+    "shapes": {
+      // Marine snails - spiral-like shapes
+      "Terebridae": "circle-dot",
+      "Conidae": "circle-dot",
+      "Turridae": "circle-dot",
+
+      // Scorpions - diamond shapes (like their tails)
+      "Buthidae": "diamond",
+      "Hemiscorpiidae": "diamond",
+      "Scorpionidae": "diamond",
+      "Caraboctonidae": "diamond",
+      "Hormuridae": "diamond",
+      "Euscorpiidae": "diamond",
+      "Chaerilidae": "diamond",
+      "Chactidae": "diamond",
+
+      // Spiders - cross shapes (like web intersections)
+      "Agelenidae": "cross",
+      "Zodariidae": "cross",
+      "Theraphosidae": "cross",
+      "Ctenidae": "cross",
+      "Hexathelidae": "cross",
+      "Oxyopidae": "cross",
+      "Theridiidae": "cross",
+      "Lycosidae": "cross",
+      "Thomisidae": "cross",
+      "Sicariidae": "cross",
+      "Nephilidae": "cross",
+      "Euctenizidae": "cross",
+      "Segestriidae": "cross",
+      "Diguetidae": "cross",
+      "Sparassidae": "cross",
+      "Macrothelidae": "cross",
+      "Actinopodidae": "cross",
+      "Araneidae": "cross",
+      "Nemesiidae": "cross",
+      "Filistatidae": "cross",
+      "Scytodidae": "cross",
+      "Cheiracanthiidae": "cross",
+      "Philodromidae": "cross",
+
+      // Snakes - triangle shapes (like snake heads)
+      "Viperidae": "triangle-right",
+      "Lamprophiidae": "triangle-right",
+      "Elapidae": "triangle-right",
+      "Homalopsidae": "triangle-right",
+      "Colubridae": "triangle-right",
+      "Dipsadidae": "triangle-right",
+      "Hydrophiidae": "triangle-right",
+
+      // Wasps/Bees/Ants - hexagons (like honeycomb)
+      "Vespidae": "hexagon",
+      "Pompilidae": "hexagon",
+      "Apidae": "hexagon",
+      "Formicidae": "hexagon",
+      "Sphecidae": "hexagon",
+      "Megachilidae": "hexagon",
+      "Scoliidae": "hexagon",
+      "Eulophidae": "hexagon",
+
+      // Fish - triangle shapes pointing left (like fish)
+      "Blenniidae": "triangle-left",
+      "Synanceiidae": "triangle-left",
+      "Batrachoididae": "triangle-left",
+      "Scorpaenidae": "triangle-left",
+      "Potamotrygonidae": "triangle-left",
+
+      // Centipedes - line shapes (elongated body)
+      "Scolopendridae": "line-ew",
+      "Scutigeridae": "line-ew",
+
+      // Lizards - square (robust body shape)
+      "Helodermatidae": "square",
+      "Varanidae": "square",
+      "Diploglossidae": "square",
+
+      // Mammals - star (distinctive)
+      "Ornithorhynchidae": "star",
+
+      // True bugs - pentagon
+      "Reduviidae": "pentagon",
+
+      // Moths - y-shapes (like wings)
+      "Limacodidae": "y-up",
+
+      // Green algae - asterisk (like cellular structure)
+      "Trebouxiaceae": "asterisk",
+
+      // Starfish - star shapes
+      "Acanthasteridae": "star-open",
+
+      // Crustaceans - octagon (distinctive)
+      "Speleonectidae": "octagon"
+    }
+  },
+    "Order": {
+    "colors": {
+      "Neogastropoda": "rgba(255, 99, 71, 0.8)",      // Reddish - marine snails
+      "Scorpiones": "rgba(255, 215, 0, 0.8)",         // Golden - scorpions
+      "Araneae": "rgba(147, 112, 219, 0.8)",          // Purple - spiders
+      "Squamata": "rgba(34, 139, 34, 0.8)",           // Green - snakes and lizards
+      "Blenniiformes": "rgba(0, 191, 255, 0.8)",      // Light blue - fish
+      "Perciformes": "rgba(30, 144, 255, 0.8)",       // Medium blue - fish
+      "Batrachoidiformes": "rgba(65, 105, 225, 0.8)", // Royal blue - fish
+      "Myliobatiformes": "rgba(0, 0, 139, 0.8)",      // Dark blue - rays
+      "Hymenoptera": "rgba(255, 140, 0, 0.8)",        // Orange - wasps/bees
+      "Scolopendromorpha": "rgba(128, 128, 0, 0.8)",  // Olive - centipedes
+      "Scutigeromorpha": "rgba(107, 142, 35, 0.8)",   // Olive drab - centipedes
+      "Trebouxiales": "rgba(143, 188, 143, 0.8)",     // Sea green - algae
+      "Diptera": "rgba(169, 169, 169, 0.8)",          // Gray - flies
+      "Valvatida": "rgba(72, 61, 139, 0.8)",          // Slate blue - starfish
+      "Lepidoptera": "rgba(102, 205, 170, 0.8)",      // Aquamarine - moths
+      "Monotremata": "rgba(128, 0, 0, 0.8)",          // Maroon - mammals
+      "Hemiptera": "rgba(85, 107, 47, 0.8)",          // Dark olive - true bugs
+      "Nectiopoda": "rgba(25, 25, 112, 0.8)"          // Midnight blue - crustaceans
+    },
+    "shapes": {
+      "Neogastropoda": "circle",                // More basic version of family shape
+      "Scorpiones": "diamond-open",             // Open version of family shape
+      "Araneae": "cross-open",                  // Open version of family shape
+      "Squamata": "triangle-right-open",        // Open version of family shape
+      "Blenniiformes": "triangle-left-open",    // Open version of family shape
+      "Perciformes": "triangle-left-open",      // Matching other fish orders
+      "Batrachoidiformes": "triangle-left-open", // Matching other fish orders
+      "Myliobatiformes": "triangle-left-open",   // Matching other fish orders
+      "Hymenoptera": "hexagon-open",            // Open version of family shape
+      "Scolopendromorpha": "line-ew-open",     // Open version of family shape
+      "Scutigeromorpha": "line-ew-open",       // Matching other centipede order
+      "Trebouxiales": "asterisk-open",         // Open version of family shape
+      "Diptera": "y-up-open",                  // Wing-like shape
+      "Valvatida": "star-open",                // Open version of family shape
+      "Lepidoptera": "y-up-open",              // Wing-like shape
+      "Monotremata": "star-open",              // Open version of family shape
+      "Hemiptera": "pentagon-open",            // Open version of family shape
+      "Nectiopoda": "octagon-open"             // Open version of family shape
+    }
+  },
+}

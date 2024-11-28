@@ -3,7 +3,6 @@ mAimeC,Pla2g2C,C mammals
 mAimeF,Pla2g2F,F mammals
 mAimeDb,Pla2g2D1,D mammals
 mAimeDa,Pla2g2D1,D mammals
-mAimeV,Pla2g2V1,V mammals
 mAimeE,Pla2g2E,E mammals
 mAifuE,Pla2g2E,E mammals
 mAifuV,Pla2g2V1,V mammals
@@ -14,7 +13,6 @@ cAlmiC,Pla2g2C,C crocodile
 cAlmiD3,Pla2g2D3,D3 reptilia
 cAlmiD1,Pla2g2D1,D1 reptilia
 cAlmiE,Pla2g2E,E crocodile
-cAlsiD1,Pla2g2D1,D1 reptilia
 cAlsiD3,Pla2g2D3,D3 reptilia
 cAlsiC,Pla2g2C,C crocodile
 bAnplC,Pla2g2C,C birds
@@ -118,7 +116,6 @@ sCrheAE,Pla2g2E,E serpentes
 sCrheAGb,Pla2g2Gb,G squamates
 sCrheAGc1,Pla2g2Gc,G squamates
 sCrheAGa1,Pla2g2Ga,G squamates
-sCrheAGc2,Pla2g2Gc,G squamates
 sCrheAGa2,Pla2g2Ga,G squamates
 sCrheAF,Pla2g2F,F squamates
 sCrheBF,Pla2g2F,F squamates
@@ -316,7 +313,6 @@ sOphaF,Pla2g2F,F squamates
 sOpgrF,Pla2g2F,F squamates
 sOpgrDb,Pla2g2D1,D squamates
 sOpgrG0,Pla2g2G0,G squamates
-mOpgrE,Pla2g2E,E mammals
 bOphoC,Pla2g2C,C birds
 bOphoD,Pla2g2D3,D birds
 bOphoE,Pla2g2E,E birds
@@ -373,7 +369,6 @@ mPhciC,Pla2g2C,C mammals
 mPhciF,Pla2g2F,F mammals
 mPhciDb,Pla2g2D1,D mammals
 mPhciDa,Pla2g2D1,D mammals
-mPhciV4,Pla2g2V2,V mammals
 mPhciV3,Pla2g2V2,V mammals
 mPhciV2,Pla2g2V2,V mammals
 mPhciV1,Pla2g2V2,V mammals
@@ -434,10 +429,6 @@ bStocE,Pla2g2E,E birds
 bStocB,Pla2g2B,B birds
 bStocD,Pla2g2D3,D birds
 bStocC,Pla2g2C,C birds
-sThbaF,Pla2g2F,F squamates
-sThbaD,Pla2g2D1,D squamates
-sThbaGc,Pla2g2Gc,G squamates
-sThbaE,Pla2g2E,E serpentes
 mTrmaC,Pla2g2C,C mammals
 mTrmaF,Pla2g2F,F mammals
 mTrmaD,Pla2g2D1,D mammals

@@ -150,7 +150,9 @@ class MDSReducer(DimensionReducer):
             n_init=self.config.n_init,
             max_iter=self.config.max_iter,
             eps=self.config.eps,
-            dissimilarity=("precomputed" if self.config.precomputed else "euclidean"),
+            dissimilarity=(
+                "precomputed" if self.config.precomputed else "euclidean"
+            ),
         ).fit_transform(data)
 
     def get_params(self) -> Dict[str, Any]:
@@ -176,7 +178,14 @@ class DataProcessor:
     def __init__(self, config: Dict[str, Any]):
         # Remove command-line specific arguments that aren't used for dimension reduction
         self.config = config.copy()
-        for arg in ["input", "metadata", "output", "methods", "verbose", "custom_names"]:
+        for arg in [
+            "input",
+            "metadata",
+            "output",
+            "methods",
+            "verbose",
+            "custom_names",
+        ]:
             self.config.pop(arg, None)
         self.identifier_col = "identifier"
         self.custom_names = config.get("custom_names", {})
@@ -262,7 +271,9 @@ class DataProcessor:
         reduced_data = reducer.fit_transform(data)
 
         method_spec = f"{method}{dims}"
-        projection_name = self.custom_names.get(method_spec, f"{method.upper()}_{dims}")
+        projection_name = self.custom_names.get(
+            method_spec, f"{method.upper()}_{dims}"
+        )
 
         return {
             "name": projection_name,
@@ -350,7 +361,7 @@ def main():
         "--metadata",
         type=Path,
         required=True,
-        help="Path to CSV file containing metadata and features",
+        help="Path to CSV file containing metadata and features (first column must be named 'identifier' and match IDs in HDF5/similarity matrix)",
     )
     parser.add_argument(
         "-o",
@@ -411,7 +422,10 @@ def main():
     # t-SNE parameters
     tsne_group = parser.add_argument_group("t-SNE Parameters")
     tsne_group.add_argument(
-        "--perplexity", type=int, default=30, help="Perplexity parameter for t-SNE"
+        "--perplexity",
+        type=int,
+        default=30,
+        help="Perplexity parameter for t-SNE",
     )
     tsne_group.add_argument(
         "--learning_rate", type=int, default=200, help="Learning rate for t-SNE"
@@ -460,14 +474,16 @@ def main():
     if args.custom_names:
         for name_spec in args.custom_names:
             try:
-                method, name = name_spec.split('=')
+                method, name = name_spec.split("=")
                 custom_names[method] = name
             except ValueError:
-                logger.warning(f"Invalid custom name specification: {name_spec}")
+                logger.warning(
+                    f"Invalid custom name specification: {name_spec}"
+                )
 
     # Add custom names to args
     args_dict = vars(args)
-    args_dict['custom_names'] = custom_names
+    args_dict["custom_names"] = custom_names
 
     # Set logging level
     logger.setLevel(

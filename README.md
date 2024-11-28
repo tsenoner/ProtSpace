@@ -1,6 +1,6 @@
 # ProtSpace
 
-ProtSpace is a powerful visualization tool for exploring protein embeddings and structures. It allows users to interactively visualize high-dimensional protein language model data in 2D or 3D space, color-code proteins based on various features, and view protein structures when available.
+ProtSpace is a visualization tool for exploring protein embeddings or similarity matrix along their 3D protein structures. It allows users to interactively visualize high-dimensional protein language model data in 2D or 3D space, color-code proteins based on various features, and view protein structures when available.
 
 ## Table of Contents
 
@@ -26,44 +26,36 @@ ProtSpace is a powerful visualization tool for exploring protein embeddings and 
 
 ## Quick Start with Google Colab
 
-Try ProtSpace instantly using our Google Colab notebook:
+Try ProtSpace instantly using our Google Colab notebooks:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsenoner/ProtSpace/blob/main/examples/notebook/Run_ProtSpace.ipynb)
+1. **Explore Pre-computed Visualizations**:
+[![Open Explorer In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsenoner/ProtSpace/blob/main/examples/notebook/Explore_ProtSpace.ipynb)
 
-The notebook demonstrates:
-- Installation and setup
-- Data preparation
-- Basic visualization
+2. **Generate Protein Embeddings**:
+[![Open Embeddings In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsenoner/ProtSpace/blob/main/examples/notebook/ClickThrough_GenerateEmbeddings.ipynb)
+
+3. **Full Pipeline Demo**:
+[![Open Pipeline In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsenoner/ProtSpace/blob/main/examples/notebook/Run_ProtSpace.ipynb)
 
 ## Example Outputs
 
 ### 2D Scatter Plot (SVG)
-![2D Scatter Plot Example](examples/out/3FTx/UMAP2_major_group.svg)
+![2D Scatter Plot Example](examples/out/toxins/protein_category_umap.svg)
 
 ### 3D Interactive Plot
 [View 3D Interactive Plot](https://tsenoner.github.io/ProtSpace/examples/out/3FTx/UMAP3_major_group.html)
 
 ## Installation
 
-Using uv:
 ```bash
-# Quick run
-uvx protspace
-
-# Permanent installation
-uv tool install protspace
-uv tool update-shell
-
-# Latest GitHub version
-uv tool install git+https://github.com/tsenoner/ProtSpace.git
-uv tool update-shell
+pip install protspace
 ```
 
 ## Usage
 
 ### Data Preparation
 ```bash
-uvx --from protspace protspace-json -i embeddings.h5 -m features.csv -o output.json --methods pca3 umap2 tsne2
+protspace-json -i embeddings.h5 -m features.csv -o output.json --methods pca3 umap2 tsne2
 ```
 
 ### Running ProtSpace
@@ -75,7 +67,12 @@ Access the interface at `http://localhost:8050`
 
 ## Features
 
-- Interactive 2D/3D visualization (PCA, UMAP, t-SNE)
+- Interactive 2D/3D visualization with multiple dimensionality reduction methods:
+  - Principal Component Analysis (PCA)
+  - Multidimensional Scaling (MDS)
+  - Uniform Manifold Approximation and Projection (UMAP)
+  - t-Distributed Stochastic Neighbor Embedding (t-SNE)
+  - Pairwise Controlled Manifold Approximation (PaCMAP)
 - Feature-based coloring and marker styling
 - Protein structure visualization (with PDB files)
 - Search and highlight functionality
@@ -88,9 +85,9 @@ The `protspace-json` command supports:
 
 ### Required Arguments
 - `-i, --input`: HDF file (.h5) or similarity matrix (.csv)
-- `-m, --metadata`: CSV file with features
+- `-m, --metadata`: CSV file with features (first column must be named "identifier" and match IDs in HDF5/similarity matrix)
 - `-o, --output`: Output JSON path
-- `--methods`: Reduction methods (e.g., pca2, tsne3, umap2)
+- `--methods`: Reduction methods (e.g., pca2, tsne3, umap2, pacmap2, mds2)
 
 ### Optional Arguments
 - `--custom_names`: Custom projection names (e.g., pca2=PCA_2D)
@@ -137,9 +134,9 @@ Available shapes: circle, circle-open, cross, diamond, diamond-open, square, squ
 1. **Embeddings/Similarity**
    - HDF5 (.h5) for embeddings
    - CSV for similarity matrix
-   
+
 2. **Metadata**
-   - CSV with 'identifier' column
+   - CSV with mandatory 'identifier' column matching IDs in embeddings/similarity data
    - Additional columns for features
 
 3. **Structures**
@@ -151,4 +148,3 @@ Available shapes: circle, circle-open, cross, diamond, diamond-open, square, squ
   - Protein features
   - Projection coordinates
   - Visualization state (colors, shapes)
-  - Structure references

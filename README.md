@@ -40,9 +40,11 @@ Try ProtSpace instantly using our Google Colab notebooks:
 ## Example Outputs
 
 ### 2D Scatter Plot (SVG)
+
 ![2D Scatter Plot Example](examples/out/toxins/protein_category_umap.svg)
 
 ### 3D Interactive Plot
+
 [View 3D Interactive Plot](https://tsenoner.github.io/protspace/examples/out/3FTx/UMAP3_major_group.html)
 
 ## Installation
@@ -54,11 +56,13 @@ pip install protspace
 ## Usage
 
 ### Data Preparation
+
 ```bash
 protspace-json -i embeddings.h5 -m features.csv -o output.json --methods pca3 umap2 tsne2
 ```
 
 ### Running protspace
+
 ```bash
 protspace output.json [--pdb_zip pdb_files.zip] [--port 8050]
 ```
@@ -84,16 +88,19 @@ Access the interface at `http://localhost:8050`
 The `protspace-json` command supports:
 
 ### Required Arguments
+
 - `-i, --input`: HDF file (.h5) or similarity matrix (.csv)
 - `-m, --metadata`: CSV file with features (first column must be named "identifier" and match IDs in HDF5/similarity matrix)
 - `-o, --output`: Output JSON path
 - `--methods`: Reduction methods (e.g., pca2, tsne3, umap2, pacmap2, mds2)
 
 ### Optional Arguments
+
 - `--custom_names`: Custom projection names (e.g., pca2=PCA_2D)
 - `--verbose`: Increase output verbosity
 
 ### Method-Specific Parameters
+
 - UMAP:
   - `--n_neighbors`: Number of neighbors (default: 15)
   - `--min_dist`: Minimum distance (default: 0.1)
@@ -131,6 +138,7 @@ Available shapes: circle, circle-open, cross, diamond, diamond-open, square, squ
 ## File Formats
 
 ### Input
+
 1. **Embeddings/Similarity**
    - HDF5 (.h5) for embeddings
    - CSV for similarity matrix
@@ -144,6 +152,7 @@ Available shapes: circle, circle-open, cross, diamond, diamond-open, square, squ
    - Filenames match identifiers (dots replaced with underscores)
 
 ### Output
+
 - JSON containing:
   - Protein features
   - Projection coordinates

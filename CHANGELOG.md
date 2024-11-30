@@ -1,6 +1,25 @@
 # CHANGELOG
 
 
+## v1.0.0 (2024-11-30)
+
+### Breaking
+
+* fix: format README
+
+BREAKING CHANGE: release ([`9a37e48`](https://github.com/tsenoner/protspace/commit/9a37e48295eef82198916f1980803a1315c926f3))
+
+### Unknown
+
+* BREAKING CHANGE: release again ([`3b3b2c6`](https://github.com/tsenoner/protspace/commit/3b3b2c6e6920d5d8ada8ca9db2fa5fb122cd961a))
+
+* Braking Change: Release ([`366f4b7`](https://github.com/tsenoner/protspace/commit/366f4b75bef846be42d5dcb1c6e68ccfc570fd49))
+
+* update notebook: clean old cell ([`d7e6895`](https://github.com/tsenoner/protspace/commit/d7e6895b5c97baa23e40853a9ec3f68950b1d372))
+
+* Merge branch 'main' of https://github.com/tsenoner/protspace ([`564ee64`](https://github.com/tsenoner/protspace/commit/564ee64cb2aecc6c8f6c5dd665d966e05cb9af80))
+
+
 ## v0.1.0 (2024-11-28)
 
 ### Chores
@@ -103,6 +122,8 @@ Python 3.10 requires an only numy that is troublesome. ([`16c93f8`](https://gith
 * test: add tests for the prepare_json script ([`b9a254b`](https://github.com/tsenoner/protspace/commit/b9a254b30d64a4802e0b7d9f8352ad8292e4fc0c))
 
 ### Unknown
+
+* update readme links to lowercase protspace ([`68f1619`](https://github.com/tsenoner/protspace/commit/68f1619f7fb92bc24fa97b97021108131090a3a1))
 
 * Update .gitignore ([`0cdf190`](https://github.com/tsenoner/protspace/commit/0cdf190a15ee3edfd12178906d8b1c6f7838bdc5))
 

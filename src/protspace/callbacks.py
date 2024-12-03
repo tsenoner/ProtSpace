@@ -189,8 +189,11 @@ def setup_callbacks(app):
 
         if n_clicks and selected_value:
             if selected_color:
-                color_hex = selected_color.get("hex", "#000000")
-                reader.update_feature_color(selected_feature, selected_value, color_hex)
+                if selected_color['hex'].startswith('rgba'):
+                    selected_color_str = selected_color['hex']
+                else:
+                    selected_color_str = "rgba({r}, {g}, {b}, {a})".format(**selected_color['rgb'])
+                reader.update_feature_color(selected_feature, selected_value, selected_color_str)
             if selected_shape:
                 reader.update_marker_shape(
                     selected_feature, selected_value, selected_shape

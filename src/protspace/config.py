@@ -1,4 +1,10 @@
 import os
+from plotly.validators.scatter.marker import SymbolValidator
+
+# https://plotly.com/python/marker-style/
+def extract_marker_strings(input_list):
+    # Filter out integers and string representations of numbers
+    return [item for item in input_list if isinstance(item, str) and not item.isdigit()]
 
 # App settings
 DEFAULT_PORT = 8050
@@ -22,3 +28,5 @@ MARKER_SHAPES = [
     'circle', 'circle-open', 'cross', 'diamond',
     'diamond-open', 'square', 'square-open', 'x'
 ]
+
+MARKER_SHAPES_2D = sorted(extract_marker_strings(SymbolValidator().values))

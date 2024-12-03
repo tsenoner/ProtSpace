@@ -3,7 +3,7 @@ from dash import dcc, html
 from dash_bio import NglMoleculeViewer
 from dash_iconify import DashIconify
 
-from .config import MARKER_SHAPES
+from .config import MARKER_SHAPES, MARKER_SHAPES_2D
 from .data_loader import JsonReader
 
 
@@ -30,12 +30,17 @@ def create_layout(app):
         # Select the first feature and projection
         first_feature = features[0] if features else None
         first_projection = projections[0] if projections else None
+
+        projection_info = reader.get_projection_info(first_projection)
+        is_3d = projection_info["dimensions"] == 3
+        marker_shapes = MARKER_SHAPES if is_3d else MARKER_SHAPES_2D
     else:
         feature_options = []
         projection_options = []
         protein_options = []
         first_feature = None
         first_projection = None
+        marker_shapes = MARKER_SHAPES
 
     # Get PDB files data if available
     pdb_files_data = app.get_pdb_files_data()
@@ -231,7 +236,7 @@ def create_layout(app):
                                             ).title(),
                                             "value": shape,
                                         }
-                                        for shape in MARKER_SHAPES
+                                        for shape in marker_shapes
                                     ],
                                     style={"marginBottom": "10px"},
                                 ),

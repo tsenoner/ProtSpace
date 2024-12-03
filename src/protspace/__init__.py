@@ -1,4 +1,4 @@
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 from . import app, main
 from .utils import add_feature_style, prepare_json

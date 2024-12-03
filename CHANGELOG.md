@@ -1,6 +1,19 @@
 # CHANGELOG
 
 
+## v1.0.1 (2024-12-03)
+
+### Fixes
+
+* fix: only display possible 3D markers ([`79fe477`](https://github.com/tsenoner/protspace/commit/79fe477a4581939d17b610b533481e46d33bee2e))
+
+### Unknown
+
+* Add note about Safari browser limitations for google colab ([`fd141c5`](https://github.com/tsenoner/protspace/commit/fd141c520e77f3757869de0ec436fccd9e6b2c55))
+
+* Merge branch 'main' of https://github.com/tsenoner/protspace ([`f029c37`](https://github.com/tsenoner/protspace/commit/f029c37a99af79a792ab4ca053ab4bd9f1ffd323))
+
+
 ## v1.0.0 (2024-11-30)
 
 ### Breaking
@@ -14,6 +27,8 @@ BREAKING CHANGE: release ([`9a37e48`](https://github.com/tsenoner/protspace/comm
 * BREAKING CHANGE: release again ([`3b3b2c6`](https://github.com/tsenoner/protspace/commit/3b3b2c6e6920d5d8ada8ca9db2fa5fb122cd961a))
 
 * Braking Change: Release ([`366f4b7`](https://github.com/tsenoner/protspace/commit/366f4b75bef846be42d5dcb1c6e68ccfc570fd49))
+
+* hide installation progress in exploration jupyter ([`f48f3f6`](https://github.com/tsenoner/protspace/commit/f48f3f612140e735ce41062f274eac6e4806dde0))
 
 * update notebook: clean old cell ([`d7e6895`](https://github.com/tsenoner/protspace/commit/d7e6895b5c97baa23e40853a9ec3f68950b1d372))
 

@@ -28,6 +28,8 @@ ProtSpace is a visualization tool for exploring protein embeddings or similarity
 
 Try ProtSpace instantly using our Google Colab notebooks:
 
+**Note**: Some Google Colab functionalities may not work properly in Safari browsers. For the best experience, we recommend using Chrome or Firefox.
+
 1. **Explore Pre-computed Visualizations**:
 [![Open Explorer In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsenoner/protspace/blob/main/examples/notebook/Explore_ProtSpace.ipynb)
 

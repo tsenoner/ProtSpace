@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v1.0.2 (2024-12-03)
+
+### Fixes
+
+* fix: transparancy assignment ([`edbac07`](https://github.com/tsenoner/protspace/commit/edbac07b34021b901906e1bc77c4fb49f12030d2))
+
+### Unknown
+
+* Make Marker config dependent on visualization dimension ([`3e2566a`](https://github.com/tsenoner/protspace/commit/3e2566a82d6e9c0ec96efded8e74bdb55afb8626))
+
+
 ## v1.0.1 (2024-12-03)
 
 ### Fixes

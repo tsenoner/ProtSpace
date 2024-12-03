@@ -13,7 +13,7 @@ from dash.exceptions import PreventUpdate
 from .data_loader import JsonReader
 from .data_processing import prepare_dataframe
 from .plotting import create_2d_plot, create_3d_plot, save_plot
-from .config import NAN_COLOR
+from .config import NAN_COLOR, MARKER_SHAPES
 
 
 def get_reader(json_data):
@@ -214,7 +214,8 @@ def setup_callbacks(app):
         projection_info = reader.get_projection_info(selected_projection)
 
         # Choose the appropriate plotting function
-        if projection_info.get("dimensions") == 2:
+        is_3d = projection_info["dimensions"] == 3
+        if not is_3d:
             fig = create_2d_plot(df, selected_feature, selected_proteins)
         else:
             fig = create_3d_plot(df, selected_feature, selected_proteins)
@@ -230,7 +231,8 @@ def setup_callbacks(app):
                 if color:
                     marker_style["color"] = color
                 if shape:
-                    marker_style["symbol"] = shape
+                    if (not is_3d) or (is_3d and marker_shapes[value] in MARKER_SHAPES):
+                        marker_style["symbol"] = marker_shapes[value]
 
             if marker_style:
                 fig.update_traces(marker=marker_style, selector=dict(name=str(value)))

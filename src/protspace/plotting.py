@@ -15,6 +15,7 @@ from .config import (
     HIGHLIGHT_COLOR,
     HIGHLIGHT_LINE_WIDTH,
     HIGHLIGHT_MARKER_SIZE,
+    MARKER_SHAPES
 )
 
 
@@ -47,7 +48,8 @@ def create_styled_plot(df, reader, selected_projection, selected_feature, select
             if value in feature_colors:
                 marker_style["color"] = feature_colors[value]
             if value in marker_shapes:
-                marker_style["symbol"] = marker_shapes[value]
+                if (not is_3d) or (is_3d and marker_shapes[value] in MARKER_SHAPES):
+                    marker_style["symbol"] = marker_shapes[value]
 
             if marker_style:
                 fig.update_traces(marker=marker_style, selector=dict(name=str(value)))

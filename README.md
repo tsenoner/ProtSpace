@@ -43,7 +43,7 @@ Try ProtSpace instantly using our Google Colab notebooks:
 
 ### 2D Scatter Plot (SVG)
 
-![2D Scatter Plot Example](examples/out/toxins/protein_category_umap.svg)
+![2D Scatter Plot Example](https://tsenoner.github.io/protspace/examples/out/toxins/protein_category_umap.svg)
 
 ### 3D Interactive Plot
 

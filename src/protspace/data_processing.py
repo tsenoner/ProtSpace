@@ -16,7 +16,7 @@ def prepare_dataframe(reader: JsonReader, selected_projection: str, selected_fea
     df[selected_feature] = df["identifier"].apply(
         lambda x: reader.get_protein_features(x).get(selected_feature)
     )
-    df[selected_feature] = df[selected_feature].replace({np.nan: "<NaN>", None: "<NaN>"})
+    df[selected_feature] = df[selected_feature].replace({np.nan: "<NaN>", None: "<NaN>", "": "<NaN>"})
 
     if df[selected_feature].dtype in ["float64", "int64"]:
         df[selected_feature] = df[selected_feature].astype(str)

@@ -245,6 +245,7 @@ class DataProcessor:
         # Create full metadata with NaN for missing entries
         full_metadata = pd.DataFrame({"identifier": headers})
         if len(metadata.columns) > 1:
+            metadata = metadata.astype(str)  # Convert all columns to strings
             full_metadata = full_metadata.merge(
                 metadata.drop_duplicates("identifier"),
                 on="identifier",
@@ -294,7 +295,8 @@ class DataProcessor:
         # Process features
         for _, row in metadata.iterrows():
             protein_id = row[self.identifier_col]
-            features = row.drop(self.identifier_col).to_dict()
+            # features = row.drop(self.identifier_col).to_dict()
+            features = row.drop(self.identifier_col).infer_objects(copy=False).fillna("").to_dict()
             output["protein_data"][protein_id] = {"features": features}
 
         # Process projections

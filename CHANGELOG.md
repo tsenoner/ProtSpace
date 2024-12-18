@@ -1,6 +1,25 @@
 # CHANGELOG
 
 
+## v1.0.3 (2024-12-18)
+
+### Documentation
+
+* docs: Add full path to toxin 2D example ([`32b387e`](https://github.com/tsenoner/protspace/commit/32b387efa38a3dc00edb324520324c8595d4f3c6))
+
+### Fixes
+
+* fix: make embeddings without feature <NaN> ([`bf97138`](https://github.com/tsenoner/protspace/commit/bf97138a28acb79409cb177bc9b1a656119d3812))
+
+### Unknown
+
+* Update embedding generator ([`e0ca7fe`](https://github.com/tsenoner/protspace/commit/e0ca7fe714d4e7ed5a02399acef51ab01f7ee6f1))
+
+* Add forgotte change ([`6446fba`](https://github.com/tsenoner/protspace/commit/6446fba99235abcbf52111f00e50056d272e3179))
+
+* Add navigation guide to 'Explore_ProtSpace.ipynb' ([`1e14f4b`](https://github.com/tsenoner/protspace/commit/1e14f4b12a8d88cb1c3ee1bdb51bbc2a522bfd86))
+
+
 ## v1.0.2 (2024-12-03)
 
 ### Fixes
